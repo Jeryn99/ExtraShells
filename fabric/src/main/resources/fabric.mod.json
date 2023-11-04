@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "extra_shells",
+  "version": "${version}",
+  "name": "extra_shells",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All Rights Reserved",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [
+    "extra_shells.mixins.json",
+    "extra_shells-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.24",
+    "minecraft": ">=1.19.2"
+  }
+}
