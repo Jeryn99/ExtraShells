@@ -23,7 +23,7 @@ public class ExtraShellsForge {
     public void onGatherData(GatherDataEvent e) {
         DataGenerator generator = e.getGenerator();
         /*Data Pack*/
-        generator.addProvider(e.includeServer(), new TEPatterns(generator, false));
+        generator.addProvider(e.includeServer(), new TEPatterns(generator));
         generator.addProvider(e.includeClient(), new ESEnglish(generator));
     }
 

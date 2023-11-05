@@ -3,12 +3,12 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "tardis_refined:textures/blockentity/shell/sea_blue/default.png"
+        "texture": "extra_shells:textures/blockentity/shell/sea_blue/default.png"
       },
       "id": "tardis_refined:default",
       "interior": {
         "emissive": true,
-        "texture": "tardis_refined:textures/blockentity/shell/sea_blue/default_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/sea_blue/default_interior.png"
       },
       "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }
