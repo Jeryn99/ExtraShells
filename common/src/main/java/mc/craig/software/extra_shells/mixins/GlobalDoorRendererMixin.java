@@ -1,6 +1,7 @@
 package mc.craig.software.extra_shells.mixins;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import mc.craig.software.extra_shells.TEShellThemes;
 import mc.craig.software.extra_shells.client.models.tommy.RenderDoorHook;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,7 +24,7 @@ public class GlobalDoorRendererMixin {
         BlockState blockstate = blockEntity.getBlockState();
         ShellTheme theme = blockstate.getValue(GlobalDoorBlock.SHELL);
 
-        if (theme.name().contains("SEA_BLUE") || theme.name().contains("ENGINEERS") || theme.name().contains("ELLEN")) {
+        if (theme == TEShellThemes.ELLEN || theme == TEShellThemes.ENGINEERS || theme == TEShellThemes.MOFFAT || theme == TEShellThemes.SEA_BLUE ) {
             RenderDoorHook.renderDoorModel(blockEntity, partialTick, poseStack, bufferSource, packedLight, packedOverlay, ci);
             ci.cancel();
         }

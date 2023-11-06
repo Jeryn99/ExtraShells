@@ -4,5 +4,5 @@ import whocraft.tardis_refined.common.tardis.themes.ShellTheme;
 
 public class TEShellThemes {
 
-    public static ShellTheme SEA_BLUE, ELLEN, ENGINEERS;
+    public static ShellTheme SEA_BLUE, ELLEN, ENGINEERS, MOFFAT;
 }

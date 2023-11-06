@@ -31,15 +31,18 @@ public class ShellThemeMixin {
         var teacup = create("ENGINEERS", $VALUES.length, "engineers");
         var tommy_bricks = create("SEA_BLUE", $VALUES.length, "sea_blue");
         var ellen = create("ELLEN", $VALUES.length, "ellen");
+        var moffat = create("MOFFAT", $VALUES.length, "moffat");
 
         TEShellThemes.SEA_BLUE = tommy_bricks;
         TEShellThemes.ENGINEERS = teacup;
         TEShellThemes.ELLEN = ellen;
+        TEShellThemes.MOFFAT = moffat;
 
         ArrayList<ShellTheme> arrayList = new ArrayList(Arrays.asList($VALUES));
         arrayList.add(teacup);
         arrayList.add(tommy_bricks);
         arrayList.add(ellen);
+        arrayList.add(moffat);
 
         $VALUES = arrayList.toArray(new ShellTheme[0]);
     }

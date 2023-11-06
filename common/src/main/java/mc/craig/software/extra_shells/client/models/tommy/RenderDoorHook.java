@@ -3,8 +3,10 @@ package mc.craig.software.extra_shells.client.models.tommy;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 import mc.craig.software.extra_shells.ESModelRegistry;
+import mc.craig.software.extra_shells.TEShellThemes;
 import mc.craig.software.extra_shells.client.models.tommy.doors.EllenDoorModel;
 import mc.craig.software.extra_shells.client.models.tommy.doors.EngineerDoorModel;
+import mc.craig.software.extra_shells.client.models.tommy.doors.MoffatDoorModel;
 import mc.craig.software.extra_shells.client.models.tommy.doors.SeaBlueDoorModel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -39,7 +41,7 @@ public class RenderDoorHook {
         poseStack.translate(0.0, 0.0, -0.01);
 
 
-        if (theme.name().contains("SEA_BLUE")) {
+        if (theme == TEShellThemes.SEA_BLUE) {
 
             if (ESModelRegistry.TOMMY_INT_MODEL == null) {
                 ESModelRegistry.TOMMY_INT_MODEL = new SeaBlueDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.TOMMY_INT));
@@ -47,7 +49,7 @@ public class RenderDoorHook {
             currentModel = ESModelRegistry.TOMMY_INT_MODEL;
         }
 
-        if (theme.name().contains("ENGINEERS")) {
+        if (theme == TEShellThemes.ENGINEERS) {
             poseStack.translate(0.0, 0.0, -0.5 / 2);
 
             if (ESModelRegistry.ENGINEERS_INT_MODEL == null) {
@@ -57,12 +59,20 @@ public class RenderDoorHook {
             poseStack.mulPose(Vector3f.YP.rotationDegrees(180));
         }
 
-        if (theme.name().contains("ELLEN")) {
+        if (theme == TEShellThemes.ELLEN) {
 
             if (ESModelRegistry.ELLEN_INT_MODEL == null) {
                 ESModelRegistry.ELLEN_INT_MODEL = new EllenDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.ELLEN_INT));
             }
             currentModel = ESModelRegistry.ELLEN_INT_MODEL;
+        }
+
+        if (theme == TEShellThemes.MOFFAT) {
+
+            if (ESModelRegistry.MOFFAT_INT_MODEL == null) {
+                ESModelRegistry.MOFFAT_INT_MODEL = new MoffatDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.MOFFAT_INT));
+            }
+            currentModel = ESModelRegistry.MOFFAT_INT_MODEL;
         }
 
         TardisClientData reactions = TardisClientData.getInstance(blockEntity.getLevel().dimension());

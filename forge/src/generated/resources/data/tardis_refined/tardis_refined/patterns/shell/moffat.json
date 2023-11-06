@@ -1,0 +1,28 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat/default.png"
+      },
+      "id": "tardis_refined:default",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat/default_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat/twelfth.png"
+      },
+      "id": "tardis_refined:twelfth",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat/twelfth_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Twelfth\"}"
+    }
+  ]
+}
