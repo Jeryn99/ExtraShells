@@ -26,15 +26,27 @@
     },
     {
       "exterior": {
-        "emissive": false,
+        "emissive": true,
         "texture": "extra_shells:textures/blockentity/shell/rtd/bad_wolf.png"
       },
       "id": "tardis_refined:bad_wolf",
       "interior": {
-        "emissive": false,
+        "emissive": true,
         "texture": "extra_shells:textures/blockentity/shell/rtd/bad_wolf_interior.png"
       },
       "name_component": "{\"color\":\"yellow\",\"text\":\"Bad Wolf\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd/jack.png"
+      },
+      "id": "tardis_refined:jack",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd/jack_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Jack\"}"
     }
   ]
 }

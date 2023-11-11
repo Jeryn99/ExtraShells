@@ -82,7 +82,7 @@ public class RenderDoorHook {
 
         TardisClientData reactions = TardisClientData.getInstance(blockEntity.getLevel().dimension());
         ShellPattern shellPattern = reactions.shellPattern();
-        currentModel.setDoorPosition(isOpen);
+        currentModel.setDoorOpen(isOpen);
         currentModel.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(currentModel.texture(shellPattern, false))), packedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         poseStack.popPose();
 

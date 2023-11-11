@@ -80,12 +80,14 @@ public class EllenDoorModel extends ShellModel {
     public void setupAnim(Entity entity, float f, float g, float h, float i, float j) {
     }
 
-    public void setDoorPosition(boolean open) {
+    @Override
+    public void setDoorOpen(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 
     public void renderShell(GlobalShellBlockEntity entity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
     }
+
 
     public boolean isDoorModel() {
         return true;

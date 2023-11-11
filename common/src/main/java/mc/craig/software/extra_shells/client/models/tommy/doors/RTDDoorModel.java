@@ -73,7 +73,8 @@ public class RTDDoorModel extends ShellModel {
     public void setupAnim(Entity entity, float f, float g, float h, float i, float j) {
     }
 
-    public void setDoorPosition(boolean open) {
+    @Override
+    public void setDoorOpen(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 

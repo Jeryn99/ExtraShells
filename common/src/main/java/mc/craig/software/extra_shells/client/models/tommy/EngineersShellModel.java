@@ -83,7 +83,7 @@ public class EngineersShellModel extends ShellModel {
     }
 
     @Override
-    public void setDoorPosition(boolean open) {
+    public void setDoorOpen(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 

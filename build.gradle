@@ -18,8 +18,6 @@ subprojects {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
         // The following line declares the mojmap mappings, you may use other mappings as well
         mappings loom.officialMojangMappings()
-        // The following line declares the yarn mappings you may select this one as well.
-        modImplementation "maven.modrinth:tardis-refined:1.0.1-fabric"
     }
 }
 
@@ -42,6 +40,9 @@ allprojects {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
+
+        flatDir { dirs '../mods' }
+
     }
 
     tasks.withType(JavaCompile) {

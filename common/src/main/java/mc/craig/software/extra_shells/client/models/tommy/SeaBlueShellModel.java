@@ -73,7 +73,7 @@ public class SeaBlueShellModel extends ShellModel {
     }
 
     @Override
-    public void setDoorPosition(boolean open) {
+    public void setDoorOpen(boolean open) {
         this.right_door.yRot = open ? (float) Math.toRadians(75) : 0.0F;
         this.left_door.yRot = open ? (float) -Math.toRadians(75) : 0.0F;
     }

@@ -14,9 +14,11 @@ public class RTDShellModel extends ShellModel {
     private final ModelPart right_door;
     private final ModelPart frame;
     private final ModelPart bb_main;
+    private final ModelPart root;
 
     public RTDShellModel(ModelPart root) {
         super(root);
+        this.root = root;
         this.left_door = root.getChild("left_door");
         this.right_door = root.getChild("right_door");
         this.frame = root.getChild("frame");
@@ -77,14 +79,16 @@ public class RTDShellModel extends ShellModel {
         bb_main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
+    @Override
     public ModelPart root() {
-        return this.frame;
+        return this.root;
     }
 
     public void setupAnim(Entity entity, float f, float g, float h, float i, float j) {
     }
 
-    public void setDoorPosition(boolean open) {
+    @Override
+    public void setDoorOpen(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 
