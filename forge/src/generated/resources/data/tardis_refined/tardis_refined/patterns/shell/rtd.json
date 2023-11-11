@@ -1,0 +1,40 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd/default.png"
+      },
+      "id": "tardis_refined:default",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd/default_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd/tenth.png"
+      },
+      "id": "tardis_refined:tenth",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd/tenth_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Tenth\"}"
+    },
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "extra_shells:textures/blockentity/shell/rtd/bad_wolf.png"
+      },
+      "id": "tardis_refined:bad_wolf",
+      "interior": {
+        "emissive": false,
+        "texture": "extra_shells:textures/blockentity/shell/rtd/bad_wolf_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Bad Wolf\"}"
+    }
+  ]
+}

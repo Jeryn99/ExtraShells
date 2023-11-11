@@ -38,6 +38,9 @@ public class TEPatterns implements DataProvider {
         addDefaultPattern(TEShellThemes.ELLEN, "default", true);
         addDefaultPattern(TEShellThemes.ENGINEERS, "default", true);
         addDefaultPattern(TEShellThemes.SEA_BLUE, "default", true);
+        addDefaultPattern(TEShellThemes.RTD, "default", true);
+        addDefaultPattern(TEShellThemes.RTD, "tenth", true);
+        addDefaultPattern(TEShellThemes.RTD, "bad_wolf", false);
 
         addDefaultPattern(TEShellThemes.MOFFAT, "default", true);
         addDefaultPattern(TEShellThemes.MOFFAT, "twelfth", true);

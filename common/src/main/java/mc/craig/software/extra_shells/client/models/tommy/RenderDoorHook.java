@@ -4,10 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 import mc.craig.software.extra_shells.ESModelRegistry;
 import mc.craig.software.extra_shells.TEShellThemes;
-import mc.craig.software.extra_shells.client.models.tommy.doors.EllenDoorModel;
-import mc.craig.software.extra_shells.client.models.tommy.doors.EngineerDoorModel;
-import mc.craig.software.extra_shells.client.models.tommy.doors.MoffatDoorModel;
-import mc.craig.software.extra_shells.client.models.tommy.doors.SeaBlueDoorModel;
+import mc.craig.software.extra_shells.client.models.tommy.doors.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -73,6 +70,14 @@ public class RenderDoorHook {
                 ESModelRegistry.MOFFAT_INT_MODEL = new MoffatDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.MOFFAT_INT));
             }
             currentModel = ESModelRegistry.MOFFAT_INT_MODEL;
+        }
+
+        if (theme == TEShellThemes.RTD) {
+
+            if (ESModelRegistry.RTD_INT_MODEL == null) {
+                ESModelRegistry.RTD_INT_MODEL = new RTDDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.RTD_INT));
+            }
+            currentModel = ESModelRegistry.RTD_INT_MODEL;
         }
 
         TardisClientData reactions = TardisClientData.getInstance(blockEntity.getLevel().dimension());

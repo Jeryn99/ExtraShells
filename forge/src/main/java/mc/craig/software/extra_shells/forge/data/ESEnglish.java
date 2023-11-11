@@ -18,6 +18,7 @@ public class ESEnglish extends LanguageProvider {
         addShell(TEShellThemes.ENGINEERS, "Engineers");
         addShell(TEShellThemes.SEA_BLUE, "Sea Blue");
         addShell(TEShellThemes.MOFFAT, "Moffat");
+        addShell(TEShellThemes.RTD, "RTD");
     }
 
     public void addShell(ShellTheme theme, String name) {
