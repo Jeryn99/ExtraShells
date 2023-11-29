@@ -45,6 +45,9 @@ public class TEPatterns implements DataProvider {
 
         addDefaultPattern(TEShellThemes.MOFFAT, "default", true);
         addDefaultPattern(TEShellThemes.MOFFAT, "twelfth", true);
+
+        addDefaultPattern(TEShellThemes.GLASGOW, "default", true);
+
     }
 
     @Override
@@ -96,7 +99,7 @@ public class TEPatterns implements DataProvider {
 
     private static ShellPattern addDefaultPattern(ShellTheme theme, String patternId, boolean hasEmissiveTexture) {
         ResourceLocation themeId = new ResourceLocation(ExtraShells.MODID, theme.getSerializedName().toLowerCase(Locale.ENGLISH));
-        ShellPattern pattern = (ShellPattern)(new ShellPattern(patternId, new PatternTexture(String.valueOf(exteriorTextureLocation(theme, patternId)), hasEmissiveTexture), new PatternTexture(String.valueOf(interiorTextureLocation(theme, patternId)), hasEmissiveTexture))).setThemeId(themeId);
+        ShellPattern pattern = (ShellPattern)(new ShellPattern(patternId, new PatternTexture(exteriorTextureLocation(theme, patternId), hasEmissiveTexture), new PatternTexture(interiorTextureLocation(theme, patternId), hasEmissiveTexture))).setThemeId(themeId);
         return addDefaultPattern(theme, pattern, hasEmissiveTexture);
     }
 

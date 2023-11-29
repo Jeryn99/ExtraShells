@@ -53,7 +53,7 @@ public class RenderDoorHook {
                 ESModelRegistry.ENGINEERS_INT_MODEL = new EngineerDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.ENGINEERS_INT));
             }
             currentModel = ESModelRegistry.ENGINEERS_INT_MODEL;
-            poseStack.mulPose(Vector3f.YP.rotationDegrees(180));
+           // poseStack.mulPose(Vector3f.YP.rotationDegrees(180));
         }
 
         if (theme == TEShellThemes.ELLEN) {
@@ -70,6 +70,16 @@ public class RenderDoorHook {
                 ESModelRegistry.MOFFAT_INT_MODEL = new MoffatDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.MOFFAT_INT));
             }
             currentModel = ESModelRegistry.MOFFAT_INT_MODEL;
+        }
+
+        if (theme == TEShellThemes.GLASGOW) {
+
+            if (ESModelRegistry.GLASGOW_INT_MODEL == null) {
+                ESModelRegistry.GLASGOW_INT_MODEL = new GlasgowInspiredDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.GLASGOW_INT));
+            }
+            poseStack.translate(0, 1.5, -0.3);
+            poseStack.mulPose(Vector3f.YP.rotationDegrees(180));
+            currentModel = ESModelRegistry.GLASGOW_INT_MODEL;
         }
 
         if (theme == TEShellThemes.RTD) {

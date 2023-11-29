@@ -24,7 +24,7 @@ public class GlobalDoorRendererMixin {
         BlockState blockstate = blockEntity.getBlockState();
         ShellTheme theme = blockstate.getValue(GlobalDoorBlock.SHELL);
 
-        if (theme == TEShellThemes.RTD || theme == TEShellThemes.ELLEN || theme == TEShellThemes.ENGINEERS || theme == TEShellThemes.MOFFAT || theme == TEShellThemes.SEA_BLUE ) {
+        if (theme == TEShellThemes.RTD || theme == TEShellThemes.GLASGOW || theme == TEShellThemes.ELLEN || theme == TEShellThemes.ENGINEERS || theme == TEShellThemes.MOFFAT || theme == TEShellThemes.SEA_BLUE ) {
             RenderDoorHook.renderDoorModel(blockEntity, partialTick, poseStack, bufferSource, packedLight, packedOverlay, ci);
             ci.cancel();
         }

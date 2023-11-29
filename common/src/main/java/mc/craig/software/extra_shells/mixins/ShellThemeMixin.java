@@ -33,12 +33,14 @@ public class ShellThemeMixin {
         var ellen = create("ELLEN", $VALUES.length, "ellen");
         var moffat = create("MOFFAT", $VALUES.length, "moffat");
         var rtd = create("RTD", $VALUES.length, "rtd");
+        var glasgow = create("GLASGOW", $VALUES.length, "glasgow");
 
         TEShellThemes.SEA_BLUE = tommy_bricks;
         TEShellThemes.ENGINEERS = teacup;
         TEShellThemes.ELLEN = ellen;
         TEShellThemes.MOFFAT = moffat;
         TEShellThemes.RTD = rtd;
+        TEShellThemes.GLASGOW = glasgow;
 
         ArrayList<ShellTheme> arrayList = new ArrayList(Arrays.asList($VALUES));
         arrayList.add(teacup);
@@ -46,6 +48,7 @@ public class ShellThemeMixin {
         arrayList.add(ellen);
         arrayList.add(moffat);
         arrayList.add(rtd);
+        arrayList.add(glasgow);
 
         $VALUES = arrayList.toArray(new ShellTheme[0]);
     }

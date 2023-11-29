@@ -57,5 +57,13 @@ public class ShellModelCollectionMixin {
             cir.setReturnValue(ESModelRegistry.RTD_EXT_MODEL);
         }
 
+        if (theme == TEShellThemes.GLASGOW) {
+
+            if (ESModelRegistry.GLASGOW_EXT_MODEL == null) {
+                ESModelRegistry.GLASGOW_EXT_MODEL = new GlasgowInspiredShellModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.GLASGOW_EXT));
+            }
+            cir.setReturnValue(ESModelRegistry.GLASGOW_EXT_MODEL);
+        }
+
     }
 }
