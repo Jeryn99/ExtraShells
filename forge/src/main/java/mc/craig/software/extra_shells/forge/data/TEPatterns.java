@@ -48,6 +48,9 @@ public class TEPatterns implements DataProvider {
 
         addDefaultPattern(TEShellThemes.GLASGOW, "default", true);
 
+        addDefaultPattern(TEShellThemes.CHIBNALL, "default", true);
+        addDefaultPattern(TEShellThemes.CHIBNALL, "fourteen", true);
+
     }
 
     @Override

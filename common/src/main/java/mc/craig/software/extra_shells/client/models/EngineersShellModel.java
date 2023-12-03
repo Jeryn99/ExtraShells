@@ -1,4 +1,4 @@
-package mc.craig.software.extra_shells.client.models.tommy;
+package mc.craig.software.extra_shells.client.models;
 
 
 import com.mojang.blaze3d.vertex.PoseStack;

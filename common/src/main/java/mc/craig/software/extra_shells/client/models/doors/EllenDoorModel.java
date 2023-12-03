@@ -1,4 +1,4 @@
-package mc.craig.software.extra_shells.client.models.tommy.doors;
+package mc.craig.software.extra_shells.client.models.doors;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -18,6 +18,7 @@ public class EllenDoorModel extends ShellModel {
     private final ModelPart right_door;
     private final ModelPart frame;
     private final ModelPart bb_main;
+    private final ModelPart root;
 
     public EllenDoorModel(ModelPart root) {
         super(root);
@@ -25,6 +26,7 @@ public class EllenDoorModel extends ShellModel {
         this.right_door = root.getChild("right_door");
         this.frame = root.getChild("frame");
         this.bb_main = root.getChild("bb_main");
+        this.root = root;
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -73,10 +75,12 @@ public class EllenDoorModel extends ShellModel {
         bb_main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
+    @Override
     public ModelPart root() {
-        return this.frame;
+        return this.root;
     }
 
+    @Override
     public void setupAnim(Entity entity, float f, float g, float h, float i, float j) {
     }
 
@@ -85,10 +89,11 @@ public class EllenDoorModel extends ShellModel {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 
+    @Override
     public void renderShell(GlobalShellBlockEntity entity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
     }
 
-
+    @Override
     public boolean isDoorModel() {
         return true;
     }

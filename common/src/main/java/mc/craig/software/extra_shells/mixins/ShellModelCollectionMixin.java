@@ -2,7 +2,7 @@ package mc.craig.software.extra_shells.mixins;
 
 import mc.craig.software.extra_shells.ESModelRegistry;
 import mc.craig.software.extra_shells.TEShellThemes;
-import mc.craig.software.extra_shells.client.models.tommy.*;
+import mc.craig.software.extra_shells.client.models.*;
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -63,6 +63,14 @@ public class ShellModelCollectionMixin {
                 ESModelRegistry.GLASGOW_EXT_MODEL = new GlasgowInspiredShellModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.GLASGOW_EXT));
             }
             cir.setReturnValue(ESModelRegistry.GLASGOW_EXT_MODEL);
+        }
+
+        if (theme == TEShellThemes.CHIBNALL) {
+
+            if (ESModelRegistry.CHIBNALL_EXT_MODEL == null) {
+                ESModelRegistry.CHIBNALL_EXT_MODEL = new ChibnallShellModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.CHIBNALL_EXT));
+            }
+            cir.setReturnValue(ESModelRegistry.CHIBNALL_EXT_MODEL);
         }
 
     }
