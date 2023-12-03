@@ -10,6 +10,7 @@ import whocraft.tardis_refined.client.model.blockentity.shell.ShellModel;
 import whocraft.tardis_refined.common.blockentity.shell.GlobalShellBlockEntity;
 
 public class GlasgowInspiredShellModel extends ShellModel {
+
     private final ModelPart left_door;
     private final ModelPart right_door;
     private final ModelPart frame;
@@ -31,15 +32,15 @@ public class GlasgowInspiredShellModel extends ShellModel {
 
         PartDefinition right_door = partdefinition.addOrReplaceChild("right_door", CubeListBuilder.create().texOffs(56, 84).addBox(-9.0F, -17.0F, -2.0F, 9.0F, 34.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(9.5F, 5.0F, -9.0F));
 
-        PartDefinition frame = partdefinition.addOrReplaceChild("frame", CubeListBuilder.create().texOffs(40, 84).addBox(-12.5F, -43.0F, -12.5F, 4.0F, 41.0F, 4.0F, new CubeDeformation(0.0F))
+        PartDefinition frame = partdefinition.addOrReplaceChild("frame", CubeListBuilder.create().texOffs(0, 29).addBox(-11.5F, -42.0F, -11.5F, 24.0F, 6.0F, 24.0F, new CubeDeformation(0.0F))
+                .texOffs(66, 59).addBox(-9.5F, -41.0F, -13.5F, 20.0F, 4.0F, 3.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 59).addBox(-10.5F, -45.0F, -10.5F, 22.0F, 3.0F, 22.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 0).addBox(-1.5F, -50.0F, -1.5F, 4.0F, 5.0F, 4.0F, new CubeDeformation(0.0F))
+                .texOffs(40, 84).addBox(-12.5F, -43.0F, -12.5F, 4.0F, 41.0F, 4.0F, new CubeDeformation(0.0F))
                 .texOffs(40, 84).addBox(9.5F, -43.0F, -12.5F, 4.0F, 41.0F, 4.0F, new CubeDeformation(0.0F))
                 .texOffs(40, 84).addBox(9.5F, -43.0F, 9.5F, 4.0F, 41.0F, 4.0F, new CubeDeformation(0.0F))
                 .texOffs(40, 84).addBox(-12.5F, -43.0F, 9.5F, 4.0F, 41.0F, 4.0F, new CubeDeformation(0.0F))
-                .texOffs(0, 0).addBox(-13.0F, -2.0F, -13.0F, 27.0F, 2.0F, 27.0F, new CubeDeformation(0.0F))
-                .texOffs(0, 29).addBox(-11.5F, -42.0F, -11.5F, 24.0F, 6.0F, 24.0F, new CubeDeformation(0.0F))
-                .texOffs(66, 59).addBox(-9.5F, -41.0F, -13.5F, 20.0F, 4.0F, 3.0F, new CubeDeformation(0.0F))
-                .texOffs(0, 59).addBox(-10.5F, -45.0F, -10.5F, 22.0F, 3.0F, 22.0F, new CubeDeformation(0.0F))
-                .texOffs(0, 0).addBox(-1.5F, -50.0F, -1.5F, 4.0F, 5.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+                .texOffs(0, 0).addBox(-13.0F, -2.0F, -13.0F, 27.0F, 2.0F, 27.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
         PartDefinition Sign_r1 = frame.addOrReplaceChild("Sign_r1", CubeListBuilder.create().texOffs(66, 59).addBox(-10.5F, -41.0F, -14.5F, 20.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -3.1416F, 0.0F, 3.1416F));
 
@@ -58,9 +59,8 @@ public class GlasgowInspiredShellModel extends ShellModel {
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        left_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-        right_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-        frame.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+        this.root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+
     }
 
     @Override
@@ -82,15 +82,10 @@ public class GlasgowInspiredShellModel extends ShellModel {
             poseStack.scale(1.05F, 1.05F, 1.05F);
             poseStack.translate(0.0, -0.07, 0.0);
         }
-
-        this.handleAllAnimations(entity, this.frame, isBaseModel, open, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-        this.frame.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, this.getCurrentAlpha());
-        this.left_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, this.getCurrentAlpha());
-        this.right_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, this.getCurrentAlpha());
-
+        this.handleAllAnimations(entity, this.root(), isBaseModel, open, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
     public boolean isDoorModel() {
-        return true;
+        return false;
     }
 }

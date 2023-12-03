@@ -16,7 +16,7 @@ public class ESModelRegistry {
     public static SeaBlueShellModel TOMMY_EXT_MODEL;
     public static EngineersShellModel ENGINEERS_EXT_MODEL;
     public static EllenShellModel  ELLEN_EXT_MODEL;
-    public static MoffatShellModel MOFFAT_EXT_MODEL;
+    public static MoffatBoxShell MOFFAT_EXT_MODEL;
     public static RTDShellModel RTD_EXT_MODEL;
     public static ChibnallShellModel CHIBNALL_EXT_MODEL;
     public static GlasgowInspiredShellModel GLASGOW_EXT_MODEL;
@@ -39,7 +39,7 @@ public class ESModelRegistry {
         ENGINEERS_EXT = register(new ModelLayerLocation(new ResourceLocation(TardisRefined.MODID, "engineers_ext"), "engineers_ext"), EngineersShellModel::createBodyLayer);
         TOMMY_EXT = register(new ModelLayerLocation(new ResourceLocation(TardisRefined.MODID, "tommy_ext"), "tommy_ext"), SeaBlueShellModel::createBodyLayer);
         ELLEN_EXT = register(new ModelLayerLocation(new ResourceLocation(TardisRefined.MODID, "ellen_ext"), "ellen_ext"), EllenShellModel::createBodyLayer);
-        MOFFAT_EXT = register(new ModelLayerLocation(new ResourceLocation(TardisRefined.MODID, "moffat_ext"), "moffat_ext"), MoffatShellModel::createBodyLayer);
+        MOFFAT_EXT = register(new ModelLayerLocation(new ResourceLocation(TardisRefined.MODID, "moffat_ext"), "moffat_ext"), MoffatBoxShell::createBodyLayer);
         RTD_EXT = register(new ModelLayerLocation(new ResourceLocation(TardisRefined.MODID, "rtd_ext"), "rtd_ext"), RTDShellModel::createBodyLayer);
         GLASGOW_EXT = register(new ModelLayerLocation(new ResourceLocation(TardisRefined.MODID, "glasgow_ext"), "glasgow_ext"), GlasgowInspiredShellModel::createBodyLayer);
         CHIBNALL_EXT = register(new ModelLayerLocation(new ResourceLocation(TardisRefined.MODID, "chibnall_ext"), "chibnall_ext"), ChibnallShellModel::createBodyLayer);
