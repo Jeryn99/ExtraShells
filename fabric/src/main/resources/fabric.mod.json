@@ -9,7 +9,10 @@
   "license": "All Rights Reserved",
   "icon": "icon.png",
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": ["mc.craig.software.extra_shells.fabric.ExtraShellsFabric"],
+    "client": ["mc.craig.software.extra_shells.fabric.ExtraShellsClientFabric"]
+  },
   "mixins": [
     "extra_shells.mixins.json",
     "extra_shells-common.mixins.json"

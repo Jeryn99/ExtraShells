@@ -18,7 +18,7 @@ import whocraft.tardis_refined.common.tardis.themes.ShellTheme;
 public class GlobalDoorRendererMixin {
 
 
-    @Inject(cancellable = true, method = "render(Lwhocraft/tardis_refined/common/blockentity/door/GlobalDoorBlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V", at = @At("HEAD"), remap = false)
+    @Inject(cancellable = true, method = "render(Lwhocraft/tardis_refined/common/blockentity/door/GlobalDoorBlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V", at = @At("HEAD"), remap = true)
     public void renderDoorModel(GlobalDoorBlockEntity blockEntity, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay, CallbackInfo ci) {
 
         BlockState blockstate = blockEntity.getBlockState();

@@ -18,7 +18,6 @@ public class ShellModelCollectionMixin {
 
     @Inject(cancellable = true, method = "getShellModel(Lwhocraft/tardis_refined/common/tardis/themes/ShellTheme;)Lwhocraft/tardis_refined/client/model/blockentity/shell/ShellModel;", at = @At("HEAD"), remap = false)
     public void getShellModel(ShellTheme theme, CallbackInfoReturnable<ShellModel> cir) {
-
         EntityModelSet entityModels = Minecraft.getInstance().getEntityModels();
 
         if (theme == TEShellThemes.SEA_BLUE) {
