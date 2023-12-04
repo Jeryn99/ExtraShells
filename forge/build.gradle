@@ -29,7 +29,7 @@ configurations {
 
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
-    modApi "ignored:tardis_refined:1.0.2:forge"
+    modApi "ignored:tardis_refined:1.0.1:forge"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }

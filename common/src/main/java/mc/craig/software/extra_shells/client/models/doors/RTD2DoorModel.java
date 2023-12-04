@@ -80,7 +80,7 @@ public class RTD2DoorModel extends ShellModel {
     }
 
     @Override
-    public void setDoorOpen(boolean open) {
+    public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 
