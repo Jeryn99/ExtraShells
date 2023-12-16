@@ -75,5 +75,28 @@ public class ShellModelCollectionMixin {
             cir.setReturnValue(ESModelRegistry.CHIBNALL_EXT_MODEL);
         }
 
+        if (theme == TEShellThemes.JACK_CUSTOM) {
+            if (ESModelRegistry.JACK_CUSTOM_EXT_MODEL == null) {
+                ESModelRegistry.JACK_CUSTOM_EXT_MODEL = new JackShellModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_EXT));
+            }
+            cir.setReturnValue(ESModelRegistry.JACK_CUSTOM_EXT_MODEL);
+        }
+
+        if (theme == TEShellThemes.LEGO_IDEAS) {
+            if (ESModelRegistry.LEGO_IDEAS_EXT_MODEL == null) {
+                ESModelRegistry.LEGO_IDEAS_EXT_MODEL = new LegoIdeasShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_IDEAS_EXT));
+            }
+            cir.setReturnValue(ESModelRegistry.LEGO_IDEAS_EXT_MODEL);
+        }
+
+        if (theme == TEShellThemes.HUDOLIN) {
+            if (ESModelRegistry.HUDOLIN_EXT_MODEL == null) {
+                ESModelRegistry.HUDOLIN_EXT_MODEL = new HudolinShellModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
+            }
+            cir.setReturnValue(ESModelRegistry.HUDOLIN_EXT_MODEL);
+        }
+
+
+
     }
 }

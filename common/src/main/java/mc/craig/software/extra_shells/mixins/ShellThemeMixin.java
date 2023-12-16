@@ -35,6 +35,9 @@ public class ShellThemeMixin {
         var rtd = create("RTD", $VALUES.length, "rtd");
         var glasgow = create("GLASGOW", $VALUES.length, "glasgow");
         var chibnall = create("CHIBNALL", $VALUES.length, "chibnall");
+        var jack_custom = create("jack_custom", $VALUES.length, "jack_custom");
+        var lego_ideas = create("lego_ideas", $VALUES.length, "lego_ideas");
+        var hudolin = create("hudolin", $VALUES.length, "hudolin");
 
         TEShellThemes.SEA_BLUE = tommy_bricks;
         TEShellThemes.ENGINEERS = teacup;
@@ -43,6 +46,9 @@ public class ShellThemeMixin {
         TEShellThemes.RTD = rtd;
         TEShellThemes.GLASGOW = glasgow;
         TEShellThemes.CHIBNALL = chibnall;
+        TEShellThemes.JACK_CUSTOM = jack_custom;
+        TEShellThemes.LEGO_IDEAS = lego_ideas;
+        TEShellThemes.HUDOLIN = hudolin;
 
         ArrayList<ShellTheme> arrayList = new ArrayList<>(Arrays.asList($VALUES));
         arrayList.add(teacup);
@@ -52,6 +58,9 @@ public class ShellThemeMixin {
         arrayList.add(rtd);
         arrayList.add(glasgow);
         arrayList.add(chibnall);
+        arrayList.add(jack_custom);
+        arrayList.add(lego_ideas);
+        arrayList.add(hudolin);
 
         $VALUES = arrayList.toArray(new ShellTheme[0]);
     }

@@ -1,0 +1,16 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/lego_ideas/default.png"
+      },
+      "id": "tardis_refined:default",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/lego_ideas/default_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
+    }
+  ]
+}

@@ -21,6 +21,9 @@ public class ESEnglish extends LanguageProvider {
         addShell(TEShellThemes.RTD, "RTD");
         addShell(TEShellThemes.CHIBNALL, "Chibnall/RTD2");
         addShell(TEShellThemes.GLASGOW, "Glasgow");
+        addShell(TEShellThemes.JACK_CUSTOM, "Jacks Box");
+        addShell(TEShellThemes.LEGO_IDEAS, "Lego Ideas Inspired");
+        addShell(TEShellThemes.HUDOLIN, "Hudolin");
     }
 
     public void addShell(ShellTheme theme, String name) {

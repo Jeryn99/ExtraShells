@@ -89,6 +89,30 @@ public class RenderDoorHook {
             currentModel = ESModelRegistry.RTD_INT_MODEL;
         }
 
+        if (theme == TEShellThemes.JACK_CUSTOM) {
+
+            if (ESModelRegistry.JACK_CUSTOM_INT_MODEL == null) {
+                ESModelRegistry.JACK_CUSTOM_INT_MODEL = new JackDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.JACK_CUSTOM_INT));
+            }
+            currentModel = ESModelRegistry.JACK_CUSTOM_INT_MODEL;
+        }
+
+        if (theme == TEShellThemes.HUDOLIN) {
+
+            if (ESModelRegistry.HUDOLIN_INT_MODEL == null) {
+                ESModelRegistry.HUDOLIN_INT_MODEL = new HudolinDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.HUDOLIN_INT));
+            }
+            currentModel = ESModelRegistry.HUDOLIN_INT_MODEL;
+        }
+
+        if (theme == TEShellThemes.LEGO_IDEAS) {
+
+            if (ESModelRegistry.LEGO_IDEAS_INT_MODEL == null) {
+                ESModelRegistry.LEGO_IDEAS_INT_MODEL = new LegoIdeasDoorModel(Minecraft.getInstance().getEntityModels().bakeLayer(ESModelRegistry.LEGO_IDEAS_INT));
+            }
+            currentModel = ESModelRegistry.LEGO_IDEAS_INT_MODEL;
+        }
+
         if (theme == TEShellThemes.CHIBNALL) {
 
             if(pattern.id().getPath().contains("default")) {

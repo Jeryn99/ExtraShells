@@ -51,6 +51,16 @@ public class TEPatterns implements DataProvider {
         addDefaultPattern(TEShellThemes.CHIBNALL, "default", true);
         addDefaultPattern(TEShellThemes.CHIBNALL, "fourteen", true);
 
+        addDefaultPattern(TEShellThemes.JACK_CUSTOM, "default", true);
+        addDefaultPattern(TEShellThemes.JACK_CUSTOM, "damaged", true);
+
+        addDefaultPattern(TEShellThemes.LEGO_IDEAS, "default", true);
+
+        addDefaultPattern(TEShellThemes.HUDOLIN, "edwardian", true);
+        addDefaultPattern(TEShellThemes.HUDOLIN, "edwardian_worn", true);
+        addDefaultPattern(TEShellThemes.HUDOLIN, "edwardian_alt", true);
+        addDefaultPattern(TEShellThemes.HUDOLIN, "eight", true);
+
     }
 
     @Override
