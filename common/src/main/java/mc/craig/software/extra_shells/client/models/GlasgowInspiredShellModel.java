@@ -53,7 +53,7 @@ public class GlasgowInspiredShellModel extends ShellModel {
         PartDefinition Wall_r2 = frame.addOrReplaceChild("Wall_r2", CubeListBuilder.create().texOffs(0, 84).addBox(1.5F, -17.0F, -11.5F, 18.0F, 34.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.5F, -19.0F, 11.0F, 0.0F, 1.5708F, 0.0F));
 
         PartDefinition Wall_r3 = frame.addOrReplaceChild("Wall_r3", CubeListBuilder.create().texOffs(0, 84).addBox(-9.0F, -17.0F, -1.0F, 18.0F, 34.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(11.0F, -19.0F, 0.5F, 0.0F, -1.5708F, 0.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 

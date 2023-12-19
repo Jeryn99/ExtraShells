@@ -2,7 +2,7 @@ package mc.craig.software.extra_shells.client.models;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
@@ -80,14 +80,14 @@ public class JackShellModel extends ShellModel {
 
         PartDefinition right_door = model.addOrReplaceChild("right_door", CubeListBuilder.create().texOffs(0, 6).addBox(6.5F, -4.0F, 0.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(100, 107).addBox(0.5F, -15.0F, -1.0F, 8.0F, 30.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-8.5F, -18.0F, 12.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 256, 256);
     }
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         poseStack.pushPose();
-        poseStack.mulPose(Vector3f.YP.rotationDegrees(180));
+        poseStack.mulPose(Axis.YP.rotationDegrees(180));
         this.root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         poseStack.popPose();
     }

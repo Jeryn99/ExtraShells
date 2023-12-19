@@ -78,18 +78,13 @@ public class EngineersShellModel extends ShellModel {
         PartDefinition cube_r9 = panels.addOrReplaceChild("cube_r9", CubeListBuilder.create().texOffs(60, 69).addBox(-8.0F, -35.0F, 9.0F, 16.0F, 32.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
 
         PartDefinition cube_r10 = panels.addOrReplaceChild("cube_r10", CubeListBuilder.create().texOffs(94, 27).addBox(-8.0F, -35.0F, 9.0F, 16.0F, 32.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
     @Override
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
-    }
-
-    @Override
-    public boolean isDoorModel() {
-        return false;
     }
 
     @Override

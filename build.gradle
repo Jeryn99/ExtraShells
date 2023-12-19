@@ -41,7 +41,23 @@ allprojects {
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
 
-        flatDir { dirs '../mods' }
+        maven {
+            name = "TARDIS Refined"
+            url = "https://maven.craig.software/repository/whocraft/"
+        }
+
+        maven {
+            url "https://cursemaven.com"
+        }
+
+        maven {
+            url 'https://jitpack.io'
+        }
+
+        maven {
+            name = 'Ladysnake Mods'
+            url = 'https://maven.ladysnake.org/releases'
+        }
 
     }
 

@@ -73,18 +73,13 @@ public class EllenShellModel extends ShellModel {
         PartDefinition cube_r10 = panels.addOrReplaceChild("cube_r10", CubeListBuilder.create().texOffs(0, 67).addBox(-8.0F, -32.0F, 9.0F, 16.0F, 30.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
         PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(36, 117).addBox(-8.0F, -32.0F, -9.0F, 16.0F, 30.0F, 8.0F, new CubeDeformation(-0.05F)), PartPose.offset(0.0F, 24.0F, 0.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 256, 256);
     }
 
     @Override
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
-    }
-
-    @Override
-    public boolean isDoorModel() {
-        return false;
     }
 
     @Override

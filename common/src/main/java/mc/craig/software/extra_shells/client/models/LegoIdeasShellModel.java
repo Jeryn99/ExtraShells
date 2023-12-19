@@ -66,7 +66,7 @@ public class LegoIdeasShellModel extends ShellModel {
         PartDefinition left_door = partdefinition.addOrReplaceChild("left_door", CubeListBuilder.create().texOffs(88, 91).addBox(0.0F, -25.0F, -1.0F, 8.0F, 23.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-8.0F, 21.0F, -10.0F));
 
         PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(0, 54).addBox(-8.5F, -32.05F, -10.0F, 17.0F, 29.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 256, 256);
     }
 
@@ -74,11 +74,6 @@ public class LegoIdeasShellModel extends ShellModel {
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
         this.left_door.yRot = open ? 275.0F : 0.0F;
-    }
-
-    @Override
-    public boolean isDoorModel() {
-        return false;
     }
 
     @Override

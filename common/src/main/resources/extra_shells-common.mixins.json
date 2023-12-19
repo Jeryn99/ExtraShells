@@ -4,9 +4,6 @@
   "package": "mc.craig.software.extra_shells.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "GlobalDoorRendererMixin",
-    "ShellModelCollectionMixin",
-    "ShellThemeMixin"
   ],
   "client": [
   ],

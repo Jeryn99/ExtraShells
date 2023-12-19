@@ -10,10 +10,12 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.world.entity.Entity;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.ShellDoorModel;
 import whocraft.tardis_refined.client.model.blockentity.shell.ShellModel;
+import whocraft.tardis_refined.common.blockentity.door.GlobalDoorBlockEntity;
 import whocraft.tardis_refined.common.blockentity.shell.GlobalShellBlockEntity;
 
-public class EngineerDoorModel extends ShellModel {
+public class EngineerDoorModel extends ShellDoorModel {
     private final ModelPart left_door;
     private final ModelPart right_door;
     private final ModelPart frame;
@@ -21,7 +23,6 @@ public class EngineerDoorModel extends ShellModel {
     private final ModelPart root;
 
     public EngineerDoorModel(ModelPart root) {
-        super(root);
         this.root = root;
         this.left_door = root.getChild("left_door");
         this.right_door = root.getChild("right_door");
@@ -84,12 +85,11 @@ public class EngineerDoorModel extends ShellModel {
         PartDefinition cube_r13 = panels.addOrReplaceChild("cube_r13", CubeListBuilder.create().texOffs(94, 27).addBox(-8.0F, -35.0F, 9.0F, 16.0F, 32.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 3.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
 
         PartDefinition portal = partdefinition.addOrReplaceChild("portal", CubeListBuilder.create().texOffs(27, 70).addBox(-8.0F, -32.0F, 10.9F, 16.0F, 32.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
-        splice(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+    public void renderInteriorDoor(GlobalDoorBlockEntity doorBlockEntity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         left_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         right_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         frame.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
@@ -101,18 +101,9 @@ public class EngineerDoorModel extends ShellModel {
         return this.root;
     }
 
-    public void setupAnim(Entity entity, float f, float g, float h, float i, float j) {
-    }
-
     @Override
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 
-    public void renderShell(GlobalShellBlockEntity entity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-    }
-
-    public boolean isDoorModel() {
-        return true;
-    }
 }

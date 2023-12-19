@@ -6,17 +6,18 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.ShellDoorModel;
 import whocraft.tardis_refined.client.model.blockentity.shell.ShellModel;
+import whocraft.tardis_refined.common.blockentity.door.GlobalDoorBlockEntity;
 import whocraft.tardis_refined.common.blockentity.shell.GlobalShellBlockEntity;
 
-public class GlasgowInspiredDoorModel extends ShellModel {
+public class GlasgowInspiredDoorModel extends ShellDoorModel {
     private final ModelPart left_door;
     private final ModelPart right_door;
     private final ModelPart frame;
     private final ModelPart root;
 
     public GlasgowInspiredDoorModel(ModelPart root) {
-        super(root);
         this.left_door = root.getChild("left_door");
         this.right_door = root.getChild("right_door");
         this.frame = root.getChild("frame");
@@ -40,12 +41,11 @@ public class GlasgowInspiredDoorModel extends ShellModel {
         PartDefinition right_door = partdefinition.addOrReplaceChild("right_door", CubeListBuilder.create(), PartPose.offset(-9.0F, 5.0F, 4.5F));
 
         PartDefinition Door_r2 = right_door.addOrReplaceChild("Door_r2", CubeListBuilder.create().texOffs(16, 9).addBox(10.0F, -17.0F, -22.0F, 9.0F, 34.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(19.0F, 2.0F, -20.0F, -3.1416F, 0.0F, 3.1416F));
-        splice(partdefinition);
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
 
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+    public void renderInteriorDoor(GlobalDoorBlockEntity doorBlockEntity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         left_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         right_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         frame.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
@@ -55,18 +55,8 @@ public class GlasgowInspiredDoorModel extends ShellModel {
         return this.root;
     }
 
-    public void setupAnim(Entity entity, float f, float g, float h, float i, float j) {
-    }
-
     @Override
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
-    }
-
-    public void renderShell(GlobalShellBlockEntity entity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-    }
-
-    public boolean isDoorModel() {
-        return true;
     }
 }

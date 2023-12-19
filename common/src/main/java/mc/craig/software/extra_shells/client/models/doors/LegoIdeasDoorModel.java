@@ -10,10 +10,12 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.world.entity.Entity;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.ShellDoorModel;
 import whocraft.tardis_refined.client.model.blockentity.shell.ShellModel;
+import whocraft.tardis_refined.common.blockentity.door.GlobalDoorBlockEntity;
 import whocraft.tardis_refined.common.blockentity.shell.GlobalShellBlockEntity;
 
-public class LegoIdeasDoorModel extends ShellModel {
+public class LegoIdeasDoorModel extends ShellDoorModel {
 
     private final ModelPart left_door;
     private final ModelPart right_door;
@@ -21,7 +23,6 @@ public class LegoIdeasDoorModel extends ShellModel {
     private final ModelPart root;
 
     public LegoIdeasDoorModel(ModelPart root) {
-        super(root);
         this.root = root;
         this.model = root.getChild("frame");
         this.right_door = root.getChild("right_door");
@@ -52,13 +53,11 @@ public class LegoIdeasDoorModel extends ShellModel {
         PartDefinition left_door = partdefinition.addOrReplaceChild("left_door", CubeListBuilder.create(), PartPose.offset(9.0F, 8.0F, 6.0F));
 
         PartDefinition cube_r5 = left_door.addOrReplaceChild("cube_r5", CubeListBuilder.create().texOffs(0, 16).addBox(-9.0F, -32.0F, -8.0F, 9.0F, 29.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-9.0F, 18.0F, -7.0F, -3.1416F, 0.0F, 3.1416F));
-        splice(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
-
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+    public void renderInteriorDoor(GlobalDoorBlockEntity doorBlockEntity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         root().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
@@ -67,19 +66,9 @@ public class LegoIdeasDoorModel extends ShellModel {
         return this.root;
     }
 
-    public void setupAnim(Entity entity, float f, float g, float h, float i, float j) {
-    }
-
     @Override
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? (float) Math.toRadians(75) : 0.0F;
         this.left_door.yRot = open ? (float) Math.toRadians(-75) : 0.0F;
-    }
-
-    public void renderShell(GlobalShellBlockEntity entity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-    }
-
-    public boolean isDoorModel() {
-        return true;
     }
 }

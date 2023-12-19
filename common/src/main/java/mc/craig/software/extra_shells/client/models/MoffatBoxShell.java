@@ -72,18 +72,13 @@ public class MoffatBoxShell extends ShellModel {
                 .texOffs(16, 6).addBox(1.0F, -21.0F, 0.5F, 4.0F, 4.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(-8.0F, 21.0F, -9.0F));
 
         PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(49, 101).addBox(-8.5F, -33.025F, -9.0F, 17.0F, 30.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 256, 256);
     }
 
     @Override
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
-    }
-
-    @Override
-    public boolean isDoorModel() {
-        return false;
     }
 
     @Override

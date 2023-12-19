@@ -6,17 +6,18 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.ShellDoorModel;
 import whocraft.tardis_refined.client.model.blockentity.shell.ShellModel;
+import whocraft.tardis_refined.common.blockentity.door.GlobalDoorBlockEntity;
 import whocraft.tardis_refined.common.blockentity.shell.GlobalShellBlockEntity;
 
-public class HudolinDoorModel extends ShellModel {
+public class HudolinDoorModel extends ShellDoorModel {
     private final ModelPart left_door;
     private final ModelPart right_door;
     private final ModelPart frame;
     private final ModelPart bb_main;
 
     public HudolinDoorModel(ModelPart root) {
-        super(root);
         this.left_door = root.getChild("left_door");
         this.right_door = root.getChild("right_door");
         this.frame = root.getChild("frame");
@@ -75,12 +76,11 @@ public class HudolinDoorModel extends ShellModel {
         PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
 
         PartDefinition portal_r1 = bb_main.addOrReplaceChild("portal_r1", CubeListBuilder.create().texOffs(89, 59).addBox(-7.0F, -33.0F, 10.825F, 14.0F, 30.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 3.0F, 18.0F, 0.0F, 3.1416F, 0.0F));
-        splice(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+    public void renderInteriorDoor(GlobalDoorBlockEntity doorBlockEntity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         left_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         right_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         frame.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
@@ -93,20 +93,8 @@ public class HudolinDoorModel extends ShellModel {
     }
 
     @Override
-    public void setupAnim(Entity entity, float f, float g, float h, float i, float j) {
-    }
-
-    @Override
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 
-    @Override
-    public void renderShell(GlobalShellBlockEntity globalShellBlockEntity, boolean b, boolean b1, PoseStack poseStack, VertexConsumer vertexConsumer, int i, int i1, float v, float v1, float v2, float v3) {
-
-    }
-
-    public boolean isDoorModel() {
-        return true;
-    }
 }

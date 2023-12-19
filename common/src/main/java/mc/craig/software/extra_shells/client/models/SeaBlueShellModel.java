@@ -68,7 +68,7 @@ public class SeaBlueShellModel extends ShellModel {
         PartDefinition cube_r5 = panels.addOrReplaceChild("cube_r5", CubeListBuilder.create().texOffs(72, 57).addBox(-8.0F, -33.0F, 8.0F, 16.0F, 29.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
         PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(80, 123).addBox(-8.0F, -33.0F, -8.0F, 16.0F, 29.0F, 8.0F, new CubeDeformation(-0.05F)), PartPose.offset(0.0F, 24.0F, 0.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 256, 256);
     }
 
@@ -76,11 +76,6 @@ public class SeaBlueShellModel extends ShellModel {
     public void setDoorPosition(boolean open) {
         this.right_door.yRot = open ? (float) Math.toRadians(75) : 0.0F;
         this.left_door.yRot = open ? (float) -Math.toRadians(75) : 0.0F;
-    }
-
-    @Override
-    public boolean isDoorModel() {
-        return false;
     }
 
     @Override

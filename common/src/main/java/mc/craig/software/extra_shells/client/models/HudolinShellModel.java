@@ -90,7 +90,7 @@ public class HudolinShellModel extends ShellModel {
         PartDefinition cube_r11 = left_door.addOrReplaceChild("cube_r11", CubeListBuilder.create().texOffs(0, 34).addBox(2.0F, -19.0F, 3.5F, 2.0F, 7.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(7.0F, 0.0F, 5.0F, -3.1416F, 0.0F, 3.1416F));
 
         PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(80, 54).addBox(-7.5F, -33.1F, -7.0F, 15.0F, 30.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 

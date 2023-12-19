@@ -77,7 +77,7 @@ public class ChibnallShellModel extends ShellModel {
                 .texOffs(5, 21).addBox(7.0F, -22.0F, 0.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-8.0F, 24.0F, -9.0F));
 
         PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(78, 52).addBox(-8.5F, -33.1F, -9.0F, 17.0F, 30.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
-        splice(partdefinition);
+        addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
@@ -86,10 +86,6 @@ public class ChibnallShellModel extends ShellModel {
         this.right_door.yRot = open ? -275.0F : 0.0F;
     }
 
-    @Override
-    public boolean isDoorModel() {
-        return false;
-    }
 
     @Override
     public void renderShell(GlobalShellBlockEntity entity, boolean open, boolean isBaseModel, PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {

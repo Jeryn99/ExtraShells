@@ -3,11 +3,11 @@ dependencies {
     // Do NOT use other classes from fabric loader
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
 
-    modImplementation "ignored:tardis_refined:1.0.1:fabric"
+    modImplementation "whocraft:tardis_refined_fabric:${rootProject.tardis_refined_version}"
 }
 
 architectury {
-    common("fabric", "forge")
+    common("fabric", "neoforge")
 }
 
 

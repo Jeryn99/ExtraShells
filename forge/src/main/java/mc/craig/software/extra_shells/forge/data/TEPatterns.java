@@ -1,137 +1,58 @@
 package mc.craig.software.extra_shells.forge.data;
 
-import com.google.common.base.Preconditions;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.mojang.serialization.JsonOps;
-import mc.craig.software.extra_shells.ExtraShells;
-import mc.craig.software.extra_shells.TEShellThemes;
-import net.minecraft.ChatFormatting;
+import mc.craig.software.extra_shells.ESShellRegistry;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.Style;
-import net.minecraft.resources.ResourceLocation;
-import whocraft.tardis_refined.TardisRefined;
-import whocraft.tardis_refined.common.tardis.themes.ConsoleTheme;
-import whocraft.tardis_refined.common.tardis.themes.ShellTheme;
-import whocraft.tardis_refined.common.util.Platform;
-import whocraft.tardis_refined.patterns.*;
+import whocraft.tardis_refined.common.data.ShellPatternProvider;
+import whocraft.tardis_refined.patterns.ShellPattern;
+import whocraft.tardis_refined.patterns.ShellPatterns;
 
 import java.io.IOException;
-import java.nio.file.Path;
-import java.util.*;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
-public class TEPatterns implements DataProvider {
+public class TEPatterns extends ShellPatternProvider {
 
-    protected final DataGenerator generator;
-    private static Map<ResourceLocation, ShellPatternCollection> PATTERNS = new HashMap<>();
-
-    public TEPatterns(DataGenerator generator) {
-        Preconditions.checkNotNull(generator);
-        this.generator = generator;
-    }
-
-    /** To be used by child classes to add new patterns after defaults are registered*/
-    protected void addPatterns(){
-        addDefaultPattern(TEShellThemes.ELLEN, "default", true);
-        addDefaultPattern(TEShellThemes.ENGINEERS, "default", true);
-        addDefaultPattern(TEShellThemes.SEA_BLUE, "default", true);
-        addDefaultPattern(TEShellThemes.RTD, "default", true);
-        addDefaultPattern(TEShellThemes.RTD, "tenth", true);
-        addDefaultPattern(TEShellThemes.RTD, "bad_wolf", true);
-        addDefaultPattern(TEShellThemes.RTD, "jack", true);
-
-        addDefaultPattern(TEShellThemes.MOFFAT, "default", true);
-        addDefaultPattern(TEShellThemes.MOFFAT, "twelfth", true);
-
-        addDefaultPattern(TEShellThemes.GLASGOW, "default", true);
-
-        addDefaultPattern(TEShellThemes.CHIBNALL, "default", true);
-        addDefaultPattern(TEShellThemes.CHIBNALL, "fourteen", true);
-
-        addDefaultPattern(TEShellThemes.JACK_CUSTOM, "default", true);
-        addDefaultPattern(TEShellThemes.JACK_CUSTOM, "damaged", true);
-
-        addDefaultPattern(TEShellThemes.LEGO_IDEAS, "default", true);
-
-        addDefaultPattern(TEShellThemes.HUDOLIN, "edwardian", true);
-        addDefaultPattern(TEShellThemes.HUDOLIN, "edwardian_worn", true);
-        addDefaultPattern(TEShellThemes.HUDOLIN, "edwardian_alt", true);
-        addDefaultPattern(TEShellThemes.HUDOLIN, "eight", true);
-
-    }
 
     @Override
-    public void run(CachedOutput arg) throws IOException {
+    protected void addPatterns() {
+        super.addPatterns();
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.ELLEN.getId(), "default", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.ENGINEERS.getId(), "default", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.SEA_BLUE.getId(), "default", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.RTD_ERA.getId(), "default", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.RTD_ERA.getId(), "tenth", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.RTD_ERA.getId(), "bad_wolf", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.RTD_ERA.getId(), "jack", true);
 
-        this.addPatterns();
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.MOFFAT_ERA.getId(), "default", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.MOFFAT_ERA.getId(), "twelfth", true);
 
-        if (!PATTERNS.isEmpty()){
-            PATTERNS.entrySet().forEach(entry -> {
-                try {
-                    ShellPatternCollection patternCollection = entry.getValue();
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.GLASGOW.getId(), "default", true);
 
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.CHIBNALL_RTD_ERA.getId(), "default", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.CHIBNALL_RTD_ERA.getId(), "fourteen", true);
 
-                    JsonObject currentPatternCollection = ShellPatternCollection.CODEC.encodeStart(JsonOps.INSTANCE, patternCollection).get()
-                            .ifRight(right -> {
-                                TardisRefined.LOGGER.error(right.message());
-                            }).orThrow().getAsJsonObject();
-                    Path output = getPath(patternCollection.themeId());
-                    DataProvider.saveStable(arg, currentPatternCollection, output);
-                } catch (Exception exception) {
-                    TardisRefined.LOGGER.debug("Issue writing ShellPatternCollection {}! Error: {}", entry.getValue().themeId(), exception.getMessage());
-                }
-            });
-        }
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.JACK_CUSTOM.getId(), "default", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.JACK_CUSTOM.getId(), "damaged", true);
+
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.LEGO.getId(), "default", true);
+
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.HUDOLIN.getId(), "edwardian", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.HUDOLIN.getId(), "edwardian_worn", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.HUDOLIN.getId(), "edwardian_alt", true);
+        ESShellRegistry.addDefaultPattern(ESShellRegistry.HUDOLIN.getId(), "eight", true);
     }
 
-    private static ShellPattern addDefaultPattern(ShellTheme theme, ShellPattern datagenPattern, boolean isEmmsive) {
-        ResourceLocation themeId = new ResourceLocation("tardis_refined", theme.getSerializedName().toLowerCase(Locale.ENGLISH));
-        ShellPattern pattern = (ShellPattern)datagenPattern.setThemeId(themeId);
-        ShellPatternCollection collection;
-        if (PATTERNS.containsKey(themeId)) {
-            collection = PATTERNS.get(themeId);
-            List<ShellPattern> currentList = new ArrayList();
-            currentList.addAll(collection.patterns());
-            currentList.add(pattern);
-            collection.setPatterns(currentList);
-            PATTERNS.replace(themeId, collection);
-        } else {
-            collection = (ShellPatternCollection)(new ShellPatternCollection(List.of(pattern))).setThemeId(themeId);
-            PATTERNS.put(themeId, collection);
-        }
-
-        if (!Platform.isProduction()) {
-            TardisRefined.LOGGER.info("Adding Shell Pattern {} for {}", pattern.id(), themeId);
-        }
-
-        return pattern;
-    }
-
-    private static ShellPattern addDefaultPattern(ShellTheme theme, String patternId, boolean hasEmissiveTexture) {
-        ResourceLocation themeId = new ResourceLocation(ExtraShells.MODID, theme.getSerializedName().toLowerCase(Locale.ENGLISH));
-        ShellPattern pattern = (ShellPattern)(new ShellPattern(patternId, new PatternTexture(exteriorTextureLocation(theme, patternId), hasEmissiveTexture), new PatternTexture(interiorTextureLocation(theme, patternId), hasEmissiveTexture))).setThemeId(themeId);
-        return addDefaultPattern(theme, pattern, hasEmissiveTexture);
-    }
-
-    private static ResourceLocation exteriorTextureLocation(ShellTheme shellTheme, String textureName) {
-        String var10003 = shellTheme.getSerializedName().toLowerCase(Locale.ENGLISH);
-        return new ResourceLocation(ExtraShells.MODID, "textures/blockentity/shell/" + var10003 + "/" + textureName + ".png");
-    }
-
-    private static ResourceLocation interiorTextureLocation(ShellTheme shellTheme, String textureName) {
-        String var10003 = shellTheme.getSerializedName().toLowerCase(Locale.ENGLISH);
-        return new ResourceLocation(ExtraShells.MODID, "textures/blockentity/shell/" + var10003 + "/" + textureName + "_interior.png");
-    }
-
-    protected Path getPath(ResourceLocation themeId) {
-        return generator.getOutputFolder().resolve("data/" + TardisRefined.MODID + "/" + TardisRefined.MODID + "/patterns/shell/" + themeId.getPath() + ".json");
+    public TEPatterns(DataGenerator generator) {
+        super(generator);
     }
 
     @Override
     public String getName() {
-        return "Shell Patterns";
+        return "ExtraShells Patterns";
     }
+
+
 }
