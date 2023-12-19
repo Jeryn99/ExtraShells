@@ -2,13 +2,13 @@
   "patterns": [
     {
       "exterior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/ellen/default.png"
+        "emissive": false,
+        "texture": "tardis_refined:textures/blockentity/shell/ellen/ellen.png"
       },
       "id": "tardis_refined:default",
       "interior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/ellen/default_interior.png"
+        "emissive": false,
+        "texture": "tardis_refined:textures/blockentity/shell/ellen/ellen_interior.png"
       },
       "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }

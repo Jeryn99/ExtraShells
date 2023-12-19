@@ -2,13 +2,13 @@
   "patterns": [
     {
       "exterior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/glasgow/default.png"
+        "emissive": false,
+        "texture": "tardis_refined:textures/blockentity/shell/glasgow/glasgow.png"
       },
       "id": "tardis_refined:default",
       "interior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/glasgow/default_interior.png"
+        "emissive": false,
+        "texture": "tardis_refined:textures/blockentity/shell/glasgow/glasgow_interior.png"
       },
       "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }

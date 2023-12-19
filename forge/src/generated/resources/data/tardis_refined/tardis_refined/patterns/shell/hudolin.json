@@ -2,51 +2,15 @@
   "patterns": [
     {
       "exterior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian.png"
+        "emissive": false,
+        "texture": "tardis_refined:textures/blockentity/shell/hudolin/hudolin.png"
       },
-      "id": "tardis_refined:edwardian",
+      "id": "tardis_refined:default",
       "interior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_interior.png"
+        "emissive": false,
+        "texture": "tardis_refined:textures/blockentity/shell/hudolin/hudolin_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Edwardian\"}"
-    },
-    {
-      "exterior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_worn.png"
-      },
-      "id": "tardis_refined:edwardian_worn",
-      "interior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_worn_interior.png"
-      },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Edwardian Worn\"}"
-    },
-    {
-      "exterior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_alt.png"
-      },
-      "id": "tardis_refined:edwardian_alt",
-      "interior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_alt_interior.png"
-      },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Edwardian Alt\"}"
-    },
-    {
-      "exterior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/eight.png"
-      },
-      "id": "tardis_refined:eight",
-      "interior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/eight_interior.png"
-      },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Eight\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }
   ]
 }

@@ -3,12 +3,12 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/lego_ideas/default.png"
+        "texture": "tardis_refined:textures/blockentity/shell/nuka/nuka.png"
       },
       "id": "tardis_refined:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/lego_ideas/default_interior.png"
+        "texture": "tardis_refined:textures/blockentity/shell/nuka/nuka_interior.png"
       },
       "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }

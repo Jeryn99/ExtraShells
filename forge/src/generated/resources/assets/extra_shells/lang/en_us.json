@@ -1,12 +1,12 @@
 {
-  "shell.tardis_refined.chibnall": "Chibnall/RTD2",
-  "shell.tardis_refined.ellen": "Ellen",
-  "shell.tardis_refined.engineers": "Engineers",
-  "shell.tardis_refined.glasgow": "Glasgow",
-  "shell.tardis_refined.hudolin": "Hudolin",
-  "shell.tardis_refined.jack_custom": "Jacks Box",
-  "shell.tardis_refined.lego_ideas": "Lego Ideas Inspired",
-  "shell.tardis_refined.moffat": "Moffat",
-  "shell.tardis_refined.rtd": "RTD",
-  "shell.tardis_refined.sea_blue": "Sea Blue"
+  "shell.extra_shells.chibnall_rtd_era": "Chibnall/RTD2",
+  "shell.extra_shells.ellen": "Ellen",
+  "shell.extra_shells.engineers": "Engineers",
+  "shell.extra_shells.glasgow": "Glasgow",
+  "shell.extra_shells.hudolin": "Hudolin",
+  "shell.extra_shells.jack_custom": "Jacks Box",
+  "shell.extra_shells.lego": "Lego",
+  "shell.extra_shells.moffat_era": "Moffat",
+  "shell.extra_shells.rtd_era": "RTD",
+  "shell.extra_shells.sea_blue": "Sea Blue"
 }

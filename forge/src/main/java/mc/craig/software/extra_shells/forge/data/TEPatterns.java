@@ -17,7 +17,6 @@ public class TEPatterns extends ShellPatternProvider {
 
     @Override
     protected void addPatterns() {
-        super.addPatterns();
         ESShellRegistry.addDefaultPattern(ESShellRegistry.ELLEN.getId(), "default", true);
         ESShellRegistry.addDefaultPattern(ESShellRegistry.ENGINEERS.getId(), "default", true);
         ESShellRegistry.addDefaultPattern(ESShellRegistry.SEA_BLUE.getId(), "default", true);

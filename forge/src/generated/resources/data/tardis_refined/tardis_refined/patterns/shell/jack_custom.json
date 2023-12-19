@@ -2,27 +2,15 @@
   "patterns": [
     {
       "exterior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/jack_custom/default.png"
+        "emissive": false,
+        "texture": "tardis_refined:textures/blockentity/shell/jack_custom/jack_custom.png"
       },
       "id": "tardis_refined:default",
       "interior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/jack_custom/default_interior.png"
+        "emissive": false,
+        "texture": "tardis_refined:textures/blockentity/shell/jack_custom/jack_custom_interior.png"
       },
       "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
-    },
-    {
-      "exterior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/jack_custom/damaged.png"
-      },
-      "id": "tardis_refined:damaged",
-      "interior": {
-        "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/jack_custom/damaged_interior.png"
-      },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Damaged\"}"
     }
   ]
 }

@@ -13,7 +13,7 @@ import static whocraft.tardis_refined.patterns.ShellPatterns.interiorTextureLoca
 
 public class ESShellRegistry {
 
-    public static final DeferredRegistry<ShellTheme> SHELL_THEMES = DeferredRegistry.create(TardisRefined.MODID, ShellTheme.SHELL_THEME_REGISTRY_KEY);
+    public static final DeferredRegistry<ShellTheme> SHELL_THEMES = DeferredRegistry.create(ExtraShells.MODID, ShellTheme.SHELL_THEME_REGISTRY_KEY);
 
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> ENGINEERS = registerShellTheme("engineers");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> SEA_BLUE = registerShellTheme("sea_blue");
@@ -33,7 +33,7 @@ public class ESShellRegistry {
 
     public static ShellPattern addDefaultPattern(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture) {
         ShellPattern pattern = (ShellPattern) new ShellPattern(patternName, new PatternTexture(ShellPatterns.exteriorTextureLocation(themeId, ExtraShells.MODID, patternName), hasEmissiveTexture)
-                , new PatternTexture(interiorTextureLocation(themeId, ExtraShells.MODID, patternName), hasEmissiveTexture)).setThemeId(themeId);
+                , new PatternTexture(interiorTextureLocation(themeId, ExtraShells.MODID, patternName), hasEmissiveTexture)).setThemeId(new ResourceLocation(ExtraShells.MODID, themeId.getPath()));
         return ShellPatterns.addDefaultPattern(themeId, pattern);
     }
 

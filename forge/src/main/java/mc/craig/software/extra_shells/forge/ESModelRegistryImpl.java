@@ -1,5 +1,7 @@
 package mc.craig.software.extra_shells.forge;
 
+import mc.craig.software.extra_shells.ESModelRegistry;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -19,5 +21,6 @@ public class ESModelRegistryImpl {
 
     public static void register(EntityRenderersEvent.RegisterLayerDefinitions event) {
         DEFINITIONS.forEach(event::registerLayerDefinition);
+        ESModelRegistry.setupModelInstances(Minecraft.getInstance().getEntityModels());
     }
 }

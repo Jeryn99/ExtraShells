@@ -8,6 +8,5 @@ public class ExtraShellsClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ESModelRegistry.init();
-        ShellEntryRegistry.init();
     }
 }
