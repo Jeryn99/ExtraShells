@@ -20,6 +20,7 @@ public class TEPatterns extends ShellPatternProvider {
         ESShellRegistry.addDefaultPattern(ESShellRegistry.ELLEN.getId(), "default", true);
         ESShellRegistry.addDefaultPattern(ESShellRegistry.ENGINEERS.getId(), "default", true);
         ESShellRegistry.addDefaultPattern(ESShellRegistry.SEA_BLUE.getId(), "default", true);
+
         ESShellRegistry.addDefaultPattern(ESShellRegistry.RTD_ERA.getId(), "default", true);
         ESShellRegistry.addDefaultPattern(ESShellRegistry.RTD_ERA.getId(), "tenth", true);
         ESShellRegistry.addDefaultPattern(ESShellRegistry.RTD_ERA.getId(), "bad_wolf", true);
