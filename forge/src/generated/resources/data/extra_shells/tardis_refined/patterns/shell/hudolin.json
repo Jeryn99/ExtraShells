@@ -1,0 +1,52 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian.png"
+      },
+      "id": "extra_shells:edwardian",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Edwardian\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_worn.png"
+      },
+      "id": "extra_shells:edwardian_worn",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_worn_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Edwardian Worn\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_alt.png"
+      },
+      "id": "extra_shells:edwardian_alt",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_alt_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Edwardian Alt\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/eight.png"
+      },
+      "id": "extra_shells:eight",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/eight_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Eight\"}"
+    }
+  ]
+}

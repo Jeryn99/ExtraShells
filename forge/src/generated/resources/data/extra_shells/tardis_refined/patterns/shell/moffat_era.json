@@ -1,0 +1,28 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/moffat_era.png"
+      },
+      "id": "extra_shells:moffat_era",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/moffat_era_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Moffat Era\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/twelfth.png"
+      },
+      "id": "extra_shells:twelfth",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/twelfth_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Twelfth\"}"
+    }
+  ]
+}

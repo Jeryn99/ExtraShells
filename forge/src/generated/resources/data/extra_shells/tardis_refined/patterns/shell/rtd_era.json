@@ -1,0 +1,52 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/rtd_era.png"
+      },
+      "id": "extra_shells:rtd_era",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/rtd_era_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Rtd Era\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/tenth.png"
+      },
+      "id": "extra_shells:tenth",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/tenth_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Tenth\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/bad_wolf.png"
+      },
+      "id": "extra_shells:bad_wolf",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/bad_wolf_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Bad Wolf\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/jack.png"
+      },
+      "id": "extra_shells:jack",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/jack_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Jack\"}"
+    }
+  ]
+}

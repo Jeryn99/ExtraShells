@@ -31,11 +31,6 @@ public class ESShellRegistry {
         return SHELL_THEMES.registerHolder(id, () -> new ShellTheme(new ResourceLocation(ExtraShells.MODID, id)));
     }
 
-    public static ShellPattern addDefaultPattern(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture) {
-        ShellPattern pattern = (ShellPattern) new ShellPattern(patternName, new PatternTexture(ShellPatterns.exteriorTextureLocation(themeId, ExtraShells.MODID, patternName), hasEmissiveTexture)
-                , new PatternTexture(interiorTextureLocation(themeId, ExtraShells.MODID, patternName), hasEmissiveTexture)).setThemeId(new ResourceLocation(ExtraShells.MODID, themeId.getPath()));
-        return ShellPatterns.addDefaultPattern(themeId, pattern);
-    }
 
 
 }

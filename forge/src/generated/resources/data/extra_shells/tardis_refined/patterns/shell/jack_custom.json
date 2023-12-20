@@ -1,0 +1,28 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/jack_custom/jack_custom.png"
+      },
+      "id": "extra_shells:jack_custom",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/jack_custom/jack_custom_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Jack Custom\"}"
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/jack_custom/damaged.png"
+      },
+      "id": "extra_shells:damaged",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/jack_custom/damaged_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Damaged\"}"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/sea_blue/sea_blue.png"
+      },
+      "id": "extra_shells:sea_blue",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/sea_blue/sea_blue_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Sea Blue\"}"
+    }
+  ]
+}

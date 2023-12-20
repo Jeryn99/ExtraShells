@@ -1,0 +1,16 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/glasgow/glasgow.png"
+      },
+      "id": "extra_shells:glasgow",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/glasgow/glasgow_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Glasgow\"}"
+    }
+  ]
+}

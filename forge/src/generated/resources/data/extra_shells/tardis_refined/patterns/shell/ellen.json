@@ -1,0 +1,16 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/ellen/ellen.png"
+      },
+      "id": "extra_shells:ellen",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/ellen/ellen_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Ellen\"}"
+    }
+  ]
+}

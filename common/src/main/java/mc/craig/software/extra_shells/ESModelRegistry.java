@@ -84,6 +84,8 @@ public class ESModelRegistry {
         ESModelRegistry.CHIBNALL_EXT_MODEL = new ChibnallShellModel(entityModels.bakeLayer(ESModelRegistry.CHIBNALL_EXT));
         ESModelRegistry.LEGO_IDEAS_EXT_MODEL = new LegoIdeasShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_IDEAS_EXT));
         ESModelRegistry.HUDOLIN_EXT_MODEL = new HudolinShellModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
+        ESModelRegistry.JACK_CUSTOM_EXT_MODEL = new JackShellModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_EXT));
+        ESModelRegistry.ELLEN_EXT_MODEL = new EllenShellModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_EXT));
 
         // Interior Door
         ESModelRegistry.TOMMY_INT_MODEL = new SeaBlueDoorModel(entityModels.bakeLayer(ESModelRegistry.TOMMY_INT));
@@ -96,6 +98,8 @@ public class ESModelRegistry {
         ESModelRegistry.RTD2_INT_MODEL = new RTD2DoorModel(entityModels.bakeLayer(ESModelRegistry.RTD2_INT));
         ESModelRegistry.LEGO_IDEAS_INT_MODEL = new LegoIdeasDoorModel(entityModels.bakeLayer(ESModelRegistry.LEGO_IDEAS_INT));
         ESModelRegistry.HUDOLIN_INT_MODEL = new HudolinDoorModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
+        ESModelRegistry.JACK_CUSTOM_INT_MODEL = new JackDoorModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_INT));
+        ESModelRegistry.ELLEN_INT_MODEL = new EllenDoorModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_INT));
 
         ShellEntryRegistry.init();
     }

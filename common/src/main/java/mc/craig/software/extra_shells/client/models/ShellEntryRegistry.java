@@ -9,7 +9,8 @@ public class ShellEntryRegistry {
 
     public static void init(){
         ShellModelCollection.registerShellEntry(ESShellRegistry.ENGINEERS.get(), ESModelRegistry.ENGINEERS_EXT_MODEL, ESModelRegistry.ENGINEERS_INT_MODEL);
-        ShellModelCollection.registerShellEntry(ESShellRegistry.SEA_BLUE.get(), ESModelRegistry.ELLEN_EXT_MODEL, ESModelRegistry.ELLEN_INT_MODEL);
+        ShellModelCollection.registerShellEntry(ESShellRegistry.ELLEN.get(), ESModelRegistry.ELLEN_EXT_MODEL, ESModelRegistry.ELLEN_INT_MODEL);
+        ShellModelCollection.registerShellEntry(ESShellRegistry.SEA_BLUE.get(), ESModelRegistry.TOMMY_EXT_MODEL, ESModelRegistry.TOMMY_INT_MODEL);
         ShellModelCollection.registerShellEntry(ESShellRegistry.MOFFAT_ERA.get(), ESModelRegistry.MOFFAT_EXT_MODEL, ESModelRegistry.MOFFAT_INT_MODEL);
         ShellModelCollection.registerShellEntry(ESShellRegistry.RTD_ERA.get(), ESModelRegistry.RTD_EXT_MODEL, ESModelRegistry.RTD_INT_MODEL);
         ShellModelCollection.registerShellEntry(ESShellRegistry.GLASGOW.get(), ESModelRegistry.GLASGOW_EXT_MODEL, ESModelRegistry.GLASGOW_INT_MODEL);
