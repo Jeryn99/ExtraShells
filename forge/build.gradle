@@ -36,6 +36,7 @@ dependencies {
     neoForge("net.neoforged:neoforge:${rootProject.neoforge_version}")
 
     modImplementation "whocraft:tardis_refined_forge:${rootProject.tardis_refined_version}"
+    compileOnly "software.bernie.geckolib:geckolib-forge-1.20.2:${geckolib_version_forge}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive = false }
@@ -51,6 +52,7 @@ processResources {
 
 shadowJar {
     exclude "fabric.mod.json"
+    exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
     archiveClassifier.set("dev-shadow")

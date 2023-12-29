@@ -59,6 +59,11 @@ allprojects {
             url = 'https://maven.ladysnake.org/releases'
         }
 
+        maven {
+            name = 'GeckoLib'
+            url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        }
+
     }
 
     tasks.withType(JavaCompile) {

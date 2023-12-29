@@ -13,6 +13,11 @@
     "main": ["mc.craig.software.extra_shells.fabric.ExtraShellsFabric"],
     "client": ["mc.craig.software.extra_shells.fabric.ExtraShellsClientFabric"]
   },
+  "injected_interfaces": {
+    "whocraft/tardis_refined/common/blockentity/shell/ShellBaseBlockEntity": [
+      "software/bernie/geckolib/core/animatable/GeoAnimatable"
+    ]
+  },
   "mixins": [
     "extra_shells.mixins.json",
     "extra_shells-common.mixins.json"
