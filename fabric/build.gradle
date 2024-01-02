@@ -7,6 +7,12 @@ architectury {
     fabric()
 }
 
+loom {
+    interfaceInjection {
+        enableDependencyInterfaceInjection = true
+    }
+}
+
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
@@ -32,20 +38,11 @@ dependencies {
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
 
     modImplementation "whocraft:tardis_refined_fabric:${rootProject.tardis_refined_version}"
-    compileOnly "software.bernie.geckolib:geckolib-fabric-1.20.2:${geckolib_version_forge}"
+    modImplementation "software.bernie.geckolib:geckolib-fabric-1.20.2:${geckolib_version_forge}"
 
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
-}
-
-
-def generatedResources = project(":forge").file("src/generated/resources")
-
-sourceSets {
-    main {
-        resources.srcDir generatedResources
-    }
 }
 
 processResources {

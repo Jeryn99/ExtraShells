@@ -5,8 +5,15 @@ dependencies {
 
     modImplementation "whocraft:tardis_refined_fabric:${rootProject.tardis_refined_version}"
 
-    compileOnly "software.bernie.geckolib:geckolib-forge-1.20.2:${geckolib_version_forge}"
+    modImplementation "software.bernie.geckolib:geckolib-forge-1.20.2:${geckolib_version_forge}"
 
+}
+
+
+loom {
+    interfaceInjection {
+        enableDependencyInterfaceInjection = true
+    }
 }
 
 architectury {

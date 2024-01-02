@@ -1,0 +1,16 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "extra_shells:textures/blockentity/shell/tright_jodie/jodie.png"
+      },
+      "id": "extra_shells:jodie",
+      "interior": {
+        "emissive": false,
+        "texture": "extra_shells:textures/blockentity/shell/tright_jodie/jodie_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Jodie\"}"
+    }
+  ]
+}

@@ -27,6 +27,9 @@ public class ESShellRegistry {
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> ELLEN = registerShellTheme("ellen");
 
 
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> TRIGHT_JODIE = registerShellTheme("tright_jodie");
+
+
     private static RegistrySupplierHolder<ShellTheme, ShellTheme> registerShellTheme(String id) {
         return SHELL_THEMES.registerHolder(id, () -> new ShellTheme(new ResourceLocation(ExtraShells.MODID, id)));
     }

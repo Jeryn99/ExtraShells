@@ -15,6 +15,10 @@ loom {
             programArgs "--existing", project(":common").file("src/main/resources/").absolutePath
         }
     }
+
+    interfaceInjection {
+        enableDependencyInterfaceInjection = true
+    }
 }
 
 configurations {
