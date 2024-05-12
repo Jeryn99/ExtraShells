@@ -1,0 +1,16 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/emerald/default.png"
+      },
+      "id": "extra_shells:default",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/emerald/default_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
+    }
+  ]
+}
