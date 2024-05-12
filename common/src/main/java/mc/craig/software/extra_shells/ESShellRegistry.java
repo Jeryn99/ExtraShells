@@ -21,7 +21,7 @@ public class ESShellRegistry {
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> RTD_ERA = registerShellTheme("rtd_era");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> GLASGOW = registerShellTheme("glasgow");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> LEGO = registerShellTheme("lego");
-    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> HUDOLIN = registerShellTheme("hudolin");
+    //public static final RegistrySupplierHolder<ShellTheme, ShellTheme> HUDOLIN = registerShellTheme("hudolin");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> CHIBNALL_RTD_ERA = registerShellTheme("chibnall_rtd_era");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> ANCIENT = registerShellTheme("ancient");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> EMERALD = registerShellTheme("emerald");

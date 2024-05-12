@@ -36,10 +36,10 @@ public class TEPatterns extends ShellPatternProvider {
 
         quickAdd(ESShellRegistry.LEGO.getId(), "default", true);
 
-        quickAdd(ESShellRegistry.HUDOLIN.getId(), "default", true);
+      /*  quickAdd(ESShellRegistry.HUDOLIN.getId(), "default", true);
         quickAdd(ESShellRegistry.HUDOLIN.getId(), "edwardian_worn", true);
         quickAdd(ESShellRegistry.HUDOLIN.getId(), "edwardian_alt", true);
-        quickAdd(ESShellRegistry.HUDOLIN.getId(), "eight", true);
+        quickAdd(ESShellRegistry.HUDOLIN.getId(), "eight", true);*/
 
     }
 

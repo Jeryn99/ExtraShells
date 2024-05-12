@@ -16,7 +16,7 @@ public class ShellEntryRegistry {
         ShellModelCollection.registerShellEntry(ESShellRegistry.RTD_ERA.get(), ESModelRegistry.RTD_EXT_MODEL, ESModelRegistry.RTD_INT_MODEL);
         ShellModelCollection.registerShellEntry(ESShellRegistry.GLASGOW.get(), ESModelRegistry.GLASGOW_EXT_MODEL, ESModelRegistry.GLASGOW_INT_MODEL);
         ShellModelCollection.registerShellEntry(ESShellRegistry.LEGO.get(), ESModelRegistry.LEGO_IDEAS_EXT_MODEL, ESModelRegistry.LEGO_IDEAS_INT_MODEL);
-        ShellModelCollection.registerShellEntry(ESShellRegistry.HUDOLIN.get(), ESModelRegistry.HUDOLIN_EXT_MODEL, ESModelRegistry.HUDOLIN_INT_MODEL);
+      //  ShellModelCollection.registerShellEntry(ESShellRegistry.HUDOLIN.get(), ESModelRegistry.HUDOLIN_EXT_MODEL, ESModelRegistry.HUDOLIN_INT_MODEL);
         ShellModelCollection.registerShellEntry(ESShellRegistry.CHIBNALL_RTD_ERA.get(), new RTDChibnallShellEntry(ESModelRegistry.CHIBNALL_EXT_MODEL, ESModelRegistry.CHIBNALL_INT_MODEL));
         ShellModelCollection.registerShellEntry(ESShellRegistry.ANCIENT.get(), ESModelRegistry.JACK_CUSTOM_EXT_MODEL, ESModelRegistry.JACK_CUSTOM_INT_MODEL);
     }

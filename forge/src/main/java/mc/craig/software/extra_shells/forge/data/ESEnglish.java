@@ -23,7 +23,7 @@ public class ESEnglish extends LanguageProvider {
         addShell(ESShellRegistry.GLASGOW.get(), "Glasgow");
         addShell(ESShellRegistry.ANCIENT.get(), "Ancient");
         addShell(ESShellRegistry.LEGO.get(), "Lego");
-        addShell(ESShellRegistry.HUDOLIN.get(), "Hudolin");
+      //  addShell(ESShellRegistry.HUDOLIN.get(), "Hudolin");
     }
 
     public void addShell(ShellTheme theme, String name) {
