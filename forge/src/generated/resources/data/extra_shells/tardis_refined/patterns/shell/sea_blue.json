@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/sea_blue/sea_blue.png"
+        "texture": "extra_shells:textures/blockentity/shell/sea_blue/default.png"
       },
-      "id": "extra_shells:sea_blue",
+      "id": "extra_shells:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/sea_blue/sea_blue_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/sea_blue/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Sea Blue\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }
   ]
 }

@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/engineers/engineers.png"
+        "texture": "extra_shells:textures/blockentity/shell/engineers/default.png"
       },
-      "id": "extra_shells:engineers",
+      "id": "extra_shells:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/engineers/engineers_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/engineers/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Engineers\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }
   ]
 }

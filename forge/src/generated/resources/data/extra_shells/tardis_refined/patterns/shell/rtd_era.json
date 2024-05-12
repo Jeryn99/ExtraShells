@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/rtd_era/rtd_era.png"
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/default.png"
       },
-      "id": "extra_shells:rtd_era",
+      "id": "extra_shells:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/rtd_era/rtd_era_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Rtd Era\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     },
     {
       "exterior": {
@@ -39,14 +39,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/rtd_era/jack.png"
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/overgrown.png"
       },
-      "id": "extra_shells:jack",
+      "id": "extra_shells:overgrown",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/rtd_era/jack_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/rtd_era/overgrown_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Jack\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Overgrown\"}"
     }
   ]
 }

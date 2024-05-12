@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/chibnall_rtd_era/chibnall_rtd_era.png"
+        "texture": "extra_shells:textures/blockentity/shell/chibnall_rtd_era/default.png"
       },
-      "id": "extra_shells:chibnall_rtd_era",
+      "id": "extra_shells:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/chibnall_rtd_era/chibnall_rtd_era_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/chibnall_rtd_era/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Chibnall Rtd Era\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     },
     {
       "exterior": {

@@ -14,35 +14,33 @@ public class TEPatterns extends ShellPatternProvider {
 
     @Override
     protected void addPatterns() {
-        quickAdd(ESShellRegistry.ELLEN.getId(), "ellen", true);
-        quickAdd(ESShellRegistry.ENGINEERS.getId(), "engineers", true);
-        quickAdd(ESShellRegistry.SEA_BLUE.getId(), "sea_blue", true);
+        quickAdd(ESShellRegistry.EMERALD.getId(), "default", true);
+        quickAdd(ESShellRegistry.ENGINEERS.getId(), "default", true);
+        quickAdd(ESShellRegistry.SEA_BLUE.getId(), "default", true);
 
-        quickAdd(ESShellRegistry.RTD_ERA.getId(), "rtd_era", true);
+        quickAdd(ESShellRegistry.RTD_ERA.getId(), "default", true);
         quickAdd(ESShellRegistry.RTD_ERA.getId(), "tenth", true);
         quickAdd(ESShellRegistry.RTD_ERA.getId(), "bad_wolf", true);
-        quickAdd(ESShellRegistry.RTD_ERA.getId(), "jack", true);
+        quickAdd(ESShellRegistry.RTD_ERA.getId(), "overgrown", true);
 
-        quickAdd(ESShellRegistry.MOFFAT_ERA.getId(), "moffat_era", true);
+        quickAdd(ESShellRegistry.MOFFAT_ERA.getId(), "default", true);
         quickAdd(ESShellRegistry.MOFFAT_ERA.getId(), "twelfth", true);
 
-        quickAdd(ESShellRegistry.GLASGOW.getId(), "glasgow", true);
+        quickAdd(ESShellRegistry.GLASGOW.getId(), "default", true);
 
-        quickAdd(ESShellRegistry.CHIBNALL_RTD_ERA.getId(), "chibnall_rtd_era", true);
+        quickAdd(ESShellRegistry.CHIBNALL_RTD_ERA.getId(), "default", true);
         quickAdd(ESShellRegistry.CHIBNALL_RTD_ERA.getId(), "fourteen", true);
 
-        quickAdd(ESShellRegistry.JACK_CUSTOM.getId(), "jack_custom", true);
-        quickAdd(ESShellRegistry.JACK_CUSTOM.getId(), "damaged", true);
+        quickAdd(ESShellRegistry.ANCIENT.getId(), "default", true);
+        quickAdd(ESShellRegistry.ANCIENT.getId(), "damaged", true);
 
-        quickAdd(ESShellRegistry.LEGO.getId(), "lego", true);
+        quickAdd(ESShellRegistry.LEGO.getId(), "default", true);
 
-        quickAdd(ESShellRegistry.HUDOLIN.getId(), "edwardian", true);
+        quickAdd(ESShellRegistry.HUDOLIN.getId(), "default", true);
         quickAdd(ESShellRegistry.HUDOLIN.getId(), "edwardian_worn", true);
         quickAdd(ESShellRegistry.HUDOLIN.getId(), "edwardian_alt", true);
         quickAdd(ESShellRegistry.HUDOLIN.getId(), "eight", true);
 
-
-        quickAdd(ESShellRegistry.TRIGHT_JODIE.getId(), "jodie", false);
     }
 
     public void quickAdd(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture) {

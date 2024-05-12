@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/moffat_era/moffat_era.png"
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/default.png"
       },
-      "id": "extra_shells:moffat_era",
+      "id": "extra_shells:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/moffat_era/moffat_era_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Moffat Era\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     },
     {
       "exterior": {

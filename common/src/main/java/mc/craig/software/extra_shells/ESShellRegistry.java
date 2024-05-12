@@ -23,11 +23,8 @@ public class ESShellRegistry {
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> LEGO = registerShellTheme("lego");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> HUDOLIN = registerShellTheme("hudolin");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> CHIBNALL_RTD_ERA = registerShellTheme("chibnall_rtd_era");
-    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> JACK_CUSTOM = registerShellTheme("jack_custom");
-    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> ELLEN = registerShellTheme("ellen");
-
-
-    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> TRIGHT_JODIE = registerShellTheme("tright_jodie");
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> ANCIENT = registerShellTheme("ancient");
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> EMERALD = registerShellTheme("emerald");
 
 
     private static RegistrySupplierHolder<ShellTheme, ShellTheme> registerShellTheme(String id) {

@@ -1,7 +1,3 @@
 {
-  "injected_interfaces": {
-    "whocraft/tardis_refined/common/blockentity/shell/ShellBaseBlockEntity": [
-      "software/bernie/geckolib/core/animatable/GeoAnimatable"
-    ]
-  }
+  "injected_interfaces": {}
 }

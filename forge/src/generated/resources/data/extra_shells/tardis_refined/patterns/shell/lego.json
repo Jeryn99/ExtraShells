@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/lego/lego.png"
+        "texture": "extra_shells:textures/blockentity/shell/lego/default.png"
       },
-      "id": "extra_shells:lego",
+      "id": "extra_shells:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/lego/lego_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/lego/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Lego\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }
   ]
 }

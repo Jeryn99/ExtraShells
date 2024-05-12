@@ -43,7 +43,7 @@ allprojects {
 
         maven {
             name = "TARDIS Refined"
-            url = "https://maven.craig.software/repository/whocraft/"
+            url "https://maven.craig.software/snapshots"
         }
 
         maven {

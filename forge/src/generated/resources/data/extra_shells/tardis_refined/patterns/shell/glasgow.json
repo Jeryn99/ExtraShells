@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/glasgow/glasgow.png"
+        "texture": "extra_shells:textures/blockentity/shell/glasgow/default.png"
       },
-      "id": "extra_shells:glasgow",
+      "id": "extra_shells:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/glasgow/glasgow_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/glasgow/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Glasgow\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     }
   ]
 }

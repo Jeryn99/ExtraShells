@@ -3,14 +3,14 @@
     {
       "exterior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian.png"
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/default.png"
       },
-      "id": "extra_shells:edwardian",
+      "id": "extra_shells:default",
       "interior": {
         "emissive": true,
-        "texture": "extra_shells:textures/blockentity/shell/hudolin/edwardian_interior.png"
+        "texture": "extra_shells:textures/blockentity/shell/hudolin/default_interior.png"
       },
-      "name_component": "{\"color\":\"yellow\",\"text\":\"Edwardian\"}"
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
     },
     {
       "exterior": {
