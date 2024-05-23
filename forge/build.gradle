@@ -78,7 +78,6 @@ dependencies {
     neoForge("net.neoforged:neoforge:${rootProject.neoforge_version}")
 
     modImplementation "whocraft:tardis_refined_forge:1.20.2-2.0.1"
-    compileOnly "software.bernie.geckolib:geckolib-forge-1.20.2:${geckolib_version_forge}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive = false }

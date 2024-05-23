@@ -4,17 +4,9 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
-import net.minecraft.client.model.geom.builders.CubeDeformation;
-import net.minecraft.client.model.geom.builders.CubeListBuilder;
-import net.minecraft.client.model.geom.builders.LayerDefinition;
-import net.minecraft.client.model.geom.builders.MeshDefinition;
-import net.minecraft.client.model.geom.builders.PartDefinition;
-import net.minecraft.world.entity.Entity;
-import software.bernie.geckolib.util.RenderUtils;
+import net.minecraft.client.model.geom.builders.*;
 import whocraft.tardis_refined.client.model.blockentity.door.interior.ShellDoorModel;
-import whocraft.tardis_refined.client.model.blockentity.shell.ShellModel;
 import whocraft.tardis_refined.common.blockentity.door.GlobalDoorBlockEntity;
-import whocraft.tardis_refined.common.blockentity.shell.GlobalShellBlockEntity;
 
 public class JackDoorModel extends ShellDoorModel {
 
