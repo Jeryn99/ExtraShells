@@ -17,9 +17,6 @@ loom {
         }
     }
 
-    interfaceInjection {
-        enableDependencyInterfaceInjection = true
-    }
 }
 
 
@@ -102,7 +99,6 @@ shadowJar {
 remapJar {
     inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
-    archiveClassifier.set(null)
 }
 
 jar {

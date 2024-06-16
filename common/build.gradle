@@ -13,17 +13,10 @@ dependencies {
     modImplementation "maven.modrinth:tardis-refined:1.20.2-2.0.3+fabric"
 
     // Forge Config API Port
-    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${rootProject.forge_config_api_port_version}"
-    include "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${rootProject.forge_config_api_port_version}"
+    modImplementation "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${rootProject.forge_config_api_port_version}"
 
 }
 
-
-loom {
-    interfaceInjection {
-        enableDependencyInterfaceInjection = true
-    }
-}
 
 architectury {
     common("fabric", "neoforge")

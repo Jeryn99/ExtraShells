@@ -14,9 +14,7 @@
     "client": ["mc.craig.software.extra_shells.fabric.ExtraShellsClientFabric"]
   },
   "injected_interfaces": {
-    "whocraft/tardis_refined/common/blockentity/shell/ShellBaseBlockEntity": [
-      "software/bernie/geckolib/core/animatable/GeoAnimatable"
-    ]
+
   },
   "mixins": [
     "extra_shells.mixins.json",
@@ -24,6 +22,6 @@
   ],
   "depends": {
     "fabricloader": ">=0.14.24",
-    "minecraft": ">=1.19.2"
+    "minecraft": ">=1.20.2"
   }
 }

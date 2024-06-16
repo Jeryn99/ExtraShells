@@ -3,12 +3,11 @@ package mc.craig.software.extra_shells;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import mc.craig.software.extra_shells.client.models.*;
 import mc.craig.software.extra_shells.client.models.doors.*;
-import net.minecraft.client.Minecraft;
+import mc.craig.software.extra_shells.client.models.doors.lego.LegoPieceDoors;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
-import whocraft.tardis_refined.TardisRefined;
 import whocraft.tardis_refined.common.util.PlatformWarning;
 
 import java.util.function.Supplier;
@@ -24,6 +23,8 @@ public class ESModelRegistry {
     public static GlasgowInspiredShellModel GLASGOW_EXT_MODEL;
     public static JackShellModel JACK_CUSTOM_EXT_MODEL;
     public static LegoIdeasShellModel LEGO_IDEAS_EXT_MODEL;
+    public static LegoPieceShellModel LEGO_PIECE_EXT_MODEL;
+    public static LegoDimensionsShellModel LEGO_DIMENSIONS_EXT_MODEL;
 
     public static HudolinShellModel HUDOLIN_EXT_MODEL;
     public static HudolinDoorModel HUDOLIN_INT_MODEL;
@@ -39,9 +40,10 @@ public class ESModelRegistry {
     public static GlasgowInspiredDoorModel GLASGOW_INT_MODEL;
     public static JackDoorModel JACK_CUSTOM_INT_MODEL;
     public static LegoIdeasDoorModel LEGO_IDEAS_INT_MODEL;
+    public static LegoPieceDoors LEGO_PIECE_INT_MODEL;
 
-    public static ModelLayerLocation JACK_CUSTOM_EXT, TOMMY_EXT, ENGINEERS_EXT, ELLEN_EXT, MOFFAT_EXT, RTD_EXT, CHIBNALL_EXT, GLASGOW_EXT, LEGO_IDEAS_EXT;
-    public static ModelLayerLocation JACK_CUSTOM_INT, TOMMY_INT, ENGINEERS_INT, ELLEN_INT, MOFFAT_INT, RTD_INT, RTD2_INT, CHIBNALL_INT, GLASGOW_INT, LEGO_IDEAS_INT;
+    public static ModelLayerLocation JACK_CUSTOM_EXT, TOMMY_EXT, ENGINEERS_EXT, ELLEN_EXT, MOFFAT_EXT, RTD_EXT, CHIBNALL_EXT, GLASGOW_EXT, LEGO_IDEAS_EXT, LEGO_PIECE_EXT, LEGO_DIMENSIONS_EXT;
+    public static ModelLayerLocation JACK_CUSTOM_INT, TOMMY_INT, ENGINEERS_INT, ELLEN_INT, MOFFAT_INT, RTD_INT, RTD2_INT, CHIBNALL_INT, GLASGOW_INT, LEGO_IDEAS_INT, LEGO_PIECE_INT;
 
 
 
@@ -70,6 +72,11 @@ public class ESModelRegistry {
         HUDOLIN_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "hudolin_ext"), "hudolin_ext"), HudolinShellModel::createBodyLayer);
         HUDOLIN_INT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "hudolin_int"), "hudolin_int"), HudolinDoorModel::createBodyLayer);
 
+        LEGO_PIECE_INT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "lego_piece_int"), "lego_piece_int"), LegoPieceDoors::createBodyLayer);
+        LEGO_PIECE_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "lego_piece_ext"), "lego_piece_ext"), LegoPieceShellModel::createBodyLayer);
+
+        LEGO_DIMENSIONS_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "lego_dimensions_ext"), "lego_dimensions_ext"), LegoDimensionsShellModel::createBodyLayer);
+
     }
 
     public static void setupModelInstances(EntityModelSet entityModels) {
@@ -86,6 +93,8 @@ public class ESModelRegistry {
         ESModelRegistry.HUDOLIN_EXT_MODEL = new HudolinShellModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
         ESModelRegistry.JACK_CUSTOM_EXT_MODEL = new JackShellModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_EXT));
         ESModelRegistry.ELLEN_EXT_MODEL = new EllenShellModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_EXT));
+        ESModelRegistry.LEGO_PIECE_EXT_MODEL = new LegoPieceShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_PIECE_EXT));
+        ESModelRegistry.LEGO_DIMENSIONS_EXT_MODEL = new LegoDimensionsShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_DIMENSIONS_EXT));
 
         // Interior Door
         ESModelRegistry.TOMMY_INT_MODEL = new SeaBlueDoorModel(entityModels.bakeLayer(ESModelRegistry.TOMMY_INT));
@@ -100,6 +109,7 @@ public class ESModelRegistry {
         ESModelRegistry.HUDOLIN_INT_MODEL = new HudolinDoorModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
         ESModelRegistry.JACK_CUSTOM_INT_MODEL = new JackDoorModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_INT));
         ESModelRegistry.ELLEN_INT_MODEL = new EllenDoorModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_INT));
+        ESModelRegistry.LEGO_PIECE_INT_MODEL = new LegoPieceDoors(entityModels.bakeLayer(ESModelRegistry.LEGO_PIECE_INT));
 
         ShellEntryRegistry.init();
     }
