@@ -41,14 +41,11 @@ allprojects {
             url = "https://api.modrinth.com/maven"
         }
 
+
+
         maven {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
-        }
-
-        maven {
-            name = "TARDIS Refined"
-            url "https://maven.craig.software/snapshots"
         }
 
         maven {
@@ -68,6 +65,7 @@ allprojects {
             name = 'GeckoLib'
             url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
         }
+
 
     }
 

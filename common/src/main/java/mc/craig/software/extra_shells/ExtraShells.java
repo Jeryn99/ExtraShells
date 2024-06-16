@@ -4,7 +4,7 @@ public class ExtraShells {
 	public static final String MODID = "extra_shells";
 
 	public static void init() {
-		ESShellRegistry.SHELL_THEMES.register();
+		ESShellRegistry.SHELL_THEMES.registerToModBus();
 		ExtraShellAPIEvents.init();
 	}
 }

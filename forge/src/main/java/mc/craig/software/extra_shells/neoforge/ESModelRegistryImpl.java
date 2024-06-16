@@ -1,4 +1,4 @@
-package mc.craig.software.extra_shells.forge;
+package mc.craig.software.extra_shells.neoforge;
 
 import mc.craig.software.extra_shells.ESModelRegistry;
 import net.minecraft.client.Minecraft;

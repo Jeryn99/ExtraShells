@@ -1,8 +1,8 @@
-package mc.craig.software.extra_shells.forge;
+package mc.craig.software.extra_shells.neoforge;
 
 import mc.craig.software.extra_shells.ExtraShells;
-import mc.craig.software.extra_shells.forge.data.ESEnglish;
-import mc.craig.software.extra_shells.forge.data.TEPatterns;
+import mc.craig.software.extra_shells.neoforge.data.ESEnglish;
+import mc.craig.software.extra_shells.neoforge.data.TEPatterns;
 import net.minecraft.data.DataGenerator;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;

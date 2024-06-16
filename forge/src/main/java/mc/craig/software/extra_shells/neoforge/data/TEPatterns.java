@@ -1,4 +1,4 @@
-package mc.craig.software.extra_shells.forge.data;
+package mc.craig.software.extra_shells.neoforge.data;
 
 import mc.craig.software.extra_shells.ESShellRegistry;
 import mc.craig.software.extra_shells.ExtraShells;
@@ -35,6 +35,8 @@ public class TEPatterns extends ShellPatternProvider {
         quickAdd(ESShellRegistry.ANCIENT.getId(), "damaged", true);
 
         quickAdd(ESShellRegistry.LEGO.getId(), "default", true);
+        quickAdd(ESShellRegistry.LEGO.getId(), "piece", true);
+        quickAdd(ESShellRegistry.LEGO.getId(), "dimensions", true);
 
       /*  quickAdd(ESShellRegistry.HUDOLIN.getId(), "default", true);
         quickAdd(ESShellRegistry.HUDOLIN.getId(), "edwardian_worn", true);
