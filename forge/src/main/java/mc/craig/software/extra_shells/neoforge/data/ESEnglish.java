@@ -3,7 +3,7 @@ package mc.craig.software.extra_shells.neoforge.data;
 import mc.craig.software.extra_shells.ESShellRegistry;
 import mc.craig.software.extra_shells.ExtraShells;
 import net.minecraft.data.DataGenerator;
-import net.neoforged.neoforge.common.data.LanguageProvider;
+import net.minecraftforge.common.data.LanguageProvider;
 import whocraft.tardis_refined.common.tardis.themes.ShellTheme;
 
 public class ESEnglish extends LanguageProvider {
