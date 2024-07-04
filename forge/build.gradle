@@ -56,7 +56,7 @@ unifiedPublishing {
         if (MODRINTH_TOKEN != "") {
             modrinth {
                 token = MODRINTH_TOKEN
-                id = "8gkWtwQu"
+                id = "JPwgh9iH"
                 version = "$project.version+$project.name"
             }
         }
