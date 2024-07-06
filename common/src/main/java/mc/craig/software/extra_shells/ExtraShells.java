@@ -5,6 +5,5 @@ public class ExtraShells {
 
 	public static void init() {
 		ESShellRegistry.SHELL_THEMES.registerToModBus();
-		ExtraShellAPIEvents.init();
 	}
 }

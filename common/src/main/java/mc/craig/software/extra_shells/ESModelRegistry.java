@@ -48,6 +48,7 @@ public class ESModelRegistry {
 
 
     public static void init() {
+        ExtraShellAPIEvents.init();
         ENGINEERS_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "engineers_ext"), "engineers_ext"), EngineersShellModel::createBodyLayer);
         TOMMY_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "tommy_ext"), "tommy_ext"), SeaBlueShellModel::createBodyLayer);
         ELLEN_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "ellen_ext"), "ellen_ext"), EllenShellModel::createBodyLayer);

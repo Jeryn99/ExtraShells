@@ -1,4 +1,4 @@
-package mc.craig.software.extra_shells.neoforge.data;
+package mc.craig.software.extra_shells.forge.data;
 
 import mc.craig.software.extra_shells.ESShellRegistry;
 import mc.craig.software.extra_shells.ExtraShells;

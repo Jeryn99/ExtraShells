@@ -1,4 +1,4 @@
-package mc.craig.software.extra_shells.neoforge;
+package mc.craig.software.extra_shells.forge;
 
 import mc.craig.software.extra_shells.ESModelRegistry;
 import net.minecraft.client.Minecraft;
@@ -20,7 +20,7 @@ public class ESModelRegistryImpl {
     }
 
     public static void register(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        ESModelRegistry.init();
         DEFINITIONS.forEach(event::registerLayerDefinition);
-        ESModelRegistry.setupModelInstances(Minecraft.getInstance().getEntityModels());
     }
 }

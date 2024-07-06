@@ -1,8 +1,8 @@
-package mc.craig.software.extra_shells.neoforge;
+package mc.craig.software.extra_shells.forge;
 
 import mc.craig.software.extra_shells.ExtraShells;
-import mc.craig.software.extra_shells.neoforge.data.ESEnglish;
-import mc.craig.software.extra_shells.neoforge.data.TEPatterns;
+import mc.craig.software.extra_shells.forge.data.ESEnglish;
+import mc.craig.software.extra_shells.forge.data.TEPatterns;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,6 +16,7 @@ public class ExtraShellsForge {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::onGatherData);
     }
+
 
     public void onGatherData(GatherDataEvent e) {
         DataGenerator generator = e.getGenerator();
