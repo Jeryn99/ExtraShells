@@ -7,6 +7,8 @@ architectury {
     forge()
 }
 
+//version = "forge-" + version
+
 loom {
     runs {
         data {
@@ -32,7 +34,7 @@ unifiedPublishing {
     project {
         displayName = "[Forge] - ExtraShells - $rootProject.minecraft_version - v$project.version"
         releaseType = "release"
-        changelog = new File("${rootProject.projectDir}/changelog.html").text
+        changelog = new File("${rootProject.projectDir}/changelog.md").text
         gameVersions = ["1.20.1"]
         mainPublication tasks.remapJar
         gameLoaders = ["forge"]
@@ -57,7 +59,7 @@ unifiedPublishing {
             modrinth {
                 token = MODRINTH_TOKEN
                 id = "JPwgh9iH"
-                version = "$project.version+$project.name"
+                version = "mc$rootProject.minecraft_version-v$project.version"
             }
         }
     }
@@ -72,7 +74,7 @@ dependencies {
 
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive = false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
 
 processResources {

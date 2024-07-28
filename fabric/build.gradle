@@ -16,9 +16,9 @@ loom {
 
 unifiedPublishing {
     project {
-        displayName = "[Fabric] - ExtraShells - $rootProject.minecraft_version - v$project.version"
+        displayName = "[Fabric] - ExtraShells - mc$rootProject.minecraft_version - v$project.version"
         releaseType = "release"
-        changelog = new File("${rootProject.projectDir}/changelog.html").text
+        changelog = new File("${rootProject.projectDir}/changelog.md").text
         gameVersions = ["1.20.1"]
         mainPublication tasks.remapJar
         gameLoaders = ["fabric"]
@@ -48,7 +48,7 @@ unifiedPublishing {
             modrinth {
                 token = MODRINTH_TOKEN
                 id = "JPwgh9iH"
-                version = "$project.version+$project.name"
+                version = "mc$rootProject.minecraft_version-v$project.version"
             }
         }
     }
