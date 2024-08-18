@@ -23,6 +23,7 @@ public class ESEnglish extends LanguageProvider {
         addShell(ESShellRegistry.GLASGOW.get(), "Glasgow");
         addShell(ESShellRegistry.ANCIENT.get(), "Ancient");
         addShell(ESShellRegistry.LEGO.get(), "Lego");
+        addShell(ESShellRegistry.OLD_SCHOOL.get(), "Old School");
       //  addShell(ESShellRegistry.HUDOLIN.get(), "Hudolin");
     }
 

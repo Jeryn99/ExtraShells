@@ -27,6 +27,7 @@ public class ESShellRegistry {
     public static final RegistrySupplier<ShellTheme> CHIBNALL_RTD_ERA = registerShellTheme("chibnall_rtd_era");
     public static final RegistrySupplier<ShellTheme> ANCIENT = registerShellTheme("ancient");
     public static final RegistrySupplier<ShellTheme> EMERALD = registerShellTheme("emerald");
+    public static final RegistrySupplier<ShellTheme> OLD_SCHOOL = registerShellTheme("old_school");
 
 
     private static RegistrySupplier<ShellTheme> registerShellTheme(String id) {
