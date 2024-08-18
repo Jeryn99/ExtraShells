@@ -1,0 +1,16 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": false,
+        "texture": "extra_shells:textures/blockentity/shell/old_school/default.png"
+      },
+      "id": "extra_shells:default",
+      "interior": {
+        "emissive": false,
+        "texture": "extra_shells:textures/blockentity/shell/old_school/default_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}"
+    }
+  ]
+}

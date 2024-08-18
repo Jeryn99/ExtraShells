@@ -6,6 +6,7 @@
   "shell.extra_shells.glasgow": "Glasgow",
   "shell.extra_shells.lego": "Lego",
   "shell.extra_shells.moffat_era": "Moffat",
+  "shell.extra_shells.old_school": "Old School",
   "shell.extra_shells.rtd_era": "RTD",
   "shell.extra_shells.sea_blue": "Sea Blue"
 }
