@@ -48,7 +48,7 @@ unifiedPublishing {
             modrinth {
                 token = MODRINTH_TOKEN
                 id = "JPwgh9iH"
-                version = "$project.version+$project.name"
+                version = "mc$rootProject.minecraft_version-v$project.version"
             }
         }
     }
@@ -79,7 +79,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
 
-    modImplementation "maven.modrinth:tardis-refined:1.20.2-2.0.3+fabric"
+    modImplementation "maven.modrinth:tardis-refined:fabric-mc1.20.2-v2.0.6"
 
 
     // Adds a dependency on the base cardinal components module (required by every other module)
