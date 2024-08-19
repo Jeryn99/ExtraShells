@@ -5,9 +5,14 @@ import mc.craig.software.extra_shells.ExtraShells;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import whocraft.tardis_refined.common.data.ShellPatternProvider;
+import whocraft.tardis_refined.constants.ResourceConstants;
 import whocraft.tardis_refined.patterns.PatternTexture;
 import whocraft.tardis_refined.patterns.ShellPattern;
 import whocraft.tardis_refined.patterns.ShellPatterns;
+import whocraft.tardis_refined.patterns.sound.ShellSoundProfile;
+import whocraft.tardis_refined.patterns.sound.TRShellSoundProfiles;
+
+import java.util.Optional;
 
 public class TEPatterns extends ShellPatternProvider {
 
@@ -52,14 +57,14 @@ public class TEPatterns extends ShellPatternProvider {
     }
 
 
-    public static ShellPattern createPattern(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture) {
+    public ShellPattern createPattern(ResourceLocation themeId, String patternName, boolean hasEmissiveTexture) {
         ResourceLocation exteriorTextureLocation = ShellPatterns.exteriorTextureLocation(themeId, ExtraShells.MODID, patternName);
         ResourceLocation interiorTextureLocation = ShellPatterns.interiorTextureLocation(themeId, ExtraShells.MODID, patternName);
+        ShellSoundProfile soundProfile = TRShellSoundProfiles.defaultSoundProfilesByTheme().getOrDefault(themeId, TRShellSoundProfiles.DEFAULT_SOUND_PROFILE);
+        ShellPattern pattern = new ShellPattern(new ResourceLocation(themeId.getNamespace(), patternName), new PatternTexture(exteriorTextureLocation, hasEmissiveTexture), new PatternTexture(interiorTextureLocation, hasEmissiveTexture), Optional.of(soundProfile));
+        pattern.setThemeId(themeId);
 
-        ShellPattern shellPattern = new ShellPattern(new ResourceLocation(ExtraShells.MODID, patternName), new PatternTexture(exteriorTextureLocation, hasEmissiveTexture), new PatternTexture(interiorTextureLocation, hasEmissiveTexture));
-        shellPattern.setThemeId(themeId);
-
-        return ShellPatterns.addDefaultPattern(themeId, shellPattern);
+        return ShellPatterns.addDefaultPattern(themeId, pattern);
     }
 
     public TEPatterns(DataGenerator generator) {
