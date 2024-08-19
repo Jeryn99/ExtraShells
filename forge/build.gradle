@@ -44,7 +44,7 @@ unifiedPublishing {
         changelog = new File("${rootProject.projectDir}/changelog.html").text
         gameVersions = ["1.20.2"]
         mainPublication tasks.remapJar
-        gameLoaders = ["fabric"]
+        gameLoaders = ["neoforge"]
         relations {
             depends {
                 curseforge = "tardis-refined"
