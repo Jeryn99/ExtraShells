@@ -2,8 +2,6 @@ dependencies {
     // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
     // Do NOT use other classes from fabric loader
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
-
-
     // Adds a dependency on the base cardinal components module (required by every other module)
     // Replace modImplementation with modApi if you expose components in your own API
     modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${rootProject.cardinal_version}"

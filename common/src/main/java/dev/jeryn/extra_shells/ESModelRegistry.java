@@ -3,14 +3,11 @@ package dev.jeryn.extra_shells;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import dev.jeryn.extra_shells.client.models.*;
 import dev.jeryn.extra_shells.client.models.doors.*;
-import dev.jeryn.extra_shells.client.models.*;
-import dev.jeryn.extra_shells.client.models.doors.*;
 import dev.jeryn.extra_shells.client.models.doors.lego.LegoPieceDoors;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
-import whocraft.tardis_refined.client.ModelRegistry;
 import whocraft.tardis_refined.client.model.blockentity.door.interior.DualInteriorDoorModel;
 import whocraft.tardis_refined.common.util.PlatformWarning;
 
@@ -47,13 +44,26 @@ public class ESModelRegistry {
     public static LegoIdeasDoorModel LEGO_IDEAS_INT_MDL;
     public static LegoPieceDoors LEGO_PIECE_INT_MDL;
     public static OldSchoolDoorModel OLDSCHOOL_INT_MDL;
-    public static DualInteriorDoorModel MADDOC_WHITTAKERINT_MDL;
+    public static DualInteriorDoorModel MADDOC_NEWBERRYINT_MDL, MADDOC_SMITHINT_MDL, MADDOC_TENNANTINT_MDL, MADDOC_WHITTAKERINT_MDL, MADDOC_BRACHACKIINT_MDL;
+    public static MadDocShellBase MADDOC_NEWBERRYEXT_MDL, MADDOC_SMITHEXT_MDL, MADDOC_TENNANTEXT_MDL, MADDOC_WHITTAKEREXT_MDL, MADDOC_BRACHACKIEXT_MDL;
 
     public static ModelLayerLocation JACK_CUSTOM_EXT, TOMMY_EXT, ENGINEERS_EXT, ELLEN_EXT, MOFFAT_EXT, OLDSCHOOL_EXT, RTD_EXT, CHIBNALL_EXT, GLASGOW_EXT, LEGO_IDEAS_EXT, LEGO_PIECE_EXT, LEGO_DIMENSIONS_EXT;
     public static ModelLayerLocation JACK_CUSTOM_INT, OLDSCHOOL_INT, TOMMY_INT, ENGINEERS_INT, ELLEN_INT, MOFFAT_INT, RTD_INT, RTD2_INT, CHIBNALL_INT, GLASGOW_INT, LEGO_IDEAS_INT, LEGO_PIECE_INT;
 
+    public static ModelLayerLocation MADDOC_SMITHINT = interiorDoor("maddoc_smith_door");
+    public static ModelLayerLocation MADDOC_SMITHEXT = shell("maddoc_smith");
+
+    public static ModelLayerLocation MADDOC_TENNANTINT = interiorDoor("maddoc_2005_door");
+    public static ModelLayerLocation MADDOC_TENNANTEXT = shell("maddoc_2005");
+
     public static ModelLayerLocation MADDOC_WHITTAKERINT = interiorDoor("maddoc_whittaker_door");
-    public static ModelLayerLocation MADDOC_WHITTAKEREXT = interiorDoor("maddoc_whittaker");
+    public static ModelLayerLocation MADDOC_WHITTAKEREXT = shell("maddoc_whittaker");
+
+    public static ModelLayerLocation MADDOC_BRACHACKIINT = interiorDoor("maddoc_brachacki_door");
+    public static ModelLayerLocation MADDOC_BRACHACKIEXT = shell("maddoc_brachacki");
+
+    public static ModelLayerLocation MADDOC_NEWBERYINT = interiorDoor("maddoc_newberry_door");
+    public static ModelLayerLocation MADDOC_NEWBERYEXT = shell("maddoc_newberry");
 
 
     private static ModelLayerLocation interiorDoor(String name) {
@@ -143,7 +153,20 @@ public class ESModelRegistry {
         ESModelRegistry.ELLEN_INT_MDL = new EllenDoorModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_INT));
         ESModelRegistry.LEGO_PIECE_INT_MDL = new LegoPieceDoors(entityModels.bakeLayer(ESModelRegistry.LEGO_PIECE_INT));
         ESModelRegistry.OLDSCHOOL_INT_MDL = new OldSchoolDoorModel(entityModels.bakeLayer(ESModelRegistry.OLDSCHOOL_INT));
-        ESModelRegistry.MADDOC_WHITTAKERINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_WHITTAKERINT), 90);
+
+        ESModelRegistry.MADDOC_SMITHINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_SMITHINT), -90);
+        ESModelRegistry.MADDOC_BRACHACKIINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_BRACHACKIINT), -90);
+        ESModelRegistry.MADDOC_WHITTAKERINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_WHITTAKERINT), -90);
+        ESModelRegistry.MADDOC_NEWBERRYINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_NEWBERYINT), -90);
+        ESModelRegistry.MADDOC_TENNANTINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTINT), -90);
+
+        ESModelRegistry.MADDOC_SMITHEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_SMITHEXT));
+        ESModelRegistry.MADDOC_TENNANTEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTEXT));
+        ESModelRegistry.MADDOC_BRACHACKIEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_BRACHACKIEXT));
+
+        ESModelRegistry.MADDOC_TENNANTEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTEXT));
+        ESModelRegistry.MADDOC_WHITTAKEREXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_WHITTAKEREXT));
+        ESModelRegistry.MADDOC_NEWBERRYEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_NEWBERYEXT));
 
         ShellEntryRegistry.init();
     }

@@ -18,6 +18,14 @@ public class TEPatterns extends ShellPatternProvider {
 
     @Override
     protected void addPatterns() {
+        quickAdd(ESShellRegistry.MADDOC_WHITTAKER.getId(), "default", false);
+        quickAdd(ESShellRegistry.MADDOC_NEWBERRY.getId(), "default", false);
+        quickAdd(ESShellRegistry.MADDOC_2005.getId(), "tennant", false);
+        quickAdd(ESShellRegistry.MADDOC_2005.getId(), "eccleston", false);
+
+        quickAdd(ESShellRegistry.MADDOC_SMITH.getId(), "default", false);
+        quickAdd(ESShellRegistry.MADDOC_BRACHACKI.getId(), "default", false);
+
         quickAdd(ESShellRegistry.OLD_SCHOOL.getId(), "default", false);
 
         quickAdd(ESShellRegistry.EMERALD.getId(), "default", true);
@@ -62,7 +70,6 @@ public class TEPatterns extends ShellPatternProvider {
         ShellSoundProfile soundProfile = TRShellSoundProfiles.defaultSoundProfilesByTheme().getOrDefault(themeId, TRShellSoundProfiles.DEFAULT_SOUND_PROFILE);
         ShellPattern pattern = new ShellPattern(new ResourceLocation(themeId.getNamespace(), patternName), new PatternTexture(exteriorTextureLocation, hasEmissiveTexture), new PatternTexture(interiorTextureLocation, hasEmissiveTexture), Optional.of(soundProfile));
         pattern.setThemeId(themeId);
-        pattern.setName(patternName);
 
         return ShellPatterns.addDefaultPattern(themeId, pattern);
     }

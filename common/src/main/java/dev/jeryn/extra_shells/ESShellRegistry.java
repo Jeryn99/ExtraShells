@@ -22,6 +22,12 @@ public class ESShellRegistry {
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> ANCIENT = registerShellTheme("ancient");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> EMERALD = registerShellTheme("emerald");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> OLD_SCHOOL = registerShellTheme("old_school");
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> MADDOC_WHITTAKER = registerShellTheme("maddoc_whittaker");
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> MADDOC_NEWBERRY = registerShellTheme("maddoc_newberry");
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> MADDOC_2005 = registerShellTheme("maddoc_2005");
+
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> MADDOC_SMITH = registerShellTheme("maddoc_smith");
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> MADDOC_BRACHACKI = registerShellTheme("maddoc_brachacki");
 
 
     private static RegistrySupplierHolder<ShellTheme, ShellTheme> registerShellTheme(String id) {

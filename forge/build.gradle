@@ -4,7 +4,7 @@ plugins {
 }
 architectury {
     platformSetupLoomIde()
-    forge()
+    neoForge()
 }
 
 //version = "forge-" + version

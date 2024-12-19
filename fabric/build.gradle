@@ -8,11 +8,6 @@ architectury {
     fabric()
 }
 
-loom {
-    interfaceInjection {
-        enableDependencyInterfaceInjection = true
-    }
-}
 
 unifiedPublishing {
     project {

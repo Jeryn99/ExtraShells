@@ -24,7 +24,12 @@ public class ESEnglish extends LanguageProvider {
         addShell(ESShellRegistry.ANCIENT.get(), "Ancient");
         addShell(ESShellRegistry.LEGO.get(), "Lego");
         addShell(ESShellRegistry.OLD_SCHOOL.get(), "Old School");
-      //  addShell(ESShellRegistry.HUDOLIN.get(), "Hudolin");
+
+        addShell(ESShellRegistry.MADDOC_SMITH.get(), "(Maddoc) Smith");
+        addShell(ESShellRegistry.MADDOC_2005.get(), "(Maddoc) Tennant");
+        addShell(ESShellRegistry.MADDOC_WHITTAKER.get(), "(Maddoc) Whittaker");
+        addShell(ESShellRegistry.MADDOC_BRACHACKI.get(), "(Maddoc) Brachaki");
+        addShell(ESShellRegistry.MADDOC_NEWBERRY.get(), "(Maddoc) Newberry");
     }
 
     public void addShell(ShellTheme theme, String name) {

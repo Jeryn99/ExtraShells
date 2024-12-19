@@ -25,14 +25,14 @@
 				},
 				{
 					"name": "left_door",
-					"pivot": [-8, 3, 0],
+					"pivot": [-8, 19, 5.5],
 					"cubes": [
 						{"origin": [-8, 3, 5], "size": [8, 32, 1], "uv": [124, 71]}
 					]
 				},
 				{
 					"name": "right_door",
-					"pivot": [-8, 8, 8],
+					"pivot": [8, 19, 5.5],
 					"cubes": [
 						{"origin": [0, 3, 5], "size": [8, 32, 1], "uv": [136, 104]}
 					]
