@@ -62,6 +62,7 @@ public class TEPatterns extends ShellPatternProvider {
         ShellSoundProfile soundProfile = TRShellSoundProfiles.defaultSoundProfilesByTheme().getOrDefault(themeId, TRShellSoundProfiles.DEFAULT_SOUND_PROFILE);
         ShellPattern pattern = new ShellPattern(new ResourceLocation(themeId.getNamespace(), patternName), new PatternTexture(exteriorTextureLocation, hasEmissiveTexture), new PatternTexture(interiorTextureLocation, hasEmissiveTexture), Optional.of(soundProfile));
         pattern.setThemeId(themeId);
+        pattern.setName(patternName);
 
         return ShellPatterns.addDefaultPattern(themeId, pattern);
     }

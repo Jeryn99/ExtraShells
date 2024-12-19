@@ -79,7 +79,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
 
-    modImplementation "maven.modrinth:tardis-refined:fabric-mc1.20.2-v2.0.6"
+    modImplementation "dev.jeryn:fabrictr:2.1.0"
 
 
     // Adds a dependency on the base cardinal components module (required by every other module)
@@ -87,6 +87,7 @@ dependencies {
     modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${rootProject.cardinal_version}"
     // Adds a dependency on a specific module
     modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-world:${rootProject.cardinal_version}"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${rootProject.cardinal_version}"
 
 
     // Forge Config API Port

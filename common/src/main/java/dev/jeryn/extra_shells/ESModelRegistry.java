@@ -10,45 +10,68 @@ import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
+import whocraft.tardis_refined.client.ModelRegistry;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.DualInteriorDoorModel;
 import whocraft.tardis_refined.common.util.PlatformWarning;
 
 import java.util.function.Supplier;
 
 public class ESModelRegistry {
 
-    public static SeaBlueShellModel TOMMY_EXT_MODEL;
-    public static EngineersShellModel ENGINEERS_EXT_MODEL;
-    public static EllenShellModel ELLEN_EXT_MODEL;
-    public static MoffatBoxShell MOFFAT_EXT_MODEL;
-    public static OldSchoolShellModel OLDSCHOOL_EXT_MODEL;
-    public static RTDShellModel RTD_EXT_MODEL;
-    public static ChibnallShellModel CHIBNALL_EXT_MODEL;
-    public static GlasgowInspiredShellModel GLASGOW_EXT_MODEL;
-    public static JackShellModel JACK_CUSTOM_EXT_MODEL;
-    public static LegoIdeasShellModel LEGO_IDEAS_EXT_MODEL;
-    public static LegoPieceShellModel LEGO_PIECE_EXT_MODEL;
-    public static LegoDimensionsShellModel LEGO_DIMENSIONS_EXT_MODEL;
+    public static SeaBlueShellModel TOMMY_EXT_MDL;
+    public static EngineersShellModel ENGINEERS_EXT_MDL;
+    public static EllenShellModel ELLEN_EXT_MDL;
+    public static MoffatBoxShell MOFFAT_EXT_MDL;
+    public static OldSchoolShellModel OLDSCHOOL_EXT_MDL;
+    public static RTDShellModel RTD_EXT_MDL;
+    public static ChibnallShellModel CHIBNALL_EXT_MDL;
+    public static GlasgowInspiredShellModel GLASGOW_EXT_MDL;
+    public static JackShellModel JACK_CUSTOM_EXT_MDL;
+    public static LegoIdeasShellModel LEGO_IDEAS_EXT_MDL;
+    public static LegoPieceShellModel LEGO_PIECE_EXT_MDL;
+    public static LegoDimensionsShellModel LEGO_DIMENSIONS_EXT_MDL;
 
-    public static HudolinShellModel HUDOLIN_EXT_MODEL;
-    public static HudolinDoorModel HUDOLIN_INT_MODEL;
+    public static HudolinShellModel HUDOLIN_EXT_MDL;
+    public static HudolinDoorModel HUDOLIN_INT_MDL;
     public static ModelLayerLocation HUDOLIN_EXT, HUDOLIN_INT;
 
-    public static SeaBlueDoorModel TOMMY_INT_MODEL;
-    public static EngineerDoorModel ENGINEERS_INT_MODEL;
-    public static EllenDoorModel ELLEN_INT_MODEL;
-    public static MoffatDoorModel MOFFAT_INT_MODEL;
-    public static RTDDoorModel RTD_INT_MODEL;
-    public static ChibnallDoorModel CHIBNALL_INT_MODEL;
-    public static RTD2DoorModel RTD2_INT_MODEL;
-    public static GlasgowInspiredDoorModel GLASGOW_INT_MODEL;
-    public static JackDoorModel JACK_CUSTOM_INT_MODEL;
-    public static LegoIdeasDoorModel LEGO_IDEAS_INT_MODEL;
-    public static LegoPieceDoors LEGO_PIECE_INT_MODEL;
-    public static OldSchoolDoorModel OLDSCHOOL_INT_MODEL;
+    public static SeaBlueDoorModel TOMMY_INT_MDL;
+    public static EngineerDoorModel ENGINEERS_INT_MDL;
+    public static EllenDoorModel ELLEN_INT_MDL;
+    public static MoffatDoorModel MOFFAT_INT_MDL;
+    public static RTDDoorModel RTD_INT_MDL;
+    public static ChibnallDoorModel CHIBNALL_INT_MDL;
+    public static RTD2DoorModel RTD2_INT_MDL;
+    public static GlasgowInspiredDoorModel GLASGOW_INT_MDL;
+    public static JackDoorModel JACK_CUSTOM_INT_MDL;
+    public static LegoIdeasDoorModel LEGO_IDEAS_INT_MDL;
+    public static LegoPieceDoors LEGO_PIECE_INT_MDL;
+    public static OldSchoolDoorModel OLDSCHOOL_INT_MDL;
+    public static DualInteriorDoorModel MADDOC_WHITTAKERINT_MDL;
 
     public static ModelLayerLocation JACK_CUSTOM_EXT, TOMMY_EXT, ENGINEERS_EXT, ELLEN_EXT, MOFFAT_EXT, OLDSCHOOL_EXT, RTD_EXT, CHIBNALL_EXT, GLASGOW_EXT, LEGO_IDEAS_EXT, LEGO_PIECE_EXT, LEGO_DIMENSIONS_EXT;
     public static ModelLayerLocation JACK_CUSTOM_INT, OLDSCHOOL_INT, TOMMY_INT, ENGINEERS_INT, ELLEN_INT, MOFFAT_INT, RTD_INT, RTD2_INT, CHIBNALL_INT, GLASGOW_INT, LEGO_IDEAS_INT, LEGO_PIECE_INT;
 
+    public static ModelLayerLocation MADDOC_WHITTAKERINT = interiorDoor("maddoc_whittaker_door");
+    public static ModelLayerLocation MADDOC_WHITTAKEREXT = interiorDoor("maddoc_whittaker");
+
+
+    private static ModelLayerLocation interiorDoor(String name) {
+        return createLocation(name, "door");
+    }
+
+    private static ModelLayerLocation console(String name) {
+        return createLocation(name, "console");
+    }
+
+    private static ModelLayerLocation shell(String name) {
+        return createLocation(name, "shell");
+    }
+
+
+    private static ModelLayerLocation createLocation(String name, String layer) {
+        return new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, name), layer);
+    }        
 
 
     public static void init() {
@@ -90,36 +113,37 @@ public class ESModelRegistry {
     public static void setupModelInstances(EntityModelSet entityModels) {
 
         // Shell
-        ESModelRegistry.TOMMY_EXT_MODEL = new SeaBlueShellModel(entityModels.bakeLayer(ESModelRegistry.TOMMY_EXT));
-        ESModelRegistry.ENGINEERS_EXT_MODEL = new EngineersShellModel(entityModels.bakeLayer(ESModelRegistry.ENGINEERS_EXT));
-        ESModelRegistry.ELLEN_EXT_MODEL = new EllenShellModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_EXT));
-        ESModelRegistry.MOFFAT_EXT_MODEL = new MoffatBoxShell(entityModels.bakeLayer(ESModelRegistry.MOFFAT_EXT));
-        ESModelRegistry.OLDSCHOOL_EXT_MODEL = new OldSchoolShellModel(entityModels.bakeLayer(ESModelRegistry.OLDSCHOOL_EXT));
-        ESModelRegistry.RTD_EXT_MODEL = new RTDShellModel(entityModels.bakeLayer(ESModelRegistry.RTD_EXT));
-        ESModelRegistry.GLASGOW_EXT_MODEL = new GlasgowInspiredShellModel(entityModels.bakeLayer(ESModelRegistry.GLASGOW_EXT));
-        ESModelRegistry.CHIBNALL_EXT_MODEL = new ChibnallShellModel(entityModels.bakeLayer(ESModelRegistry.CHIBNALL_EXT));
-        ESModelRegistry.LEGO_IDEAS_EXT_MODEL = new LegoIdeasShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_IDEAS_EXT));
-        ESModelRegistry.HUDOLIN_EXT_MODEL = new HudolinShellModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
-        ESModelRegistry.JACK_CUSTOM_EXT_MODEL = new JackShellModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_EXT));
-        ESModelRegistry.ELLEN_EXT_MODEL = new EllenShellModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_EXT));
-        ESModelRegistry.LEGO_PIECE_EXT_MODEL = new LegoPieceShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_PIECE_EXT));
-        ESModelRegistry.LEGO_DIMENSIONS_EXT_MODEL = new LegoDimensionsShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_DIMENSIONS_EXT));
+        ESModelRegistry.TOMMY_EXT_MDL = new SeaBlueShellModel(entityModels.bakeLayer(ESModelRegistry.TOMMY_EXT));
+        ESModelRegistry.ENGINEERS_EXT_MDL = new EngineersShellModel(entityModels.bakeLayer(ESModelRegistry.ENGINEERS_EXT));
+        ESModelRegistry.ELLEN_EXT_MDL = new EllenShellModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_EXT));
+        ESModelRegistry.MOFFAT_EXT_MDL = new MoffatBoxShell(entityModels.bakeLayer(ESModelRegistry.MOFFAT_EXT));
+        ESModelRegistry.OLDSCHOOL_EXT_MDL = new OldSchoolShellModel(entityModels.bakeLayer(ESModelRegistry.OLDSCHOOL_EXT));
+        ESModelRegistry.RTD_EXT_MDL = new RTDShellModel(entityModels.bakeLayer(ESModelRegistry.RTD_EXT));
+        ESModelRegistry.GLASGOW_EXT_MDL = new GlasgowInspiredShellModel(entityModels.bakeLayer(ESModelRegistry.GLASGOW_EXT));
+        ESModelRegistry.CHIBNALL_EXT_MDL = new ChibnallShellModel(entityModels.bakeLayer(ESModelRegistry.CHIBNALL_EXT));
+        ESModelRegistry.LEGO_IDEAS_EXT_MDL = new LegoIdeasShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_IDEAS_EXT));
+        ESModelRegistry.HUDOLIN_EXT_MDL = new HudolinShellModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
+        ESModelRegistry.JACK_CUSTOM_EXT_MDL = new JackShellModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_EXT));
+        ESModelRegistry.ELLEN_EXT_MDL = new EllenShellModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_EXT));
+        ESModelRegistry.LEGO_PIECE_EXT_MDL = new LegoPieceShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_PIECE_EXT));
+        ESModelRegistry.LEGO_DIMENSIONS_EXT_MDL = new LegoDimensionsShellModel(entityModels.bakeLayer(ESModelRegistry.LEGO_DIMENSIONS_EXT));
 
         // Interior Door
-        ESModelRegistry.TOMMY_INT_MODEL = new SeaBlueDoorModel(entityModels.bakeLayer(ESModelRegistry.TOMMY_INT));
-        ESModelRegistry.ENGINEERS_INT_MODEL = new EngineerDoorModel(entityModels.bakeLayer(ESModelRegistry.ENGINEERS_INT));
-        ESModelRegistry.ELLEN_INT_MODEL = new EllenDoorModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_INT));
-        ESModelRegistry.MOFFAT_INT_MODEL = new MoffatDoorModel(entityModels.bakeLayer(ESModelRegistry.MOFFAT_INT));
-        ESModelRegistry.GLASGOW_INT_MODEL = new GlasgowInspiredDoorModel(entityModels.bakeLayer(ESModelRegistry.GLASGOW_INT));
-        ESModelRegistry.RTD_INT_MODEL = new RTDDoorModel(entityModels.bakeLayer(ESModelRegistry.RTD_INT));
-        ESModelRegistry.CHIBNALL_INT_MODEL = new ChibnallDoorModel(entityModels.bakeLayer(ESModelRegistry.CHIBNALL_INT));
-        ESModelRegistry.RTD2_INT_MODEL = new RTD2DoorModel(entityModels.bakeLayer(ESModelRegistry.RTD2_INT));
-        ESModelRegistry.LEGO_IDEAS_INT_MODEL = new LegoIdeasDoorModel(entityModels.bakeLayer(ESModelRegistry.LEGO_IDEAS_INT));
-        ESModelRegistry.HUDOLIN_INT_MODEL = new HudolinDoorModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
-        ESModelRegistry.JACK_CUSTOM_INT_MODEL = new JackDoorModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_INT));
-        ESModelRegistry.ELLEN_INT_MODEL = new EllenDoorModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_INT));
-        ESModelRegistry.LEGO_PIECE_INT_MODEL = new LegoPieceDoors(entityModels.bakeLayer(ESModelRegistry.LEGO_PIECE_INT));
-        ESModelRegistry.OLDSCHOOL_INT_MODEL = new OldSchoolDoorModel(entityModels.bakeLayer(ESModelRegistry.OLDSCHOOL_INT));
+        ESModelRegistry.TOMMY_INT_MDL = new SeaBlueDoorModel(entityModels.bakeLayer(ESModelRegistry.TOMMY_INT));
+        ESModelRegistry.ENGINEERS_INT_MDL = new EngineerDoorModel(entityModels.bakeLayer(ESModelRegistry.ENGINEERS_INT));
+        ESModelRegistry.ELLEN_INT_MDL = new EllenDoorModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_INT));
+        ESModelRegistry.MOFFAT_INT_MDL = new MoffatDoorModel(entityModels.bakeLayer(ESModelRegistry.MOFFAT_INT));
+        ESModelRegistry.GLASGOW_INT_MDL = new GlasgowInspiredDoorModel(entityModels.bakeLayer(ESModelRegistry.GLASGOW_INT));
+        ESModelRegistry.RTD_INT_MDL = new RTDDoorModel(entityModels.bakeLayer(ESModelRegistry.RTD_INT));
+        ESModelRegistry.CHIBNALL_INT_MDL = new ChibnallDoorModel(entityModels.bakeLayer(ESModelRegistry.CHIBNALL_INT));
+        ESModelRegistry.RTD2_INT_MDL = new RTD2DoorModel(entityModels.bakeLayer(ESModelRegistry.RTD2_INT));
+        ESModelRegistry.LEGO_IDEAS_INT_MDL = new LegoIdeasDoorModel(entityModels.bakeLayer(ESModelRegistry.LEGO_IDEAS_INT));
+        ESModelRegistry.HUDOLIN_INT_MDL = new HudolinDoorModel(entityModels.bakeLayer(ESModelRegistry.HUDOLIN_EXT));
+        ESModelRegistry.JACK_CUSTOM_INT_MDL = new JackDoorModel(entityModels.bakeLayer(ESModelRegistry.JACK_CUSTOM_INT));
+        ESModelRegistry.ELLEN_INT_MDL = new EllenDoorModel(entityModels.bakeLayer(ESModelRegistry.ELLEN_INT));
+        ESModelRegistry.LEGO_PIECE_INT_MDL = new LegoPieceDoors(entityModels.bakeLayer(ESModelRegistry.LEGO_PIECE_INT));
+        ESModelRegistry.OLDSCHOOL_INT_MDL = new OldSchoolDoorModel(entityModels.bakeLayer(ESModelRegistry.OLDSCHOOL_INT));
+        ESModelRegistry.MADDOC_WHITTAKERINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_WHITTAKERINT), 90);
 
         ShellEntryRegistry.init();
     }

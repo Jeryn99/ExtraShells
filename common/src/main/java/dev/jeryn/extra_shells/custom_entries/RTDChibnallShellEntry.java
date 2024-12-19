@@ -17,7 +17,7 @@ public class RTDChibnallShellEntry extends ShellEntry {
     public ShellDoorModel getShellDoorModel(ShellPattern shellPattern) {
 
         if(shellPattern.id().getPath().contains("fourteen") && shellPattern.id().getNamespace().contains(ExtraShells.MODID)){
-            return ESModelRegistry.RTD2_INT_MODEL;
+            return ESModelRegistry.RTD2_INT_MDL;
         }
 
         return super.getShellDoorModel(shellPattern);

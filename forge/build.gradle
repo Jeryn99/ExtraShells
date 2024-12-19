@@ -76,7 +76,7 @@ unifiedPublishing {
 dependencies {
     neoForge("net.neoforged:neoforge:${rootProject.neoforge_version}")
 
-    modImplementation "maven.modrinth:tardis-refined:neoforge-mc1.20.2-v2.0.6"
+    modImplementation "dev.jeryn:neoforgetr:2.1.0"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive = false }
@@ -110,6 +110,7 @@ jar {
 sourcesJar {
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources
+    duplicatesStrategy 'exclude'
     from commonSources.archiveFile.map { zipTree(it) }
 }
 

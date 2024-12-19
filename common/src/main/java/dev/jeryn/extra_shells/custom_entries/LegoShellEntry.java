@@ -17,11 +17,11 @@ public class LegoShellEntry extends ShellEntry {
     public ShellModel getShellModel(ShellPattern shellPattern) {
 
         if(shellPattern.id().getPath().contains("dimensions") && shellPattern.id().getNamespace().contains(ExtraShells.MODID)){
-            return ESModelRegistry.LEGO_DIMENSIONS_EXT_MODEL;
+            return ESModelRegistry.LEGO_DIMENSIONS_EXT_MDL;
         }
 
         if(shellPattern.id().getPath().contains("piece") && shellPattern.id().getNamespace().contains(ExtraShells.MODID)){
-            return ESModelRegistry.LEGO_PIECE_EXT_MODEL;
+            return ESModelRegistry.LEGO_PIECE_EXT_MDL;
         }
 
         return super.getShellModel(shellPattern);
@@ -31,7 +31,7 @@ public class LegoShellEntry extends ShellEntry {
     public ShellDoorModel getShellDoorModel(ShellPattern shellPattern) {
 
         if(shellPattern.id().getPath().contains("piece") && shellPattern.id().getNamespace().contains(ExtraShells.MODID)){
-            return ESModelRegistry.LEGO_PIECE_INT_MODEL;
+            return ESModelRegistry.LEGO_PIECE_INT_MDL;
         }
 
         return super.getShellDoorModel(shellPattern);
