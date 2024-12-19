@@ -39,8 +39,8 @@ public class MadDocShellBase extends ShellModel {
 
     @Override
     public void setDoorPosition(boolean open) {
-        this.right_door.yRot = open ? (float) Math.toRadians(75) : 0.0F;
-        this.left_door.yRot = open ? (float) Math.toRadians(-75) : 0.0F;
+        this.right_door.yRot = open ? (float) Math.toRadians(70) : 0.0F;
+        this.left_door.yRot = open ? (float) Math.toRadians(-70) : 0.0F;
     }
 
     @Override

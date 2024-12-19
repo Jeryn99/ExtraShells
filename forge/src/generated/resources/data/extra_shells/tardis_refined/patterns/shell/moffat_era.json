@@ -1,0 +1,92 @@
+{
+  "patterns": [
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/default.png"
+      },
+      "id": "extra_shells:default",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/default_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    },
+    {
+      "exterior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/twelfth.png"
+      },
+      "id": "extra_shells:twelfth",
+      "interior": {
+        "emissive": true,
+        "texture": "extra_shells:textures/blockentity/shell/moffat_era/twelfth_interior.png"
+      },
+      "name_component": "{\"color\":\"yellow\",\"text\":\"Twelfth\"}",
+      "sound_profile": {
+        "sounds": {
+          "tardis_refined:door_close": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.close"
+            },
+            "volume": 1.4
+          },
+          "tardis_refined:door_open": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_door.open"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_unlock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "minecraft:block.iron_trapdoor.open"
+            },
+            "volume": 1.0
+          }
+        }
+      }
+    }
+  ]
+}
