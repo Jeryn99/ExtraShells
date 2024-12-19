@@ -10,8 +10,12 @@
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": ["mc.craig.software.extra_shells.fabric.ExtraShellsFabric"],
-    "client": ["mc.craig.software.extra_shells.fabric.ExtraShellsClientFabric"]
+    "main": [
+      "dev.jeryn.extra_shells.fabric.ExtraShellsFabric"
+    ],
+    "client": [
+      "dev.jeryn.extra_shells.fabric.ExtraShellsClientFabric"
+    ]
   },
   "injected_interfaces": {
 
