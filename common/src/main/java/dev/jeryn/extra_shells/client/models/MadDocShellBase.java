@@ -3,6 +3,7 @@ package dev.jeryn.extra_shells.client.models;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
+import dev.jeryn.anim.tardis.JsonToAnimationDefinition;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.world.entity.Entity;
 import whocraft.tardis_refined.client.model.blockentity.shell.ShellModel;
@@ -13,12 +14,14 @@ public class MadDocShellBase extends ShellModel {
     private final ModelPart left_door;
     private final ModelPart right_door;
     private final ModelPart root;
+    private final ModelPart fade;
 
     public MadDocShellBase(ModelPart root) {
         super(root);
         this.left_door = root.getChild("door1");
         this.right_door = root.getChild("door2");
         this.root = root;
+        this.fade = JsonToAnimationDefinition.findPart(this, "fade_value");
     }
 
     @Override
@@ -39,8 +42,8 @@ public class MadDocShellBase extends ShellModel {
 
     @Override
     public void setDoorPosition(boolean open) {
-        this.right_door.yRot = open ? (float) Math.toRadians(70) : 0.0F;
-        this.left_door.yRot = open ? (float) Math.toRadians(-70) : 0.0F;
+        this.right_door.yRot = open ? -300 : 0.0F;
+        this.left_door.yRot = open ? 300 : 0.0F;
     }
 
     @Override
@@ -50,7 +53,7 @@ public class MadDocShellBase extends ShellModel {
         if(!isBaseModel){
         poseStack.translate(0.0, -0.07, 0.0);
 }*/
-
+        fade.visible = false;
         this.handleAllAnimations(entity, this.root(), isBaseModel, open, poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 

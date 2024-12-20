@@ -154,11 +154,11 @@ public class ESModelRegistry {
         ESModelRegistry.LEGO_PIECE_INT_MDL = new LegoPieceDoors(entityModels.bakeLayer(ESModelRegistry.LEGO_PIECE_INT));
         ESModelRegistry.OLDSCHOOL_INT_MDL = new OldSchoolDoorModel(entityModels.bakeLayer(ESModelRegistry.OLDSCHOOL_INT));
 
-        ESModelRegistry.MADDOC_SMITHINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_SMITHINT), (float) Math.toRadians(-60));
-        ESModelRegistry.MADDOC_BRACHACKIINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_BRACHACKIINT), (float) Math.toRadians(-60));
-        ESModelRegistry.MADDOC_WHITTAKERINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_WHITTAKERINT), (float) Math.toRadians(-60));
-        ESModelRegistry.MADDOC_NEWBERRYINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_NEWBERYINT), (float) Math.toRadians(-60));
-        ESModelRegistry.MADDOC_TENNANTINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTINT), (float) Math.toRadians(-60));
+        ESModelRegistry.MADDOC_SMITHINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_SMITHINT), 300);
+        ESModelRegistry.MADDOC_BRACHACKIINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_BRACHACKIINT), 300);
+        ESModelRegistry.MADDOC_WHITTAKERINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_WHITTAKERINT), 300);
+        ESModelRegistry.MADDOC_NEWBERRYINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_NEWBERYINT), 300);
+        ESModelRegistry.MADDOC_TENNANTINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTINT), 300);
 
         ESModelRegistry.MADDOC_SMITHEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_SMITHEXT));
         ESModelRegistry.MADDOC_TENNANTEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTEXT));
