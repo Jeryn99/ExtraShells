@@ -23,6 +23,7 @@ public class ESSoundProvider extends SoundDefinitionsProvider {
     public void registerSounds() {
         this.add(ESSounds.DELOREAN_OPEN.get(), this.basicSound("delorean_open", new ResourceLocation(ExtraShells.MODID, "delorean_open")));
         this.add(ESSounds.DELOREAN_CLOSED.get(), this.basicSound("delorean_closed", new ResourceLocation(ExtraShells.MODID, "delorean_closed")));
+        this.add(ESSounds.DELOREAN_LOCKED.get(), this.basicSound("delorean_locked", new ResourceLocation(ExtraShells.MODID, "delorean_locked")));
 
     }
 

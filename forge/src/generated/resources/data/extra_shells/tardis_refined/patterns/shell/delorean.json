@@ -20,6 +20,13 @@
             },
             "volume": 1.0
           },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "extra_shells:delorean_locked"
+            },
+            "volume": 1.0
+          },
           "tardis_refined:door_open": {
             "pitch": 1.0,
             "sound_event": {
@@ -47,6 +54,13 @@
             "pitch": 1.0,
             "sound_event": {
               "sound_id": "extra_shells:delorean_closed"
+            },
+            "volume": 1.0
+          },
+          "tardis_refined:door_lock": {
+            "pitch": 1.0,
+            "sound_event": {
+              "sound_id": "extra_shells:delorean_locked"
             },
             "volume": 1.0
           },

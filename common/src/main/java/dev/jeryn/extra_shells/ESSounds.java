@@ -12,6 +12,7 @@ public class ESSounds {
     public static final DeferredRegistry<SoundEvent> SOUNDS = DeferredRegistry.create(ExtraShells.MODID, Registries.SOUND_EVENT);
     public static final RegistrySupplier<SoundEvent> DELOREAN_OPEN = setUpSound("delorean_open");
     public static final RegistrySupplier<SoundEvent> DELOREAN_CLOSED = setUpSound("delorean_closed");
+    public static final RegistrySupplier<SoundEvent> DELOREAN_LOCKED = setUpSound("delorean_locked");
 
 
     private static RegistrySupplier<SoundEvent> setUpSound(String soundName) {

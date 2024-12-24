@@ -57,6 +57,7 @@ public class ESPatterns extends ShellPatternProvider {
         ShellSoundProfile soundProfile = new ShellSoundProfile();
         soundProfile.setDoorClose(new ConfiguredSound(ESSounds.DELOREAN_CLOSED.get()));
         soundProfile.setDoorOpen(new ConfiguredSound(ESSounds.DELOREAN_OPEN.get()));
+        soundProfile.setDoorLocked(new ConfiguredSound(ESSounds.DELOREAN_LOCKED.get()));
 
         quickAdd(ESShellRegistry.DELOREAN.getId(), "default", true, soundProfile);
         quickAdd(ESShellRegistry.DELOREAN.getId(), "future", true, soundProfile);
