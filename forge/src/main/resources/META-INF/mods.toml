@@ -11,7 +11,7 @@ loaderVersion = "[1,)" #mandatory This is typically bumped every Minecraft versi
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license = "All Rights Reserved"
 # A URL to refer people to when problems occur with this mod
-issueTrackerURL = "https://Craig/untitled1/issues"
+issueTrackerURL = "https://github.com/Jeryn99/ExtraShells"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
@@ -42,7 +42,7 @@ logoFile = "icon.png" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description = '''
-
+Adds more Shells to the mod Tardis Refined!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.extra_shells]] #optional
