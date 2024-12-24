@@ -15,7 +15,7 @@ public class LegoDimensionsShellModel extends ShellModel {
     private final ModelPart frame;
     private final ModelPart right_door;
     private final ModelPart left_door;
-    private final ModelPart bb_main;
+    private final ModelPart portal;
 
     public LegoDimensionsShellModel(ModelPart root) {
         super(root);
@@ -23,7 +23,7 @@ public class LegoDimensionsShellModel extends ShellModel {
         this.frame = root.getChild("frame");
         this.right_door = root.getChild("right_door");
         this.left_door = root.getChild("left_door");
-        this.bb_main = root.getChild("bb_main");
+        this.portal = root.getChild("portal");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -53,7 +53,7 @@ public class LegoDimensionsShellModel extends ShellModel {
 
         PartDefinition cube_r4 = left_door.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(28, 71).addBox(-9.0F, -26.0F, -8.0F, 10.0F, 26.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-8.0F, -3.0F, -1.0F, 0.0F, -1.5708F, 0.0F));
 
-        PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(0, 102).addBox(-9.0F, -29.0F, -0.025F, 18.0F, 26.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+        PartDefinition portal = partdefinition.addOrReplaceChild("portal", CubeListBuilder.create().texOffs(0, 102).addBox(-9.0F, -29.0F, -0.025F, 18.0F, 26.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
@@ -71,7 +71,7 @@ public class LegoDimensionsShellModel extends ShellModel {
         frame.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         right_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         left_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-        bb_main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+        portal.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
     @Override

@@ -1,0 +1,102 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.jack_int_model",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "frame",
+					"pivot": [0, -2, -3]
+				},
+				{
+					"name": "Roof",
+					"parent": "frame",
+					"pivot": [0, -2, -3]
+				},
+				{
+					"name": "pillars",
+					"parent": "frame",
+					"pivot": [0, -2, -3],
+					"cubes": [
+						{"origin": [-11, 0, 7], "size": [3, 37, 3], "uv": [0, 106]},
+						{"origin": [8, 0, 7], "size": [3, 37, 3], "uv": [70, 103]}
+					]
+				},
+				{
+					"name": "Signs",
+					"parent": "frame",
+					"pivot": [0, -2, -3],
+					"cubes": [
+						{"origin": [0.6, 32.2, 7.7], "size": [2, 2, 2], "uv": [18, 171]},
+						{"origin": [1.1, 34.2, 8.2], "size": [1, 1, 1], "uv": [22, 162]},
+						{"origin": [4.6, 32.2, 7.7], "size": [2, 2, 2], "uv": [18, 171]},
+						{"origin": [5.1, 34.2, 8.2], "size": [1, 1, 1], "uv": [22, 162]},
+						{"origin": [-7, 32.2, 7.7], "size": [2, 2, 2], "uv": [18, 171]},
+						{"origin": [-6.5, 34.2, 8.2], "size": [1, 1, 1], "uv": [22, 162]},
+						{"origin": [-3.1, 32.2, 7.7], "size": [2, 2, 2], "uv": [18, 171]},
+						{"origin": [-2.6, 34.2, 8.2], "size": [1, 1, 1], "uv": [22, 162]}
+					]
+				},
+				{
+					"name": "cube_r1",
+					"parent": "Signs",
+					"pivot": [0, -2, -3],
+					"rotation": [0, -90.00021, 0],
+					"cubes": [
+						{"origin": [13, 31, -14], "size": [1, 4, 22], "uv": [0, 80]}
+					]
+				},
+				{
+					"name": "Doors",
+					"parent": "frame",
+					"pivot": [0, -2, -3]
+				},
+				{
+					"name": "cube_r2",
+					"parent": "Doors",
+					"pivot": [0, -2, -3],
+					"rotation": [0, -90.00021, 0],
+					"cubes": [
+						{"origin": [10, 35, -11], "size": [3, 2, 16], "uv": [38, 38]},
+						{"origin": [10, 31, -11], "size": [3, 1, 16], "uv": [38, 38]}
+					]
+				},
+				{
+					"name": "Lamp",
+					"parent": "frame",
+					"pivot": [0, -2, -3]
+				},
+				{
+					"name": "portal",
+					"pivot": [0, 0, -1],
+					"cubes": [
+						{"origin": [-11, 0, 9.9], "size": [22, 37, 1], "uv": [23, 69]}
+					]
+				},
+				{
+					"name": "right_door",
+					"pivot": [7.5, 16, 8],
+					"cubes": [
+						{"origin": [0, 1, 8], "size": [8, 30, 1], "uv": [114, 34]},
+						{"origin": [3, 17, 6], "size": [3, 4, 3], "uv": [1, 165]}
+					]
+				},
+				{
+					"name": "left_door",
+					"pivot": [-7.5, 16, 8],
+					"cubes": [
+						{"origin": [-8, 1, 8], "size": [8, 30, 1], "uv": [100, 107]},
+						{"origin": [-2, 18, 9], "size": [1, 2, 1], "uv": [0, 6]}
+					]
+				}
+			]
+		}
+	]
+}

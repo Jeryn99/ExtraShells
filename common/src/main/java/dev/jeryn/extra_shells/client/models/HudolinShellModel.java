@@ -13,7 +13,7 @@ public class HudolinShellModel extends ShellModel {
     private final ModelPart left_door;
     private final ModelPart right_door;
     private final ModelPart frame;
-    private final ModelPart bb_main;
+    private final ModelPart portal;
     private final ModelPart root;
 
     public HudolinShellModel(ModelPart root) {
@@ -22,7 +22,7 @@ public class HudolinShellModel extends ShellModel {
         this.left_door = root.getChild("left_door");
         this.right_door = root.getChild("right_door");
         this.frame = root.getChild("frame");
-        this.bb_main = root.getChild("bb_main");
+        this.portal = root.getChild("portal");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -89,7 +89,7 @@ public class HudolinShellModel extends ShellModel {
 
         PartDefinition cube_r11 = left_door.addOrReplaceChild("cube_r11", CubeListBuilder.create().texOffs(0, 34).addBox(2.0F, -19.0F, 3.5F, 2.0F, 7.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(7.0F, 0.0F, 5.0F, -3.1416F, 0.0F, 3.1416F));
 
-        PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(80, 54).addBox(-7.5F, -33.1F, -7.0F, 15.0F, 30.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+        PartDefinition portal = partdefinition.addOrReplaceChild("portal", CubeListBuilder.create().texOffs(80, 54).addBox(-7.5F, -33.1F, -7.0F, 15.0F, 30.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
         addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
@@ -101,7 +101,7 @@ public class HudolinShellModel extends ShellModel {
         left_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         right_door.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
         frame.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-        bb_main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+        portal.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
     @Override

@@ -1,0 +1,49 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.lego_piece_door",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "door_closed",
+					"pivot": [0, -4.1, 0],
+					"rotation": [0, 180.00041, 0],
+					"cubes": [
+						{"origin": [-4, -0.1, -7.9], "size": [8, 15, 2], "inflate": -0.09, "uv": [0, 43]}
+					]
+				},
+				{
+					"name": "portal",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2.075, 0.85, 5.925], "size": [3, 12, 1], "inflate": -0.1, "uv": [56, 51]}
+					]
+				},
+				{
+					"name": "door_open",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "doorsopen_r1",
+					"parent": "door_open",
+					"pivot": [0, -4.1, 0],
+					"rotation": [0, 180.00041, 0],
+					"cubes": [
+						{"origin": [-4, -0.1, -7.9], "size": [8, 15, 2], "inflate": -0.1, "uv": [44, 0]}
+					]
+				},
+				{
+					"name": "frame",
+					"pivot": [0, 0, 0]
+				}
+			]
+		}
+	]
+}

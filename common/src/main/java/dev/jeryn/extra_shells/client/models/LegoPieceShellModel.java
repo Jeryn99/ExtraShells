@@ -19,7 +19,7 @@ public class LegoPieceShellModel extends ShellModel {
     private final ModelPart frame;
     private final ModelPart doorclosed;
     private final ModelPart dooropen;
-    private final ModelPart bb_main;
+    private final ModelPart portal;
 
     public LegoPieceShellModel(ModelPart root) {
         super(root);
@@ -27,7 +27,7 @@ public class LegoPieceShellModel extends ShellModel {
         this.frame = root.getChild("frame");
         this.doorclosed = root.getChild("doorclosed");
         this.dooropen = root.getChild("dooropen");
-        this.bb_main = root.getChild("bb_main");
+        this.portal = root.getChild("portal");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -51,7 +51,7 @@ public class LegoPieceShellModel extends ShellModel {
 
         PartDefinition dooropen = partdefinition.addOrReplaceChild("dooropen", CubeListBuilder.create().texOffs(20, 43).addBox(-4.0F, -14.9F, -5.9F, 8.0F, 15.0F, 2.0F, new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
-        PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(56, 51).addBox(-0.925F, -12.85F, -5.875F, 3.0F, 12.0F, 1.0F, new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+        PartDefinition portal = partdefinition.addOrReplaceChild("portal", CubeListBuilder.create().texOffs(56, 51).addBox(-0.925F, -12.85F, -5.875F, 3.0F, 12.0F, 1.0F, new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 24.0F, 0.0F));
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
 

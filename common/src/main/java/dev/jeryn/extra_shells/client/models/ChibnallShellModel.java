@@ -76,7 +76,7 @@ public class ChibnallShellModel extends ShellModel {
                 .texOffs(77, 96).addBox(6.5F, -33.0F, 0.0F, 0.0F, 30.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(5, 21).addBox(7.0F, -22.0F, 0.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-8.0F, 24.0F, -9.0F));
 
-        PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(78, 52).addBox(-8.5F, -33.1F, -9.0F, 17.0F, 30.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+        PartDefinition portal = partdefinition.addOrReplaceChild("portal", CubeListBuilder.create().texOffs(78, 52).addBox(-8.5F, -33.1F, -9.0F, 17.0F, 30.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
         addMaterializationPart(partdefinition);
         return LayerDefinition.create(meshdefinition, 128, 128);
     }

@@ -1,0 +1,570 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "chibnall_int_model",
+        "texture_width": 128,
+        "texture_height": 128
+      },
+      "bones": [
+        {
+          "name": "right_door",
+          "pivot": [
+            8.0,
+            -0.0,
+            -9.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0.0,
+                -0.0,
+                -10.0
+              ],
+              "size": [
+                8.0,
+                30.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                0.0,
+                66.0
+              ],
+              "mirror": false
+            },
+            {
+              "origin": [
+                1.0,
+                14.0,
+                -11.0
+              ],
+              "size": [
+                1.0,
+                2.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                0.0,
+                19.0
+              ],
+              "mirror": false
+            },
+            {
+              "origin": [
+                0.0,
+                17.0,
+                -9.0
+              ],
+              "size": [
+                2.0,
+                2.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                5.0,
+                18.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "portal",
+          "pivot": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": []
+        },
+        {
+          "name": "portal_r1",
+          "parent": "portal",
+          "pivot": [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            180.00041482030653,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8.0,
+                -0.0,
+                9.825
+              ],
+              "size": [
+                16.0,
+                30.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                87.0,
+                60.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "left_door",
+          "pivot": [
+            -8.0,
+            -0.0,
+            -9.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8.0,
+                -0.0,
+                -10.0
+              ],
+              "size": [
+                8.0,
+                30.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                18.0,
+                66.0
+              ],
+              "mirror": false
+            },
+            {
+              "origin": [
+                -1.5,
+                -0.0,
+                -9.0
+              ],
+              "size": [
+                0.0,
+                30.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                77.0,
+                96.0
+              ],
+              "mirror": false
+            },
+            {
+              "origin": [
+                -1.0,
+                17.0,
+                -9.0
+              ],
+              "size": [
+                1.0,
+                2.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                5.0,
+                21.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "frame",
+          "pivot": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": []
+        },
+        {
+          "name": "roof",
+          "parent": "frame",
+          "pivot": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10.0,
+                33.0,
+                -10.0
+              ],
+              "size": [
+                20.0,
+                2.0,
+                20.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                0.0,
+                27.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "panels",
+          "parent": "frame",
+          "pivot": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": []
+        },
+        {
+          "name": "cube_r4",
+          "parent": "panels",
+          "pivot": [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            -90.00020741015327,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8.0,
+                -0.0,
+                9.0
+              ],
+              "size": [
+                16.0,
+                30.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                0.0,
+                97.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "cube_r5",
+          "parent": "panels",
+          "pivot": [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            90.00020741015327,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8.0,
+                -0.0,
+                9.0
+              ],
+              "size": [
+                16.0,
+                30.0,
+                1.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                34.0,
+                97.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "signage",
+          "parent": "frame",
+          "pivot": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": []
+        },
+        {
+          "name": "f_r1",
+          "parent": "signage",
+          "pivot": [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10.0,
+                30.0,
+                -12.0
+              ],
+              "size": [
+                20.0,
+                3.0,
+                3.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                60.0,
+                27.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "cube_r1",
+          "parent": "signage",
+          "pivot": [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            -90.00020741015327,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10.0,
+                30.0,
+                -12.0
+              ],
+              "size": [
+                20.0,
+                3.0,
+                3.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                60.0,
+                27.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "cube_r2",
+          "parent": "signage",
+          "pivot": [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            180.00041482030653,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10.0,
+                30.0,
+                -12.0
+              ],
+              "size": [
+                20.0,
+                3.0,
+                3.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                60.0,
+                27.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "cube_r3",
+          "parent": "signage",
+          "pivot": [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            90.00020741015327,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10.0,
+                30.0,
+                -12.0
+              ],
+              "size": [
+                20.0,
+                3.0,
+                3.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                60.0,
+                27.0
+              ],
+              "mirror": false
+            }
+          ]
+        },
+        {
+          "name": "posts",
+          "parent": "frame",
+          "pivot": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10.975,
+                -0.0,
+                7.975
+              ],
+              "size": [
+                3.0,
+                34.0,
+                3.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                104.0,
+                91.0
+              ],
+              "mirror": false
+            },
+            {
+              "origin": [
+                -11.0,
+                -0.0,
+                -11.0
+              ],
+              "size": [
+                3.0,
+                34.0,
+                3.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                116.0,
+                91.0
+              ],
+              "mirror": false
+            },
+            {
+              "origin": [
+                8.0,
+                -0.0,
+                -11.0
+              ],
+              "size": [
+                3.0,
+                34.0,
+                3.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                80.0,
+                91.0
+              ],
+              "mirror": false
+            },
+            {
+              "origin": [
+                7.975,
+                -0.0,
+                7.975
+              ],
+              "size": [
+                3.0,
+                34.0,
+                3.0
+              ],
+              "inflate": 0.0,
+              "uv": [
+                92.0,
+                91.0
+              ],
+              "mirror": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
