@@ -3,7 +3,7 @@ package dev.jeryn.extra_shells.client.models;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
-import dev.jeryn.anim.tardis.JsonToAnimationDefinition;
+import dev.jeryn.frame.tardis.Frame;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.world.entity.Entity;
 import whocraft.tardis_refined.client.model.blockentity.shell.ShellModel;
@@ -21,7 +21,7 @@ public class MadDocShellBase extends ShellModel {
         this.left_door = root.getChild("door1");
         this.right_door = root.getChild("door2");
         this.root = root;
-        this.fade = JsonToAnimationDefinition.findPart(this, "fade_value");
+        this.fade = Frame.findPart(this, "fade_value");
     }
 
     @Override

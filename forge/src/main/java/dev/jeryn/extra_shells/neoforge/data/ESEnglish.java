@@ -17,8 +17,8 @@ public class ESEnglish extends LanguageProvider {
         addShell(ESShellRegistry.EMERALD.get(), "Emerald");
         addShell(ESShellRegistry.ENGINEERS.get(), "Engineers");
         addShell(ESShellRegistry.SEA_BLUE.get(), "Sea Blue");
-        addShell(ESShellRegistry.MOFFAT_ERA.get(), "Moffat");
-        addShell(ESShellRegistry.RTD_ERA.get(), "RTD");
+        addShell(ESShellRegistry.MOFFAT_ERA.get(), "Moffat Era");
+        addShell(ESShellRegistry.RTD_ERA.get(), "RTD Era");
         addShell(ESShellRegistry.CHIBNALL_RTD_ERA.get(), "Chibnall/RTD2");
         addShell(ESShellRegistry.GLASGOW.get(), "Glasgow");
         addShell(ESShellRegistry.ANCIENT.get(), "Ancient");
@@ -30,6 +30,7 @@ public class ESEnglish extends LanguageProvider {
         addShell(ESShellRegistry.MADDOC_WHITTAKER.get(), "(Maddoc) Whittaker");
         addShell(ESShellRegistry.MADDOC_BRACHACKI.get(), "(Maddoc) Brachaki");
         addShell(ESShellRegistry.MADDOC_NEWBERRY.get(), "(Maddoc) Newberry");
+        addShell(ESShellRegistry.DELOREAN.get(), "Delorean");
     }
 
     public void addShell(ShellTheme theme, String name) {

@@ -2,7 +2,8 @@ package dev.jeryn.extra_shells.neoforge;
 
 import dev.jeryn.extra_shells.ExtraShells;
 import dev.jeryn.extra_shells.neoforge.data.ESEnglish;
-import dev.jeryn.extra_shells.neoforge.data.TEPatterns;
+import dev.jeryn.extra_shells.neoforge.data.ESPatterns;
+import dev.jeryn.extra_shells.neoforge.data.ESSoundProvider;
 import net.minecraft.data.DataGenerator;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -20,8 +21,9 @@ public class ExtraShellsForge {
     public void onGatherData(GatherDataEvent e) {
         DataGenerator generator = e.getGenerator();
         /*Data Pack*/
-        generator.addProvider(e.includeServer(), new TEPatterns(generator));
+        generator.addProvider(e.includeServer(), new ESPatterns(generator));
         generator.addProvider(e.includeClient(), new ESEnglish(generator));
+        generator.addProvider(e.includeClient(), new ESSoundProvider(generator.getPackOutput(), e.getExistingFileHelper()));
     }
 
 }

@@ -9,7 +9,7 @@ dependencies {
     modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-world:${rootProject.cardinal_version}"
     modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${rootProject.cardinal_version}"
 
-    modImplementation "dev.jeryn:fabrictr:2.1.0"
+    modImplementation "dev.jeryn:fabrictr:2.1.1"
 
     // Forge Config API Port
     modImplementation "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${rootProject.forge_config_api_port_version}"

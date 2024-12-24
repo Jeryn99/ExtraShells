@@ -28,6 +28,7 @@ public class ESShellRegistry {
 
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> MADDOC_SMITH = registerShellTheme("maddoc_smith");
     public static final RegistrySupplierHolder<ShellTheme, ShellTheme> MADDOC_BRACHACKI = registerShellTheme("maddoc_brachacki");
+    public static final RegistrySupplierHolder<ShellTheme, ShellTheme> DELOREAN = registerShellTheme("delorean");
 
 
     private static RegistrySupplierHolder<ShellTheme, ShellTheme> registerShellTheme(String id) {

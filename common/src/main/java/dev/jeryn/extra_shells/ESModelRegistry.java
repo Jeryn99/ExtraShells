@@ -8,6 +8,7 @@ import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
+import whocraft.tardis_refined.client.ModelRegistry;
 import whocraft.tardis_refined.client.model.blockentity.door.interior.DualInteriorDoorModel;
 import whocraft.tardis_refined.common.util.PlatformWarning;
 
@@ -44,11 +45,14 @@ public class ESModelRegistry {
     public static LegoIdeasDoorModel LEGO_IDEAS_INT_MDL;
     public static LegoPieceDoors LEGO_PIECE_INT_MDL;
     public static OldSchoolDoorModel OLDSCHOOL_INT_MDL;
-    public static DualInteriorDoorModel MADDOC_NEWBERRYINT_MDL, MADDOC_SMITHINT_MDL, MADDOC_TENNANTINT_MDL, MADDOC_WHITTAKERINT_MDL, MADDOC_BRACHACKIINT_MDL;
+    public static DualInteriorDoorModel  MADDOC_NEWBERRYINT_MDL, MADDOC_SMITHINT_MDL, MADDOC_TENNANTINT_MDL, MADDOC_WHITTAKERINT_MDL, MADDOC_BRACHACKIINT_MDL;
     public static MadDocShellBase MADDOC_NEWBERRYEXT_MDL, MADDOC_SMITHEXT_MDL, MADDOC_TENNANTEXT_MDL, MADDOC_WHITTAKEREXT_MDL, MADDOC_BRACHACKIEXT_MDL;
 
-    public static ModelLayerLocation JACK_CUSTOM_EXT, TOMMY_EXT, ENGINEERS_EXT, ELLEN_EXT, MOFFAT_EXT, OLDSCHOOL_EXT, RTD_EXT, CHIBNALL_EXT, GLASGOW_EXT, LEGO_IDEAS_EXT, LEGO_PIECE_EXT, LEGO_DIMENSIONS_EXT;
-    public static ModelLayerLocation JACK_CUSTOM_INT, OLDSCHOOL_INT, TOMMY_INT, ENGINEERS_INT, ELLEN_INT, MOFFAT_INT, RTD_INT, RTD2_INT, CHIBNALL_INT, GLASGOW_INT, LEGO_IDEAS_INT, LEGO_PIECE_INT;
+    public static DeloreanShellModel DELOREAN_MDL;
+    public static DeloreanShellDoorModel DELOREAN_INT_MDL;
+
+    public static ModelLayerLocation DELOREAN_EXT, JACK_CUSTOM_EXT, TOMMY_EXT, ENGINEERS_EXT, ELLEN_EXT, MOFFAT_EXT, OLDSCHOOL_EXT, RTD_EXT, CHIBNALL_EXT, GLASGOW_EXT, LEGO_IDEAS_EXT, LEGO_PIECE_EXT, LEGO_DIMENSIONS_EXT;
+    public static ModelLayerLocation DELOREAN_INT, JACK_CUSTOM_INT, OLDSCHOOL_INT, TOMMY_INT, ENGINEERS_INT, ELLEN_INT, MOFFAT_INT, RTD_INT, RTD2_INT, CHIBNALL_INT, GLASGOW_INT, LEGO_IDEAS_INT, LEGO_PIECE_INT;
 
     public static ModelLayerLocation MADDOC_SMITHINT = interiorDoor("maddoc_smith_door");
     public static ModelLayerLocation MADDOC_SMITHEXT = shell("maddoc_smith");
@@ -96,6 +100,7 @@ public class ESModelRegistry {
         CHIBNALL_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "chibnall_ext"), "chibnall_ext"), ChibnallShellModel::createBodyLayer);
         JACK_CUSTOM_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "jack_ext"), "jack_ext"), JackShellModel::createBodyLayer);
         LEGO_IDEAS_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "lego_ideas_ext"), "lego_ideas_ext"), LegoIdeasShellModel::createBodyLayer);
+        DELOREAN_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "delorean_ext"), "delorean_ext"), DeloreanShellModel::createBodyLayer);
 
         OLDSCHOOL_INT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "oldschool_int"), "oldschool_int"), OldSchoolDoorModel::createBodyLayer);
         ENGINEERS_INT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "engineers_int"), "engineers_int"), EngineerDoorModel::createBodyLayer);
@@ -117,6 +122,7 @@ public class ESModelRegistry {
         LEGO_PIECE_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "lego_piece_ext"), "lego_piece_ext"), LegoPieceShellModel::createBodyLayer);
 
         LEGO_DIMENSIONS_EXT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "lego_dimensions_ext"), "lego_dimensions_ext"), LegoDimensionsShellModel::createBodyLayer);
+        DELOREAN_INT = register(new ModelLayerLocation(new ResourceLocation(ExtraShells.MODID, "delorean_int"), "delorean_int"), DeloreanShellDoorModel::createBodyLayer);
 
     }
 
@@ -159,6 +165,7 @@ public class ESModelRegistry {
         ESModelRegistry.MADDOC_WHITTAKERINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_WHITTAKERINT), 300);
         ESModelRegistry.MADDOC_NEWBERRYINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_NEWBERYINT), 300);
         ESModelRegistry.MADDOC_TENNANTINT_MDL = new DualInteriorDoorModel(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTINT), 300);
+        ESModelRegistry.DELOREAN_INT_MDL = new DeloreanShellDoorModel(entityModels.bakeLayer(ESModelRegistry.DELOREAN_INT));
 
         ESModelRegistry.MADDOC_SMITHEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_SMITHEXT));
         ESModelRegistry.MADDOC_TENNANTEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTEXT));
@@ -167,6 +174,7 @@ public class ESModelRegistry {
         ESModelRegistry.MADDOC_TENNANTEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_TENNANTEXT));
         ESModelRegistry.MADDOC_WHITTAKEREXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_WHITTAKEREXT));
         ESModelRegistry.MADDOC_NEWBERRYEXT_MDL = new MadDocShellBase(entityModels.bakeLayer(ESModelRegistry.MADDOC_NEWBERYEXT));
+        ESModelRegistry.DELOREAN_MDL = new DeloreanShellModel(entityModels.bakeLayer(ESModelRegistry.DELOREAN_EXT));
 
         ShellEntryRegistry.init();
     }

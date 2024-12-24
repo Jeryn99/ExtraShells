@@ -4,7 +4,13 @@ import dev.jeryn.extra_shells.ESModelRegistry;
 import dev.jeryn.extra_shells.ESShellRegistry;
 import dev.jeryn.extra_shells.custom_entries.LegoShellEntry;
 import dev.jeryn.extra_shells.custom_entries.RTDChibnallShellEntry;
+import whocraft.tardis_refined.client.ModelRegistry;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.DualInteriorDoorModel;
+import whocraft.tardis_refined.client.model.blockentity.door.interior.DualTexInteriorDoorModel;
 import whocraft.tardis_refined.client.model.blockentity.shell.ShellModelCollection;
+import whocraft.tardis_refined.common.tardis.themes.ShellTheme;
+import whocraft.tardis_refined.patterns.ShellPattern;
+import whocraft.tardis_refined.patterns.ShellPatterns;
 
 public class ShellEntryRegistry {
 
@@ -27,6 +33,7 @@ public class ShellEntryRegistry {
         ShellModelCollection.registerShellEntry(ESShellRegistry.MADDOC_WHITTAKER.get(), ESModelRegistry.MADDOC_WHITTAKEREXT_MDL, ESModelRegistry.MADDOC_WHITTAKERINT_MDL);
         ShellModelCollection.registerShellEntry(ESShellRegistry.MADDOC_BRACHACKI.get(), ESModelRegistry.MADDOC_BRACHACKIEXT_MDL, ESModelRegistry.MADDOC_BRACHACKIINT_MDL);
         ShellModelCollection.registerShellEntry(ESShellRegistry.MADDOC_NEWBERRY.get(), ESModelRegistry.MADDOC_NEWBERRYEXT_MDL, ESModelRegistry.MADDOC_NEWBERRYINT_MDL);
+        ShellModelCollection.registerShellEntry(ESShellRegistry.DELOREAN.get(), ESModelRegistry.DELOREAN_MDL, ESModelRegistry.DELOREAN_INT_MDL);
 
 
 
