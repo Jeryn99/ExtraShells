@@ -58,8 +58,8 @@ public class ESPatterns extends ShellPatternProvider {
         soundProfile.setDoorClose(new ConfiguredSound(ESSounds.DELOREAN_CLOSED.get()));
         soundProfile.setDoorOpen(new ConfiguredSound(ESSounds.DELOREAN_OPEN.get()));
 
-        quickAdd(ESShellRegistry.DELOREAN.getId(), "default", false, soundProfile);
-        quickAdd(ESShellRegistry.DELOREAN.getId(), "future", false, soundProfile);
+        quickAdd(ESShellRegistry.DELOREAN.getId(), "default", true, soundProfile);
+        quickAdd(ESShellRegistry.DELOREAN.getId(), "future", true, soundProfile);
 
       /*  quickAdd(ESShellRegistry.HUDOLIN.getId(), "default", true);
         quickAdd(ESShellRegistry.HUDOLIN.getId(), "edwardian_worn", true);

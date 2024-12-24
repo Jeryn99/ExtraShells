@@ -2,12 +2,12 @@
   "patterns": [
     {
       "exterior": {
-        "emissive": false,
+        "emissive": true,
         "texture": "extra_shells:textures/blockentity/shell/delorean/default.png"
       },
       "id": "extra_shells:default",
       "interior": {
-        "emissive": false,
+        "emissive": true,
         "texture": "extra_shells:textures/blockentity/shell/delorean/default_interior.png"
       },
       "name_component": "{\"color\":\"yellow\",\"text\":\"Default\"}",
@@ -32,12 +32,12 @@
     },
     {
       "exterior": {
-        "emissive": false,
+        "emissive": true,
         "texture": "extra_shells:textures/blockentity/shell/delorean/future.png"
       },
       "id": "extra_shells:future",
       "interior": {
-        "emissive": false,
+        "emissive": true,
         "texture": "extra_shells:textures/blockentity/shell/delorean/future_interior.png"
       },
       "name_component": "{\"color\":\"yellow\",\"text\":\"Future\"}",
