@@ -1,0 +1,91 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.lego_ideas_door",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "right_door",
+					"pivot": [-9, 16, 6]
+				},
+				{
+					"name": "cube_r4",
+					"parent": "right_door",
+					"pivot": [0, -2, -1],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [0, 1, -9], "size": [9, 29, 1], "uv": [20, 16]}
+					]
+				},
+				{
+					"name": "left_door",
+					"pivot": [9, 16, 6]
+				},
+				{
+					"name": "cube_r5",
+					"parent": "left_door",
+					"pivot": [0, -2, -1],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [-9, 1, -9], "size": [9, 29, 1], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "frame",
+					"pivot": [0, 1, 0]
+				},
+				{
+					"name": "signage",
+					"parent": "frame",
+					"pivot": [0, 1, 0]
+				},
+				{
+					"name": "cube_r1",
+					"parent": "signage",
+					"pivot": [0, 1, -1],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [-12, 30, -10], "size": [24, 10, 3], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "posts",
+					"parent": "frame",
+					"pivot": [0, 1, 0]
+				},
+				{
+					"name": "cube_r2",
+					"parent": "posts",
+					"pivot": [0, -1, -1],
+					"cubes": [
+						{"origin": [-9, 0.025, 5], "size": [18, 1, 3], "uv": [0, 46]}
+					]
+				},
+				{
+					"name": "cube_r3",
+					"parent": "posts",
+					"pivot": [0, -1, -1],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [9, 0, -10], "size": [3, 30, 3], "uv": [40, 16]},
+						{"origin": [-12, 0, -10], "size": [3, 30, 3], "uv": [40, 16]}
+					]
+				},
+				{
+					"name": "portal",
+					"pivot": [0, 0, -3],
+					"cubes": [
+						{"origin": [-12, 0, 7.9], "size": [24, 37, 1], "uv": [22, 69]}
+					]
+				}
+			]
+		}
+	]
+}

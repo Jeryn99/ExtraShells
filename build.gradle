@@ -1,6 +1,6 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.5.+" apply false
+    id "dev.architectury.loom" version "1.6.+" apply false
 }
 
 architectury {
@@ -32,7 +32,7 @@ allprojects {
     apply plugin: "maven-publish"
 
     archivesBaseName = rootProject.archives_base_name
-    version = "${rootProject.minecraft_version}-v${rootProject.mod_version}"
+    version = rootProject.minecraft_version + "-" + rootProject.mod_version
     group = rootProject.maven_group
 
     repositories {
@@ -64,6 +64,10 @@ allprojects {
             url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
         }
 
+
+        flatDir {
+            dirs '../mods'
+        }
 
     }
 

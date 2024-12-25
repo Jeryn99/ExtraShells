@@ -1,0 +1,20 @@
+{
+  "delorean_closed": {
+    "sounds": [
+      "extra_shells:delorean_closed"
+    ],
+    "subtitle": "sound.delorean_closed.subtitle"
+  },
+  "delorean_locked": {
+    "sounds": [
+      "extra_shells:delorean_locked"
+    ],
+    "subtitle": "sound.delorean_locked.subtitle"
+  },
+  "delorean_open": {
+    "sounds": [
+      "extra_shells:delorean_open"
+    ],
+    "subtitle": "sound.delorean_open.subtitle"
+  }
+}

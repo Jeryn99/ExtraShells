@@ -25,7 +25,7 @@ displayName = "extra_shells" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="http://example.com/" #optional
+displayURL="https://jeryn.dev/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile = "icon.png" #optional
 # A text field displayed in the mod UI
@@ -42,7 +42,7 @@ logoFile = "icon.png" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description = '''
-
+Adds more Shells to the mod Tardis Refined!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.extra_shells]]

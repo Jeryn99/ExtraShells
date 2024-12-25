@@ -1,0 +1,92 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "base",
+					"pivot": [0, -16, 0],
+					"cubes": [
+						{"origin": [-13, 0, -13], "size": [26, 2, 26], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "pillars",
+					"pivot": [-8, 8, 8],
+					"cubes": [
+						{"origin": [8, 2, -12], "size": [4, 41, 4], "uv": [50, 112]},
+						{"origin": [-12, 2, -12], "size": [4, 41, 4], "uv": [34, 112]},
+						{"origin": [-12, 2, 8], "size": [4, 41, 4], "uv": [98, 76]},
+						{"origin": [8, 2, 8], "size": [4, 41, 4], "uv": [76, 107]}
+					]
+				},
+				{
+					"name": "sides",
+					"pivot": [-8, -14, 8],
+					"cubes": [
+						{"origin": [-10, 2, -8], "size": [1, 32, 16], "uv": [0, 75]},
+						{"origin": [-8, 2, 9], "size": [16, 32, 1], "uv": [98, 43]},
+						{"origin": [9, 2, -8], "size": [1, 32, 16], "uv": [64, 59]}
+					]
+				},
+				{
+					"name": "door1",
+					"pivot": [-8, 18, -9.5],
+					"cubes": [
+						{"origin": [-8, 2, -10], "size": [8, 32, 1], "uv": [114, 109]}
+					]
+				},
+				{
+					"name": "door2",
+					"pivot": [8, 18, -9.5],
+					"cubes": [
+						{"origin": [0, 2, -10], "size": [8, 32, 1], "uv": [114, 76]}
+					]
+				},
+				{
+					"name": "signs",
+					"pivot": [-8, 8, 8],
+					"cubes": [
+						{"origin": [-9, 35, -13], "size": [18, 5, 3], "uv": [102, 0]},
+						{"origin": [-9, 35, 10], "size": [18, 5, 3], "uv": [18, 75]},
+						{"origin": [-13, 35, -9], "size": [3, 5, 18], "uv": [78, 0]},
+						{"origin": [10, 35, -9], "size": [3, 5, 18], "pivot": [11.5, 37.5, 0], "rotation": [0, 180, 0], "uv": [78, 0]}
+					]
+				},
+				{
+					"name": "roof",
+					"pivot": [-8, 8, 8],
+					"cubes": [
+						{"origin": [-11, 34, -11], "size": [22, 1, 22], "uv": [0, 28]},
+						{"origin": [-10, 40, -10], "size": [20, 4, 20], "uv": [0, 51]},
+						{"origin": [-7, 44, -7], "size": [14, 1, 14], "uv": [66, 28]}
+					]
+				},
+				{
+					"name": "lamp",
+					"pivot": [-8, 8, 8],
+					"cubes": [
+						{"origin": [-1, 45, -1], "size": [2, 3, 2], "uv": [0, 0]},
+						{"origin": [-0.25, 45, -1.75], "size": [0, 2, 4.5], "pivot": [-0.75, 44, 0], "rotation": [0, 45, 0], "uv": [0, 2]},
+						{"origin": [-2.75, 45, -0.25], "size": [4.5, 2, 0], "pivot": [0, 44, -0.75], "rotation": [0, 45, 0], "uv": [0, 7]}
+					]
+				},
+				{
+					"name": "fade_value",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 0, -1], "size": [2, 2, 2], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

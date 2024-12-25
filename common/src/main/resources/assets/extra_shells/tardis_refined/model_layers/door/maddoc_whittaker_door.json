@@ -1,0 +1,50 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "frame",
+					"pivot": [0, -16, 0],
+					"cubes": [
+						{"origin": [-12, 0, 4], "size": [24, 3, 4], "uv": [23, 22]},
+						{"origin": [8, 3, 4], "size": [4, 39, 4], "uv": [64, 109]},
+						{"origin": [-12, 3, 4], "size": [4, 39, 4], "uv": [102, 105]},
+						{"origin": [-11, 36, 3], "size": [22, 5, 3], "uv": [78, 0]},
+						{"origin": [-11, 35, 5], "size": [22, 1, 2], "uv": [20, 74]},
+						{"origin": [-11, 41, 5], "size": [22, 3, 2], "uv": [20, 49]}
+					]
+				},
+				{
+					"name": "left_door",
+					"pivot": [-8, 19, 5.5],
+					"cubes": [
+						{"origin": [-8, 3, 5], "size": [8, 32, 1], "uv": [124, 71]}
+					]
+				},
+				{
+					"name": "right_door",
+					"pivot": [8, 19, 5.5],
+					"cubes": [
+						{"origin": [0, 3, 5], "size": [8, 32, 1], "uv": [136, 104]}
+					]
+				},
+				{
+					"name": "portal",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 3, 6], "size": [16, 32, 1], "uv": [0, 154]}
+					]
+				}
+			]
+		}
+	]
+}

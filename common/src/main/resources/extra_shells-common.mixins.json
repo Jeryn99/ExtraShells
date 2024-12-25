@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "mc.craig.software.extra_shells.mixins",
+  "package": "dev.jeryn.extra_shells.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
 

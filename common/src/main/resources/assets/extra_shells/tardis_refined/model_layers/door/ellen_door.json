@@ -1,0 +1,104 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ellen_door",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "right_door",
+					"pivot": [-8, 0, 6]
+				},
+				{
+					"name": "cube_r2",
+					"parent": "right_door",
+					"pivot": [0, -2, -1],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [1, 15, -10], "size": [1, 2, 3], "uv": [0, 19]},
+						{"origin": [0, 20, -8], "size": [2, 2, 1], "uv": [0, 15]}
+					]
+				},
+				{
+					"name": "cube_r3",
+					"parent": "right_door",
+					"pivot": [-6, -2, 7],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [-12, 0, 7], "size": [8, 30, 1], "uv": [98, 40]}
+					]
+				},
+				{
+					"name": "left_door",
+					"pivot": [8, 0, 6]
+				},
+				{
+					"name": "cube_r1",
+					"parent": "left_door",
+					"pivot": [0, -2, -1],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [-1.95, 1, -8], "size": [0, 28, 1], "uv": [31, 98]},
+						{"origin": [-8, 0, -9], "size": [8, 30, 1], "uv": [0, 98]},
+						{"origin": [-1, 20, -8], "size": [1, 2, 1], "uv": [7, 15]}
+					]
+				},
+				{
+					"name": "frame",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "PPCB",
+					"parent": "frame",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "cube_r4",
+					"parent": "PPCB",
+					"pivot": [0, -2, -1],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [-9, 30, -10.025], "size": [18, 3, 4], "uv": [72, 7]}
+					]
+				},
+				{
+					"name": "posts",
+					"parent": "frame",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "cube_r5",
+					"parent": "posts",
+					"pivot": [0, -2, -1],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [8, 0, -10], "size": [3, 34, 3], "uv": [18, 98]}
+					]
+				},
+				{
+					"name": "cube_r6",
+					"parent": "posts",
+					"pivot": [0, -2, -1],
+					"rotation": [0, -90.00021, 0],
+					"cubes": [
+						{"origin": [6, 0, -12], "size": [3, 34, 3], "uv": [92, 80]}
+					]
+				},
+				{
+					"name": "portal",
+					"pivot": [0.00012, 15.00006, 8.92488],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [-7.99988, 0.00006, 8.92488], "size": [16, 30, 2], "uv": [66, 123]}
+					]
+				}
+			]
+		}
+	]
+}
