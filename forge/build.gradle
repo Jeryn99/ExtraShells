@@ -67,7 +67,7 @@ unifiedPublishing {
 dependencies {
     forge "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    modImplementation "dev.jeryn:neoforgetr:2.1.1"
+    modImplementation "dev.jeryn:neoforgetr:2.1.4"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }

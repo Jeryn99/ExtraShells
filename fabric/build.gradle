@@ -74,7 +74,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
 
-    modImplementation "dev.jeryn:fabrictr:2.1.1"
+    modImplementation "dev.jeryn:fabrictr:2.1.4"
 
 
     // Adds a dependency on the base cardinal components module (required by every other module)

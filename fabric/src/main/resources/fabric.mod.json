@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "extra_shells",
   "version": "${version}",
-  "name": "extra_shells",
+  "name": "ExtraShells",
   "description": "Adds more Shells to the mod Tardis Refined!",
   "authors": ["Jeryn99"],
   "contact": {},
