@@ -7,12 +7,35 @@
 				"texture_width": 256,
 				"texture_height": 256,
 				"visible_bounds_width": 3,
-				"visible_bounds_height": 4.5,
-				"visible_bounds_offset": [0, 1.75, 0]
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 1.5, 0]
 			},
 			"bones": [
 				{
+					"name": "left_door",
+					"pivot": [-8, 19, -9.5],
+					"cubes": [
+						{"origin": [-8, 3, -10], "size": [8, 32, 1], "uv": [118, 104]}
+					]
+				},
+				{
+					"name": "right_door",
+					"pivot": [8, 19, -9.5],
+					"cubes": [
+						{"origin": [0, 3, -10], "size": [8, 32, 1], "uv": [106, 71]}
+					]
+				},
+				{
+					"name": "fade_value",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "frame",
+					"pivot": [0, 0, 0]
+				},
+				{
 					"name": "base",
+					"parent": "frame",
 					"pivot": [0, -16, 0],
 					"cubes": [
 						{"origin": [-13, 0, -13], "size": [26, 3, 26], "uv": [0, 0]}
@@ -20,6 +43,7 @@
 				},
 				{
 					"name": "pillars",
+					"parent": "frame",
 					"pivot": [-8, 8, 8],
 					"cubes": [
 						{"origin": [8, 3, -12], "size": [4, 39, 4], "uv": [34, 110]},
@@ -30,6 +54,7 @@
 				},
 				{
 					"name": "sides",
+					"parent": "frame",
 					"pivot": [-8, -14, 8],
 					"cubes": [
 						{"origin": [-10, 3, -8], "size": [1, 32, 16], "uv": [0, 77]},
@@ -38,21 +63,8 @@
 					]
 				},
 				{
-					"name": "door1",
-					"pivot": [-8, 19, -9.5],
-					"cubes": [
-						{"origin": [-8, 3, -10], "size": [8, 32, 1], "uv": [118, 104]}
-					]
-				},
-				{
-					"name": "door2",
-					"pivot": [8, 19, -9.5],
-					"cubes": [
-						{"origin": [0, 3, -10], "size": [8, 32, 1], "uv": [106, 71]}
-					]
-				},
-				{
 					"name": "signs",
+					"parent": "frame",
 					"pivot": [-8, 8, 8],
 					"cubes": [
 						{"origin": [-11, 36, -13], "size": [22, 5, 3], "uv": [78, 8]},
@@ -63,6 +75,7 @@
 				},
 				{
 					"name": "roof",
+					"parent": "frame",
 					"pivot": [-8, 8, 8],
 					"cubes": [
 						{"origin": [-11, 35, -11], "size": [22, 1, 22], "uv": [0, 54]},
@@ -73,18 +86,46 @@
 				},
 				{
 					"name": "lamp",
+					"parent": "frame",
 					"pivot": [-8, 8, 8],
 					"cubes": [
-						{"origin": [-1, 46, -1], "size": [2, 4, 2], "uv": [0, 8]},
-						{"origin": [-2.75, 46, -0.25], "size": [4.5, 3, 0], "pivot": [0, 45, -0.75], "rotation": [0, 45, 0], "uv": [0, 15]},
-						{"origin": [-2.25, 46, -0.04289], "size": [4.5, 3, 0], "pivot": [0, 47.5, -0.04289], "rotation": [0, -45, 0], "uv": [0, 15]}
+						{"origin": [-1, 46, -1], "size": [2, 4, 2], "uv": [0, 8]}
 					]
 				},
 				{
-					"name": "fade_value",
+					"name": "ls_1",
+					"parent": "lamp",
+					"pivot": [0, 8, 0],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-2.25, 46, 0], "size": [4.5, 3, 0], "uv": [0, 15]}
+					]
+				},
+				{
+					"name": "ls_2",
+					"parent": "lamp",
+					"pivot": [0, 8, 0],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [-2.25, 46, 0], "size": [4.5, 3, 0], "uv": [0, 15]}
+					]
+				},
+				{
+					"name": "portal",
 					"pivot": [0, 0, 0],
 					"cubes": [
-						{"origin": [-1, 0, -1], "size": [2, 2, 2], "uv": [0, 0]}
+						{
+							"origin": [-9, 3, -1.5],
+							"size": [18, 32, 1],
+							"uv": {
+								"north": {"uv": [110, 23], "uv_size": [1, 1]},
+								"east": {"uv": [110, 23], "uv_size": [1, 1]},
+								"south": {"uv": [110, 23], "uv_size": [1, 1]},
+								"west": {"uv": [110, 23], "uv_size": [1, 1]},
+								"up": {"uv": [111, 24], "uv_size": [-1, -1]},
+								"down": {"uv": [111, 24], "uv_size": [-1, -1]}
+							}
+						}
 					]
 				}
 			]

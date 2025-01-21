@@ -7,8 +7,8 @@
 				"texture_width": 64,
 				"texture_height": 64,
 				"visible_bounds_width": 3,
-				"visible_bounds_height": 4.5,
-				"visible_bounds_offset": [0, 1.75, 0]
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 1.5, 0]
 			},
 			"bones": [
 				{
@@ -56,7 +56,18 @@
 					"name": "portal",
 					"pivot": [0, 0, -4],
 					"cubes": [
-						{"origin": [-9, 0, 6.9], "size": [18, 35, 1], "uv": [25, 69]}
+						{
+							"origin": [-9, 0, 6.9],
+							"size": [18, 35, 1],
+							"uv": {
+								"north": {"uv": [59, 54], "uv_size": [2, 2]},
+								"east": {"uv": [59, 54], "uv_size": [2, 2]},
+								"south": {"uv": [59, 54], "uv_size": [2, 2]},
+								"west": {"uv": [59, 54], "uv_size": [2, 2]},
+								"up": {"uv": [61, 56], "uv_size": [-2, -2]},
+								"down": {"uv": [61, 56], "uv_size": [-2, -2]}
+							}
+						}
 					]
 				}
 			]

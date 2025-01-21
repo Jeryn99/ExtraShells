@@ -1,378 +1,103 @@
 {
-  "format_version": "1.12.0",
-  "minecraft:geometry": [
-    {
-      "description": {
-        "identifier": "rtd_door",
-        "texture_width": 256,
-        "texture_height": 256
-      },
-      "bones": [
-        {
-          "name": "right_door",
-          "pivot": [
-            -8.0,
-            -0.0,
-            7.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": []
-        },
-        {
-          "name": "cube_r3",
-          "parent": "right_door",
-          "pivot": [
-            0.0,
-            -3.0,
-            -2.0
-          ],
-          "rotation": [
-            -180.00041482030653,
-            0.0,
-            180.00041482030653
-          ],
-          "cubes": [
-            {
-              "origin": [
-                0.0,
-                14.0,
-                -11.0
-              ],
-              "size": [
-                2.0,
-                2.0,
-                1.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                0.0,
-                18.0
-              ],
-              "mirror": false
-            },
-            {
-              "origin": [
-                0.0,
-                -0.0,
-                -12.0
-              ],
-              "size": [
-                8.0,
-                30.0,
-                1.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                98.0,
-                0.0
-              ],
-              "mirror": false
-            },
-            {
-              "origin": [
-                1.0,
-                17.0,
-                -13.0
-              ],
-              "size": [
-                1.0,
-                2.0,
-                1.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                0.0,
-                0.0
-              ],
-              "mirror": false
-            }
-          ]
-        },
-        {
-          "name": "portal",
-          "pivot": [
-            0.0,
-            -0.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": [
-            {
-              "origin": [
-                -8.0,
-                -0.0,
-                7.9
-              ],
-              "size": [
-                16.0,
-                30.0,
-                1.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                85.0,
-                109.0
-              ],
-              "mirror": false
-            }
-          ]
-        },
-        {
-          "name": "left_door",
-          "pivot": [
-            8.0,
-            -0.0,
-            7.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": []
-        },
-        {
-          "name": "cube_r4",
-          "parent": "left_door",
-          "pivot": [
-            0.0,
-            -3.0,
-            -2.0
-          ],
-          "rotation": [
-            -180.00041482030653,
-            0.0,
-            180.00041482030653
-          ],
-          "cubes": [
-            {
-              "origin": [
-                -7.0,
-                17.0,
-                -10.5
-              ],
-              "size": [
-                4.0,
-                4.0,
-                0.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                16.0,
-                15.0
-              ],
-              "mirror": false
-            },
-            {
-              "origin": [
-                -6.0,
-                16.0,
-                -11.0
-              ],
-              "size": [
-                3.0,
-                4.0,
-                1.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                12.0,
-                19.0
-              ],
-              "mirror": false
-            },
-            {
-              "origin": [
-                -1.0,
-                14.0,
-                -11.0
-              ],
-              "size": [
-                1.0,
-                2.0,
-                1.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                0.0,
-                5.0
-              ],
-              "mirror": false
-            },
-            {
-              "origin": [
-                -8.0,
-                -0.0,
-                -12.0
-              ],
-              "size": [
-                8.0,
-                30.0,
-                1.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                80.0,
-                26.0
-              ],
-              "mirror": false
-            }
-          ]
-        },
-        {
-          "name": "frame",
-          "pivot": [
-            0.0,
-            -0.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": []
-        },
-        {
-          "name": "panels",
-          "parent": "frame",
-          "pivot": [
-            0.0,
-            -0.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": []
-        },
-        {
-          "name": "signage",
-          "parent": "frame",
-          "pivot": [
-            0.0,
-            -0.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": []
-        },
-        {
-          "name": "cube_r1",
-          "parent": "signage",
-          "pivot": [
-            0.0,
-            -3.0,
-            -2.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": [
-            {
-              "origin": [
-                -9.0,
-                30.0,
-                5.0
-              ],
-              "size": [
-                18.0,
-                3.0,
-                3.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                54.0,
-                57.0
-              ],
-              "mirror": false
-            }
-          ]
-        },
-        {
-          "name": "posts",
-          "parent": "frame",
-          "pivot": [
-            0.0,
-            -0.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": []
-        },
-        {
-          "name": "cube_r2",
-          "parent": "posts",
-          "pivot": [
-            0.0,
-            -3.0,
-            -2.0
-          ],
-          "rotation": [
-            -180.00041482030653,
-            0.0,
-            180.00041482030653
-          ],
-          "cubes": [
-            {
-              "origin": [
-                8.0,
-                -0.0,
-                -13.0
-              ],
-              "size": [
-                3.0,
-                34.0,
-                3.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                62.0,
-                99.0
-              ],
-              "mirror": false
-            },
-            {
-              "origin": [
-                -11.0,
-                -0.0,
-                -13.0
-              ],
-              "size": [
-                3.0,
-                34.0,
-                3.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                50.0,
-                99.0
-              ],
-              "mirror": false
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.rtd_door",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "right_door",
+					"pivot": [-8, 0, 7]
+				},
+				{
+					"name": "cube_r3",
+					"parent": "right_door",
+					"pivot": [0, -3, -2],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [0, 14, -11], "size": [2, 2, 1], "uv": [0, 18]},
+						{"origin": [0, 0, -12], "size": [8, 30, 1], "uv": [98, 0]},
+						{"origin": [1, 17, -13], "size": [1, 2, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "portal",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, 7.9],
+							"size": [16, 30, 1],
+							"uv": {
+								"north": {"uv": [118, 109], "uv_size": [-16, 1]},
+								"east": {"uv": [118, 109], "uv_size": [-16, 1]},
+								"south": {"uv": [118, 109], "uv_size": [-16, 1]},
+								"west": {"uv": [118, 109], "uv_size": [-16, 1]},
+								"up": {"uv": [102, 110], "uv_size": [16, -1]},
+								"down": {"uv": [102, 110], "uv_size": [16, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "left_door",
+					"pivot": [8, 0, 7]
+				},
+				{
+					"name": "cube_r4",
+					"parent": "left_door",
+					"pivot": [0, -3, -2],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [-7, 17, -10.5], "size": [4, 4, 0], "uv": [16, 15]},
+						{"origin": [-6, 16, -11], "size": [3, 4, 1], "uv": [12, 19]},
+						{"origin": [-1, 14, -11], "size": [1, 2, 1], "uv": [0, 5]},
+						{"origin": [-8, 0, -12], "size": [8, 30, 1], "uv": [80, 26]}
+					]
+				},
+				{
+					"name": "frame",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "panels",
+					"parent": "frame",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "signage",
+					"parent": "frame",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "cube_r1",
+					"parent": "signage",
+					"pivot": [0, -3, -2],
+					"cubes": [
+						{"origin": [-9, 30, 5], "size": [18, 3, 3], "uv": [54, 57]}
+					]
+				},
+				{
+					"name": "posts",
+					"parent": "frame",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "cube_r2",
+					"parent": "posts",
+					"pivot": [0, -3, -2],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [8, 0, -13], "size": [3, 34, 3], "uv": [62, 99]},
+						{"origin": [-11, 0, -13], "size": [3, 34, 3], "uv": [50, 99]}
+					]
+				}
+			]
+		}
+	]
 }

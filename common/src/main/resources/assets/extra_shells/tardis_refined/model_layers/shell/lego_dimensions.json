@@ -1,1 +1,113 @@
-{"format_version":"1.12.0","minecraft:geometry":[{"description":{"identifier":"lego_dimensions","texture_width":128,"texture_height":128},"bones":[{"name":"right_door","pivot":[-9.0,-0.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[{"origin":[-10.0,3.0,-9.0],"size":[10.0,26.0,4.0],"inflate":0.0,"uv":[80.0,97.0],"mirror":false}]},{"name":"cube_r3","parent":"right_door","pivot":[-1.0,3.0,-1.0],"rotation":[0.0,90.00020741015327,0.0],"cubes":[{"origin":[-2.0,3.0,-9.0],"size":[10.0,26.0,4.0],"inflate":0.0,"uv":[52.0,97.0],"mirror":false}]},{"name":"portal","pivot":[0.0,-0.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[{"origin":[-9.0,3.0,-0.025],"size":[18.0,26.0,0.0],"inflate":0.0,"uv":[0.0,102.0],"mirror":false}]},{"name":"fade_value","pivot":[-24.0,-0.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[]},{"name":"left_door","pivot":[9.0,-0.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[{"origin":[0.0,3.0,-9.0],"size":[10.0,26.0,4.0],"inflate":0.0,"uv":[88.0,0.0],"mirror":false}]},{"name":"cube_r4","parent":"left_door","pivot":[1.0,3.0,-1.0],"rotation":[0.0,-90.00020741015327,0.0],"cubes":[{"origin":[-8.0,3.0,-9.0],"size":[10.0,26.0,4.0],"inflate":0.0,"uv":[28.0,71.0],"mirror":false}]},{"name":"frame","pivot":[0.0,-0.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[{"origin":[-9.0,32.0,-9.0],"size":[18.0,3.0,18.0],"inflate":0.0,"uv":[0.0,50.0],"mirror":false},{"origin":[-11.0,29.0,-11.0],"size":[22.0,3.0,22.0],"inflate":0.0,"uv":[0.0,0.0],"mirror":false},{"origin":[-11.0,-0.0,-11.0],"size":[22.0,3.0,22.0],"inflate":0.0,"uv":[0.0,25.0],"mirror":false}]},{"name":"panels","parent":"frame","pivot":[0.0,-0.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[{"origin":[-10.0,3.0,5.0],"size":[20.0,26.0,4.0],"inflate":0.0,"uv":[68.0,67.0],"mirror":false}]},{"name":"cube_r2","parent":"panels","pivot":[-1.0,3.0,-1.0],"rotation":[0.0,90.00020741015327,0.0],"cubes":[{"origin":[-12.0,3.0,-9.0],"size":[10.0,26.0,4.0],"inflate":0.0,"uv":[88.0,30.0],"mirror":false},{"origin":[-12.0,3.0,5.0],"size":[10.0,26.0,4.0],"inflate":0.0,"uv":[0.0,71.0],"mirror":false}]},{"name":"lamp","parent":"frame","pivot":[0.0,36.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[]},{"name":"cube_r1","parent":"lamp","pivot":[0.0,36.0,0.0],"rotation":[0.0,-45.00010370507663,0.0],"cubes":[{"origin":[-2.0,38.0,-2.0],"size":[4.0,1.0,4.0],"inflate":0.0,"uv":[0.0,9.0],"mirror":false},{"origin":[-1.5,35.0,-1.5],"size":[3.0,5.0,3.0],"inflate":0.0,"uv":[0.0,0.0],"mirror":false}]}]}]}
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.lego_dimensions",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "right_door",
+					"pivot": [-9, 0, 0],
+					"cubes": [
+						{"origin": [-10, 3, -9], "size": [10, 26, 4], "uv": [80, 97]}
+					]
+				},
+				{
+					"name": "cube_r3",
+					"parent": "right_door",
+					"pivot": [-1, 3, -1],
+					"rotation": [0, 90.00021, 0],
+					"cubes": [
+						{"origin": [-2, 3, -9], "size": [10, 26, 4], "uv": [52, 97]}
+					]
+				},
+				{
+					"name": "portal",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-9, 3, -0.025],
+							"size": [18, 26, 1],
+							"uv": {
+								"north": {"uv": [0, 102], "uv_size": [18, 26]},
+								"east": {"uv": [-1, 102], "uv_size": [1, 26]},
+								"south": {"uv": [19, 102], "uv_size": [18, 26]},
+								"west": {"uv": [18, 102], "uv_size": [1, 26]},
+								"up": {"uv": [0, 101], "uv_size": [18, 1]},
+								"down": {"uv": [18, 102], "uv_size": [18, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "fade_value",
+					"pivot": [-24, 0, 0]
+				},
+				{
+					"name": "left_door",
+					"pivot": [9, 0, 0],
+					"cubes": [
+						{"origin": [0, 3, -9], "size": [10, 26, 4], "uv": [88, 0]}
+					]
+				},
+				{
+					"name": "cube_r4",
+					"parent": "left_door",
+					"pivot": [1, 3, -1],
+					"rotation": [0, -90.00021, 0],
+					"cubes": [
+						{"origin": [-8, 3, -9], "size": [10, 26, 4], "uv": [28, 71]}
+					]
+				},
+				{
+					"name": "frame",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-9, 32, -9], "size": [18, 3, 18], "uv": [0, 50]},
+						{"origin": [-11, 29, -11], "size": [22, 3, 22], "uv": [0, 0]},
+						{"origin": [-11, 0, -11], "size": [22, 3, 22], "uv": [0, 25]}
+					]
+				},
+				{
+					"name": "panels",
+					"parent": "frame",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-10, 3, 5], "size": [20, 26, 4], "uv": [68, 67]}
+					]
+				},
+				{
+					"name": "cube_r2",
+					"parent": "panels",
+					"pivot": [-1, 3, -1],
+					"rotation": [0, 90.00021, 0],
+					"cubes": [
+						{"origin": [-12, 3, -9], "size": [10, 26, 4], "uv": [88, 30]},
+						{"origin": [-12, 3, 5], "size": [10, 26, 4], "uv": [0, 71]}
+					]
+				},
+				{
+					"name": "lamp",
+					"parent": "frame",
+					"pivot": [0, 36, 0]
+				},
+				{
+					"name": "cube_r1",
+					"parent": "lamp",
+					"pivot": [0, 36, 0],
+					"rotation": [0, -45.0001, 0],
+					"cubes": [
+						{"origin": [-2, 38, -2], "size": [4, 1, 4], "uv": [0, 9]},
+						{"origin": [-1.5, 35, -1.5], "size": [3, 5, 3], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -4,8 +4,8 @@
 		{
 			"description": {
 				"identifier": "geometry.oldschool_door",
-				"texture_width": 100,
-				"texture_height": 100,
+				"texture_width": 128,
+				"texture_height": 128,
 				"visible_bounds_width": 3,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
@@ -19,12 +19,12 @@
 							"origin": [-8, 0, 7.9],
 							"size": [16, 32, 1],
 							"uv": {
-								"north": {"uv": [96, 11], "uv_size": [3, 4]},
-								"east": {"uv": [91, 13], "uv_size": [5, -12]},
-								"south": {"uv": [98, 4], "uv_size": [2, 6]},
-								"west": {"uv": [98, 13], "uv_size": [2, -12]},
-								"up": {"uv": [88, 12], "uv_size": [2, -12]},
-								"down": {"uv": [99, 1], "uv_size": [-2, 11]}
+								"north": {"uv": [122.88, 14.08], "uv_size": [3.84, 5.12]},
+								"east": {"uv": [116.48, 16.64], "uv_size": [6.4, -15.36]},
+								"south": {"uv": [125.44, 5.12], "uv_size": [2.56, 7.68]},
+								"west": {"uv": [125.44, 16.64], "uv_size": [2.56, -15.36]},
+								"up": {"uv": [112.64, 15.36], "uv_size": [2.56, -15.36]},
+								"down": {"uv": [126.72, 1.28], "uv_size": [-2.56, 14.08]}
 							}
 						}
 					]
