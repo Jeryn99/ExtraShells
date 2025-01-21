@@ -29,6 +29,7 @@ public class ESPatterns extends ShellPatternProvider {
         quickAdd(ESShellRegistry.MADDOC_BRACHACKI.getId(), "default", false);
 
         quickAdd(ESShellRegistry.OLD_SCHOOL.getId(), "default", false);
+        quickAdd(ESShellRegistry.OLD_SCHOOL.getId(), "tardim", false);
 
         quickAdd(ESShellRegistry.EMERALD.getId(), "default", true);
         quickAdd(ESShellRegistry.ENGINEERS.getId(), "default", true);
