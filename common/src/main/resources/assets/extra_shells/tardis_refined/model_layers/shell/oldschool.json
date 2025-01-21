@@ -1,198 +1,59 @@
 {
-  "format_version": "1.12.0",
-  "minecraft:geometry": [
-    {
-      "description": {
-        "identifier": "oldschool",
-        "texture_width": 100,
-        "texture_height": 100
-      },
-      "bones": [
-        {
-          "name": "door",
-          "pivot": [
-            -7.848,
-            16.0,
-            -7.8475
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": [
-            {
-              "origin": [
-                -8.0,
-                -0.0,
-                -11.0
-              ],
-              "size": [
-                16.0,
-                32.0,
-                3.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                1.0,
-                1.0
-              ],
-              "mirror": false
-            }
-          ]
-        },
-        {
-          "name": "shell",
-          "pivot": [
-            0.0,
-            32.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": [
-            {
-              "origin": [
-                -8.0,
-                -0.0,
-                8.0
-              ],
-              "size": [
-                16.0,
-                32.0,
-                3.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                1.0,
-                43.0
-              ],
-              "mirror": false
-            },
-            {
-              "origin": [
-                -8.0,
-                32.0,
-                -8.0
-              ],
-              "size": [
-                16.0,
-                8.0,
-                16.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                36.0,
-                76.0
-              ],
-              "mirror": false
-            },
-            {
-              "origin": [
-                -7.0,
-                -0.0,
-                -7.0
-              ],
-              "size": [
-                14.0,
-                1.0,
-                14.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                40.0,
-                26.0
-              ],
-              "mirror": false
-            }
-          ]
-        },
-        {
-          "name": "cube_r1",
-          "parent": "shell",
-          "pivot": [
-            -16.0,
-            16.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            90.00020741015327,
-            0.0
-          ],
-          "cubes": [
-            {
-              "origin": [
-                -24.0,
-                -0.0,
-                5.0
-              ],
-              "size": [
-                16.0,
-                32.0,
-                3.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                1.0,
-                43.0
-              ],
-              "mirror": false
-            }
-          ]
-        },
-        {
-          "name": "cube_r2",
-          "parent": "shell",
-          "pivot": [
-            4.0,
-            16.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            90.00020741015327,
-            0.0
-          ],
-          "cubes": [
-            {
-              "origin": [
-                -4.0,
-                -0.0,
-                4.0
-              ],
-              "size": [
-                16.0,
-                32.0,
-                3.0
-              ],
-              "inflate": 0.0,
-              "uv": [
-                1.0,
-                43.0
-              ],
-              "mirror": false
-            }
-          ]
-        },
-        {
-          "name": "fade_value",
-          "pivot": [
-            -24.0,
-            -0.0,
-            0.0
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cubes": []
-        }
-      ]
-    }
-  ]
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.oldschool",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "door",
+					"pivot": [-7.848, 16, -7.8475],
+					"cubes": [
+						{"origin": [-8, 0, -11], "size": [16, 32, 3], "uv": [1, 1]}
+					]
+				},
+				{
+					"name": "frame",
+					"pivot": [0, 32, 0],
+					"cubes": [
+						{"origin": [-8, 0, 8], "size": [16, 32, 3], "uv": [1, 43]},
+						{"origin": [-8, 32, -8], "size": [16, 8, 16], "uv": [36, 76]},
+						{"origin": [-7, 0, -7], "size": [14, 1, 14], "uv": [40, 26]}
+					]
+				},
+				{
+					"name": "cube_r1",
+					"parent": "frame",
+					"pivot": [-16, 16, 0],
+					"rotation": [0, 90.00021, 0],
+					"cubes": [
+						{"origin": [-24, 0, 5], "size": [16, 32, 3], "uv": [1, 43]}
+					]
+				},
+				{
+					"name": "cube_r2",
+					"parent": "frame",
+					"pivot": [4, 16, 0],
+					"rotation": [0, 90.00021, 0],
+					"cubes": [
+						{"origin": [-4, 0, 4], "size": [16, 32, 3], "uv": [1, 43]}
+					]
+				},
+				{
+					"name": "fade_value",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "portal",
+					"pivot": [0, 0, 0]
+				}
+			]
+		}
+	]
 }

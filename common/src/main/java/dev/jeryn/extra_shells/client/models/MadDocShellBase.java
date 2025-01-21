@@ -18,8 +18,8 @@ public class MadDocShellBase extends ShellModel {
 
     public MadDocShellBase(ModelPart root) {
         super(root);
-        this.left_door = root.getChild("door1");
-        this.right_door = root.getChild("door2");
+        this.left_door = root.getChild("left_door");
+        this.right_door = root.getChild("right_door");
         this.root = root;
         this.fade = Frame.findPart(this, "fade_value");
     }

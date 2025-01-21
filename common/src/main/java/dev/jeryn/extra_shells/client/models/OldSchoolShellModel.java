@@ -21,7 +21,7 @@ public class OldSchoolShellModel extends ShellModel {
         super(root);
         this.root = root;
         this.door = root.getChild("door");
-        this.shell = root.getChild("shell");
+        this.shell = root.getChild("frame");
     }
 
     public static LayerDefinition createBodyLayer() {

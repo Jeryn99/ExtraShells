@@ -12,27 +12,14 @@ import whocraft.tardis_refined.common.blockentity.shell.GlobalShellBlockEntity;
 
 public class JackShellModel extends ShellModel {
 
-
-    private final ModelPart pillars;
-    private final ModelPart Doors;
-    private final ModelPart Roof;
-    private final ModelPart Lamp;
-    private final ModelPart Signs;
     private final ModelPart left_door;
     private final ModelPart right_door;
     private final ModelPart root;
 
     public JackShellModel(ModelPart root) {
         super(root);
-        ModelPart model = root.getChild("model");
-
-        this.pillars = model.getChild("pillars");
-        this.Doors = model.getChild("Doors");
-        this.Roof = model.getChild("Roof");
-        this.Lamp = model.getChild("Lamp");
-        this.Signs = model.getChild("Signs");
-        this.left_door = model.getChild("left_door");
-        this.right_door = model.getChild("right_door");
+        this.left_door = root.getChild("left_door");
+        this.right_door = root.getChild("right_door");
         this.root = root;
     }
 

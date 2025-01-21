@@ -1,1 +1,122 @@
-{"format_version":"1.12.0","minecraft:geometry":[{"description":{"identifier":"glasgow","texture_width":128,"texture_height":128},"bones":[{"name":"right_door","pivot":[9.5,19.0,-9.0],"rotation":[0.0,0.0,0.0],"cubes":[{"origin":[0.5,2.0,-11.0],"size":[9.0,34.0,2.0],"inflate":0.0,"uv":[56.0,84.0],"mirror":false}]},{"name":"fade_value","pivot":[-24.0,-0.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[]},{"name":"left_door","pivot":[-8.5,19.0,-9.0],"rotation":[0.0,0.0,0.0],"cubes":[{"origin":[-8.5,2.0,-11.0],"size":[9.0,34.0,2.0],"inflate":0.0,"uv":[78.0,84.0],"mirror":false}]},{"name":"frame","pivot":[0.0,-0.0,0.0],"rotation":[0.0,0.0,0.0],"cubes":[{"origin":[-11.5,36.0,-11.5],"size":[24.0,6.0,24.0],"inflate":0.0,"uv":[0.0,29.0],"mirror":false},{"origin":[-9.5,37.0,-13.5],"size":[20.0,4.0,3.0],"inflate":0.0,"uv":[66.0,59.0],"mirror":false},{"origin":[-10.5,42.0,-10.5],"size":[22.0,3.0,22.0],"inflate":0.0,"uv":[0.0,59.0],"mirror":false},{"origin":[-1.5,45.0,-1.5],"size":[4.0,5.0,4.0],"inflate":0.0,"uv":[0.0,0.0],"mirror":false},{"origin":[-12.5,2.0,-12.5],"size":[4.0,41.0,4.0],"inflate":0.0,"uv":[40.0,84.0],"mirror":false},{"origin":[9.5,2.0,-12.5],"size":[4.0,41.0,4.0],"inflate":0.0,"uv":[40.0,84.0],"mirror":false},{"origin":[9.5,2.0,9.5],"size":[4.0,41.0,4.0],"inflate":0.0,"uv":[40.0,84.0],"mirror":false},{"origin":[-12.5,2.0,9.5],"size":[4.0,41.0,4.0],"inflate":0.0,"uv":[40.0,84.0],"mirror":false},{"origin":[-13.0,-0.0,-13.0],"size":[27.0,2.0,27.0],"inflate":0.0,"uv":[0.0,0.0],"mirror":false}]},{"name":"Sign_r1","parent":"frame","pivot":[0.0,-0.0,0.0],"rotation":[-180.00041482030653,0.0,180.00041482030653],"cubes":[{"origin":[-10.5,37.0,-14.5],"size":[20.0,4.0,3.0],"inflate":0.0,"uv":[66.0,59.0],"mirror":false}]},{"name":"Sign_r2","parent":"frame","pivot":[0.0,-0.0,0.0],"rotation":[0.0,-90.00020741015327,0.0],"cubes":[{"origin":[-9.5,37.0,-14.5],"size":[20.0,4.0,3.0],"inflate":0.0,"uv":[66.0,59.0],"mirror":false}]},{"name":"Sign_r3","parent":"frame","pivot":[0.0,-0.0,0.0],"rotation":[0.0,90.00020741015327,0.0],"cubes":[{"origin":[-10.5,37.0,-13.5],"size":[20.0,4.0,3.0],"inflate":0.0,"uv":[66.0,59.0],"mirror":false}]},{"name":"Wall_r1","parent":"frame","pivot":[0.5,19.0,11.0],"rotation":[0.0,180.00041482030653,0.0],"cubes":[{"origin":[-8.5,2.0,10.0],"size":[18.0,34.0,2.0],"inflate":0.0,"uv":[0.0,84.0],"mirror":false}]},{"name":"Wall_r2","parent":"frame","pivot":[0.5,19.0,11.0],"rotation":[0.0,90.00020741015327,0.0],"cubes":[{"origin":[2.0,2.0,-0.5],"size":[18.0,34.0,2.0],"inflate":0.0,"uv":[0.0,84.0],"mirror":false}]},{"name":"Wall_r3","parent":"frame","pivot":[11.0,19.0,0.5],"rotation":[0.0,-90.00020741015327,0.0],"cubes":[{"origin":[2.0,2.0,-0.5],"size":[18.0,34.0,2.0],"inflate":0.0,"uv":[0.0,84.0],"mirror":false}]}]}]}
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.glasgow",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "fade_value",
+					"pivot": [-24, 0, 0]
+				},
+				{
+					"name": "right_door",
+					"pivot": [9, 19, -9.5],
+					"cubes": [
+						{"origin": [0, 2, -11.5], "size": [9, 34, 2], "uv": [56, 84]}
+					]
+				},
+				{
+					"name": "left_door",
+					"pivot": [-9, 19, -9.5],
+					"cubes": [
+						{"origin": [-9, 2, -11.5], "size": [9, 34, 2], "uv": [78, 84]}
+					]
+				},
+				{
+					"name": "frame",
+					"pivot": [-0.5, 0, -0.5],
+					"cubes": [
+						{"origin": [-12, 36, -12], "size": [24, 6, 24], "uv": [0, 29]},
+						{"origin": [-10, 37, -14], "size": [20, 4, 3], "uv": [66, 59]},
+						{"origin": [-11, 42, -11], "size": [22, 3, 22], "uv": [0, 59]},
+						{"origin": [-2, 45, -2], "size": [4, 5, 4], "uv": [0, 0]},
+						{"origin": [-13, 2, -13], "size": [4, 41, 4], "uv": [40, 84]},
+						{"origin": [9, 2, -13], "size": [4, 41, 4], "uv": [40, 84]},
+						{"origin": [9, 2, 9], "size": [4, 41, 4], "uv": [40, 84]},
+						{"origin": [-13, 2, 9], "size": [4, 41, 4], "uv": [40, 84]},
+						{"origin": [-13.5, 0, -13.5], "size": [27, 2, 27], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Sign_r1",
+					"parent": "frame",
+					"pivot": [-0.5, 0, -0.5],
+					"rotation": [-180.00041, 0, 180.00041],
+					"cubes": [
+						{"origin": [-11, 37, -15], "size": [20, 4, 3], "uv": [66, 59]}
+					]
+				},
+				{
+					"name": "Sign_r2",
+					"parent": "frame",
+					"pivot": [-0.5, 0, -0.5],
+					"rotation": [0, -90.00021, 0],
+					"cubes": [
+						{"origin": [-10, 37, -15], "size": [20, 4, 3], "uv": [66, 59]}
+					]
+				},
+				{
+					"name": "Sign_r3",
+					"parent": "frame",
+					"pivot": [-0.5, 0, -0.5],
+					"rotation": [0, 90.00021, 0],
+					"cubes": [
+						{"origin": [-11, 37, -14], "size": [20, 4, 3], "uv": [66, 59]}
+					]
+				},
+				{
+					"name": "Wall_r1",
+					"parent": "frame",
+					"pivot": [0, 19, 10.5],
+					"rotation": [0, 180.00041, 0],
+					"cubes": [
+						{"origin": [-9, 2, 9.5], "size": [18, 34, 2], "uv": [0, 84]}
+					]
+				},
+				{
+					"name": "Wall_r2",
+					"parent": "frame",
+					"pivot": [0, 19, 10.5],
+					"rotation": [0, 90.00021, 0],
+					"cubes": [
+						{"origin": [1.5, 2, -1], "size": [18, 34, 2], "uv": [0, 84]}
+					]
+				},
+				{
+					"name": "Wall_r3",
+					"parent": "frame",
+					"pivot": [10.5, 19, 0],
+					"rotation": [0, -90.00021, 0],
+					"cubes": [
+						{"origin": [1.5, 2, -1], "size": [18, 34, 2], "uv": [0, 84]}
+					]
+				},
+				{
+					"name": "portal",
+					"pivot": [-0.5, 0, -0.5],
+					"cubes": [
+						{
+							"origin": [-9.5, 2, -0.5],
+							"size": [19, 34, 1],
+							"uv": {
+								"north": {"uv": [76, 63], "uv_size": [1, 1]},
+								"east": {"uv": [76, 63], "uv_size": [1, 1]},
+								"south": {"uv": [76, 63], "uv_size": [1, 1]},
+								"west": {"uv": [76, 63], "uv_size": [1, 1]},
+								"up": {"uv": [77, 64], "uv_size": [-1, -1]},
+								"down": {"uv": [77, 64], "uv_size": [-1, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
