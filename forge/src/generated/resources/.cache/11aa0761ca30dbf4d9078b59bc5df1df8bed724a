@@ -1,4 +1,4 @@
-// 1.20.2	2024-12-24T19:52:47.1347683	ExtraShells Patterns
+// 1.20.2	2025-01-22T12:57:34.6007742	ExtraShells Patterns
 4a97746948ab3e986d58f46f00fb5ffc61afebd4 data/extra_shells/tardis_refined/patterns/shell/ancient.json
 94a8abf931070ab12a22d09f1409b626ba450a9d data/extra_shells/tardis_refined/patterns/shell/chibnall_rtd_era.json
 3de43f4dbb530af8017b67fe1d7c408f8aa9b487 data/extra_shells/tardis_refined/patterns/shell/delorean.json
@@ -12,6 +12,6 @@ b1609b72c316ad5e84af9d690956bb3475843d4e data/extra_shells/tardis_refined/patter
 94c5c553bf0746efae6bc3b32d52af536a9a0e65 data/extra_shells/tardis_refined/patterns/shell/maddoc_smith.json
 69cef7d7a402d40fc313cc6e7668c64f27931362 data/extra_shells/tardis_refined/patterns/shell/maddoc_whittaker.json
 7575f3b09a4444a7f47ea25e0a5763255d08abdc data/extra_shells/tardis_refined/patterns/shell/moffat_era.json
-e29c709cfa560d341ed0e92bde9816b8a04d1e7f data/extra_shells/tardis_refined/patterns/shell/old_school.json
+ebb6138c5d43f0e30acfa7ab18c0d86df36c8bea data/extra_shells/tardis_refined/patterns/shell/old_school.json
 00f397716cea33988380b675e90c49715f822b85 data/extra_shells/tardis_refined/patterns/shell/rtd_era.json
 45ec3bf74dd3ad39c0701815ad76c2c03b01ff47 data/extra_shells/tardis_refined/patterns/shell/sea_blue.json
